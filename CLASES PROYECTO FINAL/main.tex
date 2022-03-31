@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{geometry}
+\graphicspath{ {images/} }
+\usepackage{cite}
+
+\geometry{
+textheight=23cm
+}
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{0cm}
+            
+        \large
+        \textbf{CLASES: PROYECTO FINAL}
+            
+
+        \vspace{8cm}
+            
+        \textbf{David Agudelo Ochoa}
+        
+        \vspace{0.5cm}
+        
+        \textbf{Erika Dayana León Quiroga}
+            
+        \vfill
+            
+        \vspace{0.8cm}
+            
+        \Large
+        Universidad de Antioquia\\
+        Despartamento de Ingeniería Electrónica y Telecomunicaciones\\
+        Informática II\\
+        Medellín-Antioquia\\
+        Abril de 2021
+            
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+\section{Sección introductoria.}\label{intro}
+
+\section{Idea de juego.}\label{integrado}
+El juego tratará de una madre lobo (nuestro héroe)
+El juego tratará de una madre lobo (nuestra heroína) quien intentará salvar a sus cachorros de la amenaza inminente del ser humano, el cual quiere apropiarse de los poderes sobrenaturales que los cachorros heredaron de su madre. Para esto iniciará una persecución en donde se enfrentará a los secuestradores de sus crías. Tendremos dos niveles de dificultad, en el primero nuestra heroína tendrá que esquivar proyectiles lanzados de manera rectilínea hacia ella, los cuales cambiarán su velocidad y frecuencia de aparición a medida que el tiempo avance, aumentando así la dificultad del mismo. Una vez superada esta primera etapa, el tipo de lanzamiento del proyectil cambiará, y se usará para este MOVIMIENTO PARABÓLICO y un SISTEMA FÍSICO ELÁSTICO (resorte, energía mecánica) el cual dará la velocidad inicial de los proyectiles en este nivel, la dificultad aumentará a medida que avance el nivel, cambiando la frecuencia de los proyectiles y su alcance máximo.
+El último sistema físico requerido, se utilizará para la ambientación del juego y será MOVIMIENTO ARMÓNICO SIMPLE (un péndulo) en un reloj que muestre el tiempo restante del nivel actual.
+
+
+\section{Clases.}
+\subsection{ObjetoAnimado.}\label{objeto_animado}
+\begin{itemize}
+  \item \textbf{Atributos:} En esta clase Objeto animado, tendremos como atributos la posición (x,y), tamaño y número de frames.
+  
+  \item \textbf{Métodos:} En los métodos tenemos Animar, en donde se actualizarán los frames de los objetos que queramos animar cada cierto tiempo, para esto se necesitarán dos parámetros, el número de frames de la animación y el path de cada una de las imágenes para crear la animación completa, para obtener este último parámetro se utilizará el retorno del método stringPath el cual nos ayudará a contruir el nombre de la dirección del archivo dependinedo del número de frame. (PONER EJEMPLO).
+\end{itemize}
+
+    \subsubsection{Héroe}
+    \begin{itemize}
+        \item \textbf{Atributos:}
+        \item \textbf{Métodos:}
+    \end{itemize}
+    
+    \subsubsection{Enemigos}
+    \begin{itemize}
+        \item \textbf{Atributos:}
+        \item \textbf{Métodos:}
+    \end{itemize}
+    
+    \subsubsection{Proyectil}
+    \begin{itemize}
+        \item \textbf{Atributos:}
+        \item \textbf{Métodos:}
+    \end{itemize}
+
+
+
+
+
+\subsection{Niveles.}\label{niveles}
+\begin{itemize}
+  \item \textbf{Atributos:} 
+  
+  \item \textbf{Métodos:} 
+\end{itemize}
+
+
+
+
+
+
+
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{funcionamiento1.png}
+\centering
+\caption{Iniciar el programa.}
+\label{fig:func1}
+\end{figure}
+
+
+
+\end{document}
