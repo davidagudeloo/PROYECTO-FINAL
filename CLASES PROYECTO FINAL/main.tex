@@ -53,55 +53,91 @@ El último sistema físico requerido, se utilizará para la ambientación del ju
 
 
 \section{Clases.}
+Para la creación de los mapas mentales que nos ayudarán con la estructuración de las clases, se utilizará el siguiente código de color, verde para las clases, blanco para los atributos y azul para los métodos.
+
+\begin{figure}[h]
+\includegraphics[scale=1]{Images/colores.png}
+\centering
+\caption{Código de color para los mapas mentales.}
+\label{fig:func1}
+\end{figure}
+
 \subsection{ObjetoAnimado.}\label{objeto_animado}
 \begin{itemize}
-  \item \textbf{Atributos:} En esta clase Objeto animado, tendremos como atributos la posición (x,y), tamaño y número de frames.
+  \item \textbf{Atributos:} En esta clase Objeto animado, tendremos como atributos la posición (x,y), el tamaño y número de frames el cual es necesario para realizar la animación de los objetos.
   
   \item \textbf{Métodos:} En los métodos tenemos Animar, en donde se actualizarán los frames de los objetos que queramos animar cada cierto tiempo, para esto se necesitarán dos parámetros, el número de frames de la animación y el path de cada una de las imágenes para crear la animación completa, para obtener este último parámetro se utilizará el retorno del método stringPath el cual nos ayudará a contruir el nombre de la dirección del archivo dependinedo del número de frame. (PONER EJEMPLO).
 \end{itemize}
 
+\begin{figure}[h]
+\includegraphics[scale=0.5]{Images/ObjetoAnimado.png}
+\centering
+\caption{Mapa mental de la clase objetoAnimado.}
+\label{fig:func1}
+\end{figure}
+
     \subsubsection{Héroe}
     \begin{itemize}
-        \item \textbf{Atributos:}
-        \item \textbf{Métodos:}
+        \item \textbf{Atributos:} Dentro los atributos de la clase Héroe encontraremos el número de vidas, si el héroe dispone de su poder en un nivel determinado y por último el nivel en el que se encuentra.
+        \item \textbf{Métodos:} Tendremos dos métodos, la actualización de la posición del héroe en Y cuando este realice un salto, y la verificación de la colisión del héroe con los límites del escenario.
     \end{itemize}
     
-    \subsubsection{Enemigos}
+    \subsubsection{Enemigo}
     \begin{itemize}
-        \item \textbf{Atributos:}
-        \item \textbf{Métodos:}
+        \item \textbf{Atributos:} Esta clase tendrá un único atributo que cambiará el nivel de dificultad dentro de un mismo nivel a medida que avance el tiempo.
     \end{itemize}
+    
+\begin{figure}[h]
+\includegraphics[scale=0.6]{Images/Heroe-enemigo.png}
+\centering
+\caption{Mapa mental de la clase héroe y de la clase enemigo.}
+\label{fig:func1}
+\end{figure}
     
     \subsubsection{Proyectil}
     \begin{itemize}
-        \item \textbf{Atributos:}
-        \item \textbf{Métodos:}
+        \item \textbf{Atributos:} En este caso tendremos de atributos la velocidad inicial del  proyectil y la frecuencia de aparición de este.
+        \item \textbf{Métodos:} Dentro de los métodos encontraremos la verificación de la colisión entre el proyectil y el héroe, también la colisión entre el proyectil y los límites del escenario, la descripción del movimiento (MRU) usado para el proyectil en el nivel 1, y por último un método que describa el movimiento de tiro parabólico con resorte utilizado para el proyectil del nivel 2.
     \end{itemize}
-
-
-
+    
+\begin{figure}[h]
+\includegraphics[scale=0.5]{Images/proyectil.png}
+\centering
+\caption{Mapa mental de la clase proyectil.}
+\label{fig:func1}
+\end{figure}
+    
+    
+    \subsubsection{Reloj}
+    \begin{itemize}
+        \item \textbf{Atributos:} Tendrá un atributo que nos permitirá llevar la cuenta del tiempo de la partida.
+        \item \textbf{Métodos:} Tendremos un método que nos permitirá modelar el movimiento de un péndelo de reloj, el cual hará parte de la ambientación del juego. También se necesitará otro método para actualizar la visualización del tiempo de juego.
+    \end{itemize}
+    
+    
+\begin{figure}[h]
+\includegraphics[scale=0.8]{Images/reloj.png}
+\centering
+\caption{Mapa mental de la clase reloj.}
+\label{fig:func1}
+\end{figure}
 
 
 \subsection{Niveles.}\label{niveles}
 \begin{itemize}
-  \item \textbf{Atributos:} 
+  \item \textbf{Atributos:}  
   
-  \item \textbf{Métodos:} 
+  \item \textbf{Métodos:} Iniciar nivel, guardar nivel, cargar nivel.
 \end{itemize}
 
-
-
-
-
-
-
-
 \begin{figure}[h]
-\includegraphics[scale=0.5]{funcionamiento1.png}
+\includegraphics[scale=0.8]{Images/niveles.png}
 \centering
-\caption{Iniciar el programa.}
+\caption{Mapa mental de la clase niveles.}
 \label{fig:func1}
 \end{figure}
+
+
 
 
 
