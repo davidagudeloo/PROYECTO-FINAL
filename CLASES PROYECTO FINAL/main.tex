@@ -47,16 +47,15 @@ textheight=23cm
 \section{Sección introductoria.}\label{intro}
 
 \section{Idea de juego.}\label{integrado}
-El juego tratará de una madre lobo (nuestro héroe)
 El juego tratará de una madre lobo (nuestra heroína) quien intentará salvar a sus cachorros de la amenaza inminente del ser humano, el cual quiere apropiarse de los poderes sobrenaturales que los cachorros heredaron de su madre. Para esto iniciará una persecución en donde se enfrentará a los secuestradores de sus crías. Tendremos dos niveles de dificultad, en el primero nuestra heroína tendrá que esquivar proyectiles lanzados de manera rectilínea hacia ella, los cuales cambiarán su velocidad y frecuencia de aparición a medida que el tiempo avance, aumentando así la dificultad del mismo. Una vez superada esta primera etapa, el tipo de lanzamiento del proyectil cambiará, y se usará para este MOVIMIENTO PARABÓLICO y un SISTEMA FÍSICO ELÁSTICO (resorte, energía mecánica) el cual dará la velocidad inicial de los proyectiles en este nivel, la dificultad aumentará a medida que avance el nivel, cambiando la frecuencia de los proyectiles y su alcance máximo.
 El último sistema físico requerido, se utilizará para la ambientación del juego y será MOVIMIENTO ARMÓNICO SIMPLE (un péndulo) en un reloj que muestre el tiempo restante del nivel actual.
 
 
 \section{Clases.}
-Para la creación de los mapas mentales que nos ayudarán con la estructuración de las clases, se utilizará el siguiente código de color, verde para las clases, blanco para los atributos y azul para los métodos.
+Para la creación de los mapas mentales que nos ayudarán con la estructuración de las clases, se utilizará el siguiente código de color: Verde para las clases, amarillo para las clases abstractas, blanco para los atributos, azul para los métodos y morado para los métodos abstractos.
 
 \begin{figure}[h]
-\includegraphics[scale=1]{Images/colores.png}
+\includegraphics[scale=0.8]{Images/colores.png}
 \centering
 \caption{Código de color para los mapas mentales.}
 \label{fig:func1}
@@ -123,11 +122,15 @@ Para la creación de los mapas mentales que nos ayudarán con la estructuración
 \end{figure}
 
 
-\subsection{Niveles.}\label{niveles}
+\subsection{Nivel.}\label{niveles}
+Para la clase nivel se decidió que fuese de tipo abstracto, pues posee métodos que cambiarán dependiendo de las clases que los hereden.
 \begin{itemize}
-  \item \textbf{Atributos:}  
+  \item \textbf{Atributos:} La clase Niveles tendrá como único atributo el timepo de duración del nivel.
   
-  \item \textbf{Métodos:} Iniciar nivel, guardar nivel, cargar nivel.
+  \item \textbf{Métodos:} Tendremos el método para guardar el nivel, el cual nos ayudará a almacenar datos importantes del nivel actual, como la posición del héroe, las vidas de este, el tiempo restante de partida, nivel de dificultad y nivel en el que se encuentra.
+  
+  \item \textbf{Métodos abstractos:}  Con respecto a los métodos abstractos, tendremos uno que nos permitirá iniciar el nivel correspondiente desde cero, creando los objetos para el funcionamiento del mismo y por último, el método para cargar el nivel guardado, el cual se encargará de tomar los datos guardados y recrear el nivel partiendo de estos. 
+  
 \end{itemize}
 
 \begin{figure}[h]
@@ -137,7 +140,15 @@ Para la creación de los mapas mentales que nos ayudarán con la estructuración
 \label{fig:func1}
 \end{figure}
 
-
+    \subsubsection{Nivel-1}
+    \begin{itemize}
+        \item \textbf{Métodos:} El método iniciar instanciará los objetos necesarios para la creación del nivel 1, dependiendo de las características de este. Para el método cargar se utilizarán los datos almacenados con ayuda del método guardar y de esta forma retomar el nivel en el punto guardado.
+    \end{itemize}
+    
+    \subsubsection{Nivel-2}
+    \begin{itemize}
+        \item \textbf{Métodos:} El método inciar instanciará los objetos necesarios para la creación del nivel 2, dependiendo de las características de este. Para el método cargar, se utilizarán los datos almacenados con ayuda del método guardar y de esta forma retomar el nivel en el punto guardado.
+    \end{itemize}
 
 
 
