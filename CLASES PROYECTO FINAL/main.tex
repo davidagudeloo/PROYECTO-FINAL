@@ -52,6 +52,59 @@ En este informe se realizará la descripción de las clases que se implementará
 El juego tratará de una madre lobo (nuestra heroína) quien intentará salvar a sus cachorros de la amenaza inminente del ser humano, el cual quiere apropiarse de los poderes sobrenaturales que los cachorros heredaron de su madre. Para esto iniciará una persecución en donde se enfrentará a los secuestradores de sus crías. Tendremos dos niveles de dificultad, en el primero nuestra heroína tendrá que esquivar proyectiles lanzados de manera rectilínea hacia ella, los cuales cambiarán su velocidad y frecuencia de aparición a medida que el tiempo avance, aumentando así la dificultad del mismo. Una vez superada esta primera etapa, el tipo de lanzamiento del proyectil cambiará, y se usará para este MOVIMIENTO PARABÓLICO y un SISTEMA FÍSICO ELÁSTICO (resorte, energía mecánica) el cual dará la velocidad inicial de los proyectiles en este nivel, la dificultad aumentará a medida que avance el nivel, cambiando la frecuencia de los proyectiles y su alcance máximo.
 El último sistema físico requerido, se utilizará para la ambientación del juego y será MOVIMIENTO ARMÓNICO SIMPLE (un péndulo) en un reloj que muestre el tiempo restante del nivel actual.
 
+\section{Descripción detallada del juego.}
+
+Después de realizar la descripción detallada de las clases mostrando sus respectivos métodos y atributos, continuaremos con una explicación de cómo serán utilizadas estas clases dentro del juego. También se describirán los escenarios a utilizar y los objetos que harán parte de estos.
+
+Tal como se mencionó en la sección \textbf{Idea de juego}, nuestra \textbf{Héroe} será una loba con poderes supernaturales, la cual vive tranquilamente con sus crías hasta que son raptadas por un grupo de humanos, cuyos intereses se centran en apropiarse de los poderes que tienen los cachorros, tal como ha hecho durante años con todo lo que nos brinda la naturaleza.
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Images/spriteheroe.png}
+\centering
+\caption{Sprite que se usará para animar a nuestro héroe .}
+\label{fig:spriteheroe}
+\end{figure}
+
+Tras este desafortunado incidente, nuestra \textbf{Héroe} emprenderá una persecución para poder rescatar a sus cachorros, sin embargo este asedio no será un camino fácil, pues no sabe a qué tendrá que enfrentarse.
+
+\vspace{5mm}
+imagen cachorro
+\vspace{5mm}
+
+En nuestro primer escenario (\textbf{Nivel-1}), el \textbf{Héroe} perseguirá un auto de policía (\textbf{Enemigo}) que trata de escapar después de capturar a los cachorros en el bosque donde la familia de lobos se encontraba viviendo tranquilamente. Pero este \textbf{Enemigo} no se limitará a huir simplemente, sino que además estos cobardes recurrirán a disparos de balas (\textbf{Proyectil}) con intención de herir, o incluso matar a nuestra Madre preocupada. Para evitar estos ataques, tendrá que recurrir a grandes saltos, mientras corre a altas velocidades para así evitar hacerse daño y no perder de vista a los secuestradores de sus hijos.
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Images/spriteproyectil.png}
+\centering
+\caption{Sprite del proyectil para el nivel uno.}
+\label{fig:spriteproy}
+\end{figure}
+
+Dado que el auto de policía alcanza velocidades demasiado elevadas, nuestra heroína debe limitarse a no perderlos de vista, y seguirles el rasto hasta su lugar de destino. Por lo que deberá aguantar un tiempo (\textbf{Reloj}) de 120 segundos esta intensa persecución.
+
+\begin{figure}[h]
+\includegraphics[scale=0.4]{Images/spritecarro.png}
+\centering
+\caption{Sprite del enemigo del nivel uno.}
+\label{fig:spriteproy}
+\end{figure}
+
+
+Si consigue su cometido, el carro de policía \textbf{Enemigo}, tendrá que recurrir a entes mayores ante la imposibilidad de detener a nuestra loba. Por lo que ingresará a una base en busca de ayuda, y de poder dificultar el rescate de los cachorros. 
+
+\vspace{5mm}
+
+Es aquí donde ocurre nuestro segundo escenario (\textbf{Nivel-2}), en donde nuestra heroína se encontrará con un gran tanque (\textbf{Enemigo}), el cuál a pesar de compartir intenciones con nuestro anterior \textbf{Enemigo}, que son el transportar a los cachorros y detener a su madre, este tendrá un poder bélico de un nivel completamente distinto, pues lanzará los proyectiles imitando el tiro de un cañón y su alcance será desconocido para nuestra héroe, la velocidad de salida del proyectil será diferente en cada tiro y se calculará haciendo uso de teoría de resortes, pues se relacionará con la compresión aleatoria que se le realice al resorte modelado para nuestro juego. Para hacerle frente, nuestra loba tendrá que usar aquellos poderes por los cuales la buscan. Usará su ultravelocidad con teletransportación para poder evitar estos proyectiles (\textbf{Proyectil}), ya que no bastará un simple salto.
+
+\newpage
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Images/spritetanque.png}
+\centering
+\caption{Sprite del enemigo del nivel dos.}
+\label{fig:spriteproy}
+\end{figure}
+
+Nuevamente, nuestra heroína tratará de alcanzar a nuestro enemigo para recuperar sus crías, por lo que este, además de atacarla, deberá desplazarse con rapidez, pero dado que este no está diseñado para alcanzar velocidades tan altas, estará sobreesforzando su maquinaria, por lo que tendrá un tiempo de 120 segundos hasta que su sistema falle por completo. Si nuestra heroína aguanta hasta que la maquinaria falle, podrá recuperar a sus cachorros, y volver a vivir pacíficamente en el bosque.
 
 \section{Clases.}
 Para la creación de los mapas mentales que nos ayudarán con la estructuración de las clases, se utilizará el siguiente código de color: Verde para las clases, amarillo para las clases abstractas, blanco para los atributos, azul para los métodos y morado para los métodos abstractos.
@@ -106,7 +159,7 @@ Para la creación de los mapas mentales que nos ayudarán con la estructuración
     \subsubsection{Proyectil}
     \begin{itemize}
         \item \textbf{Atributos:} En este caso tendremos de atributos la velocidad inicial del  proyectil y la frecuencia de aparición de este.
-        \item \textbf{Métodos:} Dentro de los métodos encontraremos la verificación de la colisión entre el proyectil y el héroe, también la colisión entre el proyectil y los límites del escenario, la descripción del movimiento (MRU) usado para el proyectil en el nivel 1, y por último un método que describa el movimiento de tiro parabólico con resorte utilizado para el proyectil del nivel 2.
+        \item \textbf{Métodos:} Dentro de los métodos encontraremos la verificación de la colisión entre el proyectil y el héroe, también la colisión entre el proyectil y los límites del escenario, la descripción del movimiento (MRU) usado para el proyectil en el nivel 1, y por último un método que describa el movimiento de tiro parabólico con resorte utilizado para el proyectil del nivel 2. 
     \end{itemize}
     
 \begin{figure}[h]
@@ -159,6 +212,7 @@ Para la clase nivel se decidió que fuese de tipo abstracto, pues posee métodos
     \begin{itemize}
         \item \textbf{Métodos:} El método inciar instanciará los objetos necesarios para la creación del nivel 2, dependiendo de las características de este. Para el método cargar, se utilizarán los datos almacenados con ayuda del método guardar y de esta forma retomar el nivel en el punto guardado.
     \end{itemize}
+    
 
 \section{Conclusiones.}
     \begin{itemize}
