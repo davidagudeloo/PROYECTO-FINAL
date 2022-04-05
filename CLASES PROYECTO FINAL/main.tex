@@ -46,6 +46,8 @@ textheight=23cm
 \newpage
 \section{Sección introductoria.}\label{intro}
 
+En este informe se realizará la descripción de las clases que se implementarán para el desarrollo del proyecto final de la materia Informática II, esto nos permitirá planear el desarrollo de nuestro proyecto de manera que ya se tenga una idea general de este a la hora de iniciar con la codificación de nuestras clases. También nos ayudará a organizar mejor las ideas que tengamos para nuestro juego y estructurarlo de la mejor manera posible.
+
 \section{Idea de juego.}\label{integrado}
 El juego tratará de una madre lobo (nuestra heroína) quien intentará salvar a sus cachorros de la amenaza inminente del ser humano, el cual quiere apropiarse de los poderes sobrenaturales que los cachorros heredaron de su madre. Para esto iniciará una persecución en donde se enfrentará a los secuestradores de sus crías. Tendremos dos niveles de dificultad, en el primero nuestra heroína tendrá que esquivar proyectiles lanzados de manera rectilínea hacia ella, los cuales cambiarán su velocidad y frecuencia de aparición a medida que el tiempo avance, aumentando así la dificultad del mismo. Una vez superada esta primera etapa, el tipo de lanzamiento del proyectil cambiará, y se usará para este MOVIMIENTO PARABÓLICO y un SISTEMA FÍSICO ELÁSTICO (resorte, energía mecánica) el cual dará la velocidad inicial de los proyectiles en este nivel, la dificultad aumentará a medida que avance el nivel, cambiando la frecuencia de los proyectiles y su alcance máximo.
 El último sistema físico requerido, se utilizará para la ambientación del juego y será MOVIMIENTO ARMÓNICO SIMPLE (un péndulo) en un reloj que muestre el tiempo restante del nivel actual.
@@ -58,21 +60,29 @@ Para la creación de los mapas mentales que nos ayudarán con la estructuración
 \includegraphics[scale=0.8]{Images/colores.png}
 \centering
 \caption{Código de color para los mapas mentales.}
-\label{fig:func1}
+\label{fig:codigo}
 \end{figure}
 
 \subsection{ObjetoAnimado.}\label{objeto_animado}
 \begin{itemize}
   \item \textbf{Atributos:} En esta clase Objeto animado, tendremos como atributos la posición (x,y), el tamaño y número de frames el cual es necesario para realizar la animación de los objetos.
   
-  \item \textbf{Métodos:} En los métodos tenemos Animar, en donde se actualizarán los frames de los objetos que queramos animar cada cierto tiempo, para esto se necesitarán dos parámetros, el número de frames de la animación y el path de cada una de las imágenes para crear la animación completa, para obtener este último parámetro se utilizará el retorno del método stringPath el cual nos ayudará a contruir el nombre de la dirección del archivo dependinedo del número de frame. (PONER EJEMPLO).
+  \item \textbf{Métodos:} En los métodos tenemos Animar, en donde se actualizarán los frames de los objetos que queramos animar cada cierto tiempo, para esto se necesitarán dos parámetros, el número de frames de la animación y el path de cada una de las imágenes para crear la animación completa, para obtener este último parámetro se utilizará el retorno del método stringPath el cual nos ayudará a contruir el nombre de la dirección del archivo dependinedo del número de frame.
 \end{itemize}
+
+\newpage
+\begin{figure}[h]
+\includegraphics[scale=0.6]{Images/string.png}
+\centering
+\caption{Ejemplo del funcionamiento del método stringPath. Como podemos ver, la primera y última parte del string se mantiene constante mientras que el número de frame va cambiando para lograr la animación de los objetos presentes en la escena.}
+\label{fig:string}
+\end{figure}
 
 \begin{figure}[h]
 \includegraphics[scale=0.5]{Images/ObjetoAnimado.png}
 \centering
 \caption{Mapa mental de la clase objetoAnimado.}
-\label{fig:func1}
+\label{fig:mmobjani}
 \end{figure}
 
     \subsubsection{Héroe}
@@ -87,10 +97,10 @@ Para la creación de los mapas mentales que nos ayudarán con la estructuración
     \end{itemize}
     
 \begin{figure}[h]
-\includegraphics[scale=0.6]{Images/Heroe-enemigo.png}
+\includegraphics[scale=0.5]{Images/Heroe-enemigo.png}
 \centering
 \caption{Mapa mental de la clase héroe y de la clase enemigo.}
-\label{fig:func1}
+\label{fig:mmheroe}
 \end{figure}
     
     \subsubsection{Proyectil}
@@ -103,7 +113,7 @@ Para la creación de los mapas mentales que nos ayudarán con la estructuración
 \includegraphics[scale=0.5]{Images/proyectil.png}
 \centering
 \caption{Mapa mental de la clase proyectil.}
-\label{fig:func1}
+\label{fig:mmproy}
 \end{figure}
     
     
@@ -118,7 +128,7 @@ Para la creación de los mapas mentales que nos ayudarán con la estructuración
 \includegraphics[scale=0.8]{Images/reloj.png}
 \centering
 \caption{Mapa mental de la clase reloj.}
-\label{fig:func1}
+\label{fig:mmreloj}
 \end{figure}
 
 
@@ -137,19 +147,27 @@ Para la clase nivel se decidió que fuese de tipo abstracto, pues posee métodos
 \includegraphics[scale=0.8]{Images/niveles.png}
 \centering
 \caption{Mapa mental de la clase niveles.}
-\label{fig:func1}
+\label{fig:mmniveles}
 \end{figure}
 
     \subsubsection{Nivel-1}
     \begin{itemize}
         \item \textbf{Métodos:} El método iniciar instanciará los objetos necesarios para la creación del nivel 1, dependiendo de las características de este. Para el método cargar se utilizarán los datos almacenados con ayuda del método guardar y de esta forma retomar el nivel en el punto guardado.
-    \end{itemize}
+    \end{itemize} 
     
     \subsubsection{Nivel-2}
     \begin{itemize}
         \item \textbf{Métodos:} El método inciar instanciará los objetos necesarios para la creación del nivel 2, dependiendo de las características de este. Para el método cargar, se utilizarán los datos almacenados con ayuda del método guardar y de esta forma retomar el nivel en el punto guardado.
     \end{itemize}
 
+\section{Conclusiones.}
+    \begin{itemize}
+        \item El proceso de estructurar las clases sin desarrollar código es bastante complejo, pues todo parte mucho de la especulación, ya que no hay garantías de si lo que se planeó podrá implementarse de manera exitosa.
+        
+        \item A pesar del comentario del ítem anterior, una vez alcanzamos un buen porcentaje de clases definidas, nos dimos cuenta de la simplicidad que adquiere la estructuración, pues nos garantiza que más adelante, una vez se empiece a codificar, exista una buena organización de las clases y una correcta descripción de sus métodos y atributos.
+        
+        \item El trabajo en equipo hace más ameno el desarrollo de los proyectos, y a pesar de que a veces puedan haber desacuerdos, mientras haya buena comunicación, no hay problema que no pueda solucionarse.
+    \end{itemize}
 
 
 \end{document}
