@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Image/imagenes heroe/frame_0_delay-0.08s.png</file>
+        <file>Image/imagenes heroe/frame_1_delay-0.08s.png</file>
+        <file>Image/imagenes heroe/frame_2_delay-0.08s.png</file>
+        <file>Image/imagenes heroe/frame_3_delay-0.08s.png</file>
+        <file>Image/imagenes heroe/frame_4_delay-0.08s.png</file>
+        <file>Image/imagenes heroe/frame_5_delay-0.08s.png</file>
+        <file>Image/imagenes heroe/frame_6_delay-0.08s.png</file>
+        <file>Image/imagenes heroe/frame_7_delay-0.08s.png</file>
+    </qresource>
+</RCC>

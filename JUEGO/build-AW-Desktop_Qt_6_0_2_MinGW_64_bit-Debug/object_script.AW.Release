@@ -1,0 +1,10 @@
+release/enemigo.o
+release/heroe.o
+release/main.o
+release/mainwindow.o
+release/objetoanimado.o
+release/proyectil.o
+release/reloj.o
+release/qrc_Imagenes.o
+release/moc_mainwindow.o
+release/moc_objetoanimado.o

@@ -1,0 +1,10 @@
+debug/enemigo.o
+debug/heroe.o
+debug/main.o
+debug/mainwindow.o
+debug/objetoanimado.o
+debug/proyectil.o
+debug/reloj.o
+debug/qrc_Imagenes.o
+debug/moc_mainwindow.o
+debug/moc_objetoanimado.o
