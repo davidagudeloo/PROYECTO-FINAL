@@ -22,14 +22,21 @@ private:
     QString initialPath;
     QString finalPath;
 
+
 public:
+    //Atributos globales
+    float delta=0.08;
+    float g =9.8;
+
     //Constructor
     ObjetoAnimado(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath);
 
     //Métodos
-    void animar(ObjetoAnimado * clase);
-    QString stringPath(int numFrame, ObjetoAnimado * clase);
+    void animar();
+    QString stringPath(int numFrame);
 
+    int getWidth() const;
+    int getHeight() const;
 };
 
 #endif // OBJETOANIMADO_H

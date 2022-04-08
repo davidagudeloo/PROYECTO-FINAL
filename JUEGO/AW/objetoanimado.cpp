@@ -1,5 +1,15 @@
 #include "objetoanimado.h"
 
+int ObjetoAnimado::getWidth() const
+{
+    return width;
+}
+
+int ObjetoAnimado::getHeight() const
+{
+    return height;
+}
+
 ObjetoAnimado::ObjetoAnimado(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath)
 {
     setPixmap(QPixmap(name).scaled(w,h));
@@ -13,20 +23,21 @@ ObjetoAnimado::ObjetoAnimado(QString name, int posix, int posiy, int w, int h, i
     this->finalPath=finalPath;
 }
 
-void ObjetoAnimado::animar(ObjetoAnimado * clase)
+
+void ObjetoAnimado::animar()
 {
-    qDebug() << "funciona";
-    clase->setPixmap(QPixmap(stringPath(actualFrame, clase)).scaled(clase->width, clase->height));
-    clase->actualFrame++;
-    if(clase->actualFrame==clase->numFrames){
-        clase->actualFrame=0;
+    //qDebug() << "funciona";
+    setPixmap(QPixmap(stringPath(actualFrame)).scaled(width, height));
+    actualFrame++;
+    if(actualFrame==numFrames){
+        actualFrame=0;
     }
 }
 
-QString ObjetoAnimado::stringPath(int numFrame, ObjetoAnimado * clase)
+QString ObjetoAnimado::stringPath(int numFrame)
 {
-    QString path = clase->initialPath;
+    QString path = initialPath;
     path += QString::number(numFrame);
-    path += clase->finalPath;
+    path += finalPath;
     return path;
 }

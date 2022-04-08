@@ -126,6 +126,14 @@ compiler_rcc_clean:
 	-$(DEL_FILE) release\qrc_Imagenes.cpp
 release/qrc_Imagenes.cpp: ../AW/Imagenes.qrc \
 		C:/QT/6.0.2/mingw81_64/bin/rcc.exe \
+		../AW/Image/imagenes\ piso/frame_1_delay-0.1s.png \
+		../AW/Image/imagenes\ piso/frame_4_delay-0.1s.png \
+		../AW/Image/imagenes\ piso/frame_6_delay-0.1s.png \
+		../AW/Image/imagenes\ piso/frame_0_delay-0.1s.png \
+		../AW/Image/imagenes\ piso/frame_3_delay-0.1s.png \
+		../AW/Image/imagenes\ piso/frame_2_delay-0.1s.png \
+		../AW/Image/imagenes\ piso/frame_7_delay-0.1s.png \
+		../AW/Image/imagenes\ piso/frame_5_delay-0.1s.png \
 		../AW/Image/imagenes\ heroe/frame_6_delay-0.08s.png \
 		../AW/Image/imagenes\ heroe/frame_2_delay-0.08s.png \
 		../AW/Image/imagenes\ heroe/frame_0_delay-0.08s.png \
@@ -133,7 +141,308 @@ release/qrc_Imagenes.cpp: ../AW/Imagenes.qrc \
 		../AW/Image/imagenes\ heroe/frame_4_delay-0.08s.png \
 		../AW/Image/imagenes\ heroe/frame_3_delay-0.08s.png \
 		../AW/Image/imagenes\ heroe/frame_5_delay-0.08s.png \
-		../AW/Image/imagenes\ heroe/frame_1_delay-0.08s.png
+		../AW/Image/imagenes\ heroe/frame_1_delay-0.08s.png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (31).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (276).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (205).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (278).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (257).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (207).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (8).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (119).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (25).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (35).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (113).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (238).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (187).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (202).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (99).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (82).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (75).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (219).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (146).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (107).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (23).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (110).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (186).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (298).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (247).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (173).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (265).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (142).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (16).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (269).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (184).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (6).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (77).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (126).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (4).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (199).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (283).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (242).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (235).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (0).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (101).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (37).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (196).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (43).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (71).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (149).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (38).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (93).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (92).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (197).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (117).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (282).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (295).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (55).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (1).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (21).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (234).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (240).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (273).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (67).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (266).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (260).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (248).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (183).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (22).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (68).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (136).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (165).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (80).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (293).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (12).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (94).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (56).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (57).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (76).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (19).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (243).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (233).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (258).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (274).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (241).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (246).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (27).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (122).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (250).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (18).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (170).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (195).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (189).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (127).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (145).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (275).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (249).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (270).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (255).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (140).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (296).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (9).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (109).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (30).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (211).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (261).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (163).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (203).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (28).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (14).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (89).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (97).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (137).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (245).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (123).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (179).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (154).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (254).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (281).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (253).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (41).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (49).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (190).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (224).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (267).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (175).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (98).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (292).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (91).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (230).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (259).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (58).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (262).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (50).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (125).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (268).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (279).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (115).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (198).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (147).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (47).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (223).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (252).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (172).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (54).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (180).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (213).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (286).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (100).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (46).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (105).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (2).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (271).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (218).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (185).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (83).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (102).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (159).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (124).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (178).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (239).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (193).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (291).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (227).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (225).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (39).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (42).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (112).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (106).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (134).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (188).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (3).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (153).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (64).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (251).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (161).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (78).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (132).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (191).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (201).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (162).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (60).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (86).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (121).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (48).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (222).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (138).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (51).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (148).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (256).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (288).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (69).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (212).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (204).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (5).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (280).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (88).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (52).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (116).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (131).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (229).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (62).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (264).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (144).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (32).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (65).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (272).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (11).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (17).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (209).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (90).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (297).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (103).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (208).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (141).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (129).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (299).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (217).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (290).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (29).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (171).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (150).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (168).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (96).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (232).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (284).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (95).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (114).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (156).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (13).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (72).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (73).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (70).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (206).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (139).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (59).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (53).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (20).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (135).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (81).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (231).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (160).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (158).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (167).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (133).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (220).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (263).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (26).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (214).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (236).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (151).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (289).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (63).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (84).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (74).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (104).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (152).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (85).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (166).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (194).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (40).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (285).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (155).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (45).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (169).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (221).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (36).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (294).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (226).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (111).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (177).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (118).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (192).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (237).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (215).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (66).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (44).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (182).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (143).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (7).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (228).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (277).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (120).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (287).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (34).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (79).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (200).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (87).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (216).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (174).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (61).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (157).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (10).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (210).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (181).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (108).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (130).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (15).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (128).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (244).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (33).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (24).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (176).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (300).png \
+		../AW/Image/imagenes\ fondo\ bosque/fondoBosque\ (164).png
 	C:\QT\6.0.2\mingw81_64\bin\rcc.exe -name Imagenes ..\AW\Imagenes.qrc -o release\qrc_Imagenes.cpp
 
 compiler_moc_predefs_make_all: release/moc_predefs.h
@@ -279,11 +588,17 @@ release/moc_mainwindow.cpp: ../AW/mainwindow.h \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/QGraphicsScene \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qgraphicsscene.h \
 		C:/QT/6.0.2/mingw81_64/include/QtGui/qpen.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/QKeyEvent \
 		../AW/objetoanimado.h \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
 		C:/QT/6.0.2/mingw81_64/include/QtGui/qpainterpath.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/QString \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QTimer \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbasictimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QDebug \
+		../AW/heroe.h \
 		release/moc_predefs.h \
 		C:/QT/6.0.2/mingw81_64/bin/moc.exe
 	C:\QT\6.0.2\mingw81_64\bin\moc.exe $(DEFINES) --include "C:/Users/ASUS/Desktop/Universidad/InformaticaII/PROYECTO FINAL INFORMATICAII/JUEGO/build-AW-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/QT/6.0.2/mingw81_64/mkspecs/win32-g++ -I"C:/Users/ASUS/Desktop/Universidad/InformaticaII/PROYECTO FINAL INFORMATICAII/JUEGO/AW" -IC:/QT/6.0.2/mingw81_64/include -IC:/QT/6.0.2/mingw81_64/include/QtWidgets -IC:/QT/6.0.2/mingw81_64/include/QtGui -IC:/QT/6.0.2/mingw81_64/include/QtCore -I. -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/QT/Tools/mingw810_64/x86_64-w64-mingw32/include ..\AW\mainwindow.h -o release\moc_mainwindow.cpp
@@ -394,6 +709,10 @@ release/moc_objetoanimado.cpp: ../AW/objetoanimado.h \
 		C:/QT/6.0.2/mingw81_64/include/QtGui/qimage.h \
 		C:/QT/6.0.2/mingw81_64/include/QtGui/qpixelformat.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/QString \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QTimer \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbasictimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QDebug \
 		release/moc_predefs.h \
 		C:/QT/6.0.2/mingw81_64/bin/moc.exe
 	C:\QT\6.0.2\mingw81_64\bin\moc.exe $(DEFINES) --include "C:/Users/ASUS/Desktop/Universidad/InformaticaII/PROYECTO FINAL INFORMATICAII/JUEGO/build-AW-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/QT/6.0.2/mingw81_64/mkspecs/win32-g++ -I"C:/Users/ASUS/Desktop/Universidad/InformaticaII/PROYECTO FINAL INFORMATICAII/JUEGO/AW" -IC:/QT/6.0.2/mingw81_64/include -IC:/QT/6.0.2/mingw81_64/include/QtWidgets -IC:/QT/6.0.2/mingw81_64/include/QtGui -IC:/QT/6.0.2/mingw81_64/include/QtCore -I. -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/QT/Tools/mingw810_64/x86_64-w64-mingw32/include ..\AW\objetoanimado.h -o release\moc_objetoanimado.cpp
@@ -421,10 +740,230 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 
 ####### Compile
 
-release/enemigo.o: ../AW/enemigo.cpp ../AW/enemigo.h
+release/enemigo.o: ../AW/enemigo.cpp ../AW/enemigo.h \
+		../AW/objetoanimado.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QObject \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qobject.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qobjectdefs.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qnamespace.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qglobal.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qconfig-bootstrapped.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qconfig.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtcore-config.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsystemdetection.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qprocessordetection.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcompilerdetection.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtypeinfo.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcontainerfwd.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsysinfo.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qlogging.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qflags.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qatomic.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbasicatomic.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qatomic_bootstrap.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qgenericatomic.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qatomic_msvc.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qglobalstatic.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmutex.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qnumeric.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qversiontagging.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtmetamacros.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstring.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qchar.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringview.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbytearray.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qrefcount.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qarraydata.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qpair.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qarraydatapointer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qarraydataops.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbytearrayalgorithms.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbytearrayview.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringliteral.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringalgorithms.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qanystringview.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qutf8stringview.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringtokenizer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringbuilder.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qlist.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qhashfunctions.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qiterator.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbytearraylist.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringlist.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qalgorithms.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringmatcher.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcoreevent.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qscopedpointer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmetatype.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcompare.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qvarlengtharray.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qdatastream.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qiodevicebase.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qiterable.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmetacontainer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcontainerinfo.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtaggedpointer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmath.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qobject_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qproperty.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qshareddata.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qpropertyprivate.h \
+		C:/QT/6.0.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
+		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qtguiglobal.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qtgui-config.h \
+		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qtwidgets-config.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qvariant.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmap.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qshareddata_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qhash.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qdebug.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtextstream.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringconverter.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qset.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsharedpointer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qrect.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmargins.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsize.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qpoint.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpainterpath.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qtransform.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpolygon.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qregion.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qwindowdefs.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qline.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpixmap.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpaintdevice.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qcolor.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qrgb.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qrgba64.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qimage.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpixelformat.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QString \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QTimer \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbasictimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\enemigo.o ..\AW\enemigo.cpp
 
-release/heroe.o: ../AW/heroe.cpp ../AW/heroe.h
+release/heroe.o: ../AW/heroe.cpp ../AW/heroe.h \
+		../AW/objetoanimado.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QObject \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qobject.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qobjectdefs.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qnamespace.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qglobal.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qconfig-bootstrapped.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qconfig.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtcore-config.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsystemdetection.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qprocessordetection.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcompilerdetection.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtypeinfo.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcontainerfwd.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsysinfo.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qlogging.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qflags.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qatomic.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbasicatomic.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qatomic_bootstrap.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qgenericatomic.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qatomic_msvc.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qglobalstatic.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmutex.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qnumeric.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qversiontagging.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtmetamacros.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstring.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qchar.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringview.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbytearray.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qrefcount.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qarraydata.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qpair.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qarraydatapointer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qarraydataops.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbytearrayalgorithms.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbytearrayview.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringliteral.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringalgorithms.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qanystringview.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qutf8stringview.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringtokenizer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringbuilder.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qlist.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qhashfunctions.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qiterator.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbytearraylist.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringlist.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qalgorithms.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringmatcher.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcoreevent.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qscopedpointer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmetatype.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcompare.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qvarlengtharray.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qdatastream.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qiodevicebase.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qiterable.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmetacontainer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcontainerinfo.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtaggedpointer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmath.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qobject_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qproperty.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qshareddata.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qpropertyprivate.h \
+		C:/QT/6.0.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
+		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qtguiglobal.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qtgui-config.h \
+		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qtwidgets-config.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qvariant.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmap.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qshareddata_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qhash.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qdebug.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtextstream.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringconverter.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qset.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsharedpointer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qrect.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmargins.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsize.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qpoint.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpainterpath.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qtransform.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpolygon.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qregion.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qwindowdefs.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qline.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpixmap.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpaintdevice.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qcolor.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qrgb.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qrgba64.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qimage.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpixelformat.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QString \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QTimer \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbasictimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\heroe.o ..\AW\heroe.cpp
 
 release/main.o: ../AW/main.cpp ../AW/mainwindow.h \
@@ -561,11 +1100,17 @@ release/main.o: ../AW/main.cpp ../AW/mainwindow.h \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/QGraphicsScene \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qgraphicsscene.h \
 		C:/QT/6.0.2/mingw81_64/include/QtGui/qpen.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/QKeyEvent \
 		../AW/objetoanimado.h \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
 		C:/QT/6.0.2/mingw81_64/include/QtGui/qpainterpath.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/QString \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QTimer \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbasictimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QDebug \
+		../AW/heroe.h \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/QApplication \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qapplication.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/qcoreapplication.h \
@@ -709,11 +1254,17 @@ release/mainwindow.o: ../AW/mainwindow.cpp ../AW/mainwindow.h \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/QGraphicsScene \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qgraphicsscene.h \
 		C:/QT/6.0.2/mingw81_64/include/QtGui/qpen.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/QKeyEvent \
 		../AW/objetoanimado.h \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
 		C:/QT/6.0.2/mingw81_64/include/QtGui/qpainterpath.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/QString \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QTimer \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbasictimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QDebug \
+		../AW/heroe.h \
 		ui_mainwindow.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/QVariant \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/QApplication \
@@ -844,7 +1395,11 @@ release/objetoanimado.o: ../AW/objetoanimado.cpp ../AW/objetoanimado.h \
 		C:/QT/6.0.2/mingw81_64/include/QtGui/qrgba64.h \
 		C:/QT/6.0.2/mingw81_64/include/QtGui/qimage.h \
 		C:/QT/6.0.2/mingw81_64/include/QtGui/qpixelformat.h \
-		C:/QT/6.0.2/mingw81_64/include/QtCore/QString
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QString \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QTimer \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbasictimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\objetoanimado.o ..\AW\objetoanimado.cpp
 
 release/proyectil.o: ../AW/proyectil.cpp ../AW/proyectil.h

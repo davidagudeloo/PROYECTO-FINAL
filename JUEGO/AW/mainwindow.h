@@ -3,8 +3,11 @@
 
 #include <QMainWindow>
 #include "QGraphicsScene"
+#include <QKeyEvent>
 #include "objetoanimado.h"
+#include "heroe.h"
 #include <QTimer>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,18 +19,26 @@ class MainWindow : public QMainWindow
 
 public slots:
     void animarHeroe();
+    void animarFondo();
 
 public:
+    void keyPressEvent(QKeyEvent * i);
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private:
     Ui::MainWindow *ui;
-
     QGraphicsScene * escena;
-    ObjetoAnimado * heroe;
 
+    //Creación de objetos
+    Heroe * heroe;
+    ObjetoAnimado * fondo;
+    ObjetoAnimado * piso;
+
+    //Creación de timers
     QTimer * timerHeroe;
+    QTimer * timerFondo;
+
 
 };
 #endif // MAINWINDOW_H
