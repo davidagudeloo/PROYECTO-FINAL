@@ -134,6 +134,36 @@ release/qrc_Imagenes.cpp: ../AW/Imagenes.qrc \
 		../AW/Image/imagenes\ piso/frame_2_delay-0.1s.png \
 		../AW/Image/imagenes\ piso/frame_7_delay-0.1s.png \
 		../AW/Image/imagenes\ piso/frame_5_delay-0.1s.png \
+		../AW/Image/Bala/frame_16_delay-0.06s.png \
+		../AW/Image/Bala/frame_8_delay-0.06s.png \
+		../AW/Image/Bala/frame_1_delay-0.06s.png \
+		../AW/Image/Bala/frame_3_delay-0.06s.png \
+		../AW/Image/Bala/frame_13_delay-0.06s.png \
+		../AW/Image/Bala/frame_5_delay-0.06s.png \
+		../AW/Image/Bala/frame_14_delay-0.06s.png \
+		../AW/Image/Bala/frame_15_delay-0.06s.png \
+		../AW/Image/Bala/frame_2_delay-0.06s.png \
+		../AW/Image/Bala/frame_0_delay-0.06s.png \
+		../AW/Image/Bala/frame_12_delay-0.06s.png \
+		../AW/Image/Bala/frame_6_delay-0.06s.png \
+		../AW/Image/Bala/frame_23_delay-0.06s.png \
+		../AW/Image/Bala/frame_27_delay-0.06s.png \
+		../AW/Image/Bala/frame_9_delay-0.06s.png \
+		../AW/Image/Bala/frame_20_delay-0.06s.png \
+		../AW/Image/Bala/frame_21_delay-0.06s.png \
+		../AW/Image/Bala/frame_22_delay-0.06s.png \
+		../AW/Image/Bala/frame_24_delay-0.06s.png \
+		../AW/Image/Bala/frame_26_delay-0.06s.png \
+		../AW/Image/Bala/frame_28_delay-0.06s.png \
+		../AW/Image/Bala/frame_4_delay-0.06s.png \
+		../AW/Image/Bala/frame_25_delay-0.06s.png \
+		../AW/Image/Bala/frame_11_delay-0.06s.png \
+		../AW/Image/Bala/frame_10_delay-0.06s.png \
+		../AW/Image/Bala/frame_17_delay-0.06s.png \
+		../AW/Image/Bala/frame_19_delay-0.06s.png \
+		../AW/Image/Bala/frame_18_delay-0.06s.png \
+		../AW/Image/Bala/frame_29_delay-0.06s.png \
+		../AW/Image/Bala/frame_7_delay-0.06s.png \
 		../AW/Image/imagenes\ heroe/frame_6_delay-0.08s.png \
 		../AW/Image/imagenes\ heroe/frame_2_delay-0.08s.png \
 		../AW/Image/imagenes\ heroe/frame_0_delay-0.08s.png \
@@ -599,9 +629,10 @@ release/moc_mainwindow.cpp: ../AW/mainwindow.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/qbasictimer.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/QDebug \
 		../AW/heroe.h \
+		../AW/proyectil.h \
 		release/moc_predefs.h \
 		C:/QT/6.0.2/mingw81_64/bin/moc.exe
-	C:\QT\6.0.2\mingw81_64\bin\moc.exe $(DEFINES) --include "C:/Users/ASUS/Desktop/Universidad/InformaticaII/PROYECTO FINAL INFORMATICAII/JUEGO/build-AW-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/QT/6.0.2/mingw81_64/mkspecs/win32-g++ -I"C:/Users/ASUS/Desktop/Universidad/InformaticaII/PROYECTO FINAL INFORMATICAII/JUEGO/AW" -IC:/QT/6.0.2/mingw81_64/include -IC:/QT/6.0.2/mingw81_64/include/QtWidgets -IC:/QT/6.0.2/mingw81_64/include/QtGui -IC:/QT/6.0.2/mingw81_64/include/QtCore -I. -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/QT/Tools/mingw810_64/x86_64-w64-mingw32/include ..\AW\mainwindow.h -o release\moc_mainwindow.cpp
+	C:\QT\6.0.2\mingw81_64\bin\moc.exe $(DEFINES) --include "C:/Users/Erika León Quiroga/Desktop/UNIVERSIDAD/SEMESTRE 2021-2/INFORMÁTICA II/PROYECTO FINAL/JUEGO/build-AW-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/QT/6.0.2/mingw81_64/mkspecs/win32-g++ -I"C:/Users/Erika León Quiroga/Desktop/UNIVERSIDAD/SEMESTRE 2021-2/INFORMÁTICA II/PROYECTO FINAL/JUEGO/AW" -IC:/QT/6.0.2/mingw81_64/include -IC:/QT/6.0.2/mingw81_64/include/QtWidgets -IC:/QT/6.0.2/mingw81_64/include/QtGui -IC:/QT/6.0.2/mingw81_64/include/QtCore -I. -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/QT/Tools/mingw810_64/x86_64-w64-mingw32/include ..\AW\mainwindow.h -o release\moc_mainwindow.cpp
 
 release/moc_objetoanimado.cpp: ../AW/objetoanimado.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/QObject \
@@ -715,7 +746,7 @@ release/moc_objetoanimado.cpp: ../AW/objetoanimado.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/QDebug \
 		release/moc_predefs.h \
 		C:/QT/6.0.2/mingw81_64/bin/moc.exe
-	C:\QT\6.0.2\mingw81_64\bin\moc.exe $(DEFINES) --include "C:/Users/ASUS/Desktop/Universidad/InformaticaII/PROYECTO FINAL INFORMATICAII/JUEGO/build-AW-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/QT/6.0.2/mingw81_64/mkspecs/win32-g++ -I"C:/Users/ASUS/Desktop/Universidad/InformaticaII/PROYECTO FINAL INFORMATICAII/JUEGO/AW" -IC:/QT/6.0.2/mingw81_64/include -IC:/QT/6.0.2/mingw81_64/include/QtWidgets -IC:/QT/6.0.2/mingw81_64/include/QtGui -IC:/QT/6.0.2/mingw81_64/include/QtCore -I. -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/QT/Tools/mingw810_64/x86_64-w64-mingw32/include ..\AW\objetoanimado.h -o release\moc_objetoanimado.cpp
+	C:\QT\6.0.2\mingw81_64\bin\moc.exe $(DEFINES) --include "C:/Users/Erika León Quiroga/Desktop/UNIVERSIDAD/SEMESTRE 2021-2/INFORMÁTICA II/PROYECTO FINAL/JUEGO/build-AW-Desktop_Qt_6_0_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/QT/6.0.2/mingw81_64/mkspecs/win32-g++ -I"C:/Users/Erika León Quiroga/Desktop/UNIVERSIDAD/SEMESTRE 2021-2/INFORMÁTICA II/PROYECTO FINAL/JUEGO/AW" -IC:/QT/6.0.2/mingw81_64/include -IC:/QT/6.0.2/mingw81_64/include/QtWidgets -IC:/QT/6.0.2/mingw81_64/include/QtGui -IC:/QT/6.0.2/mingw81_64/include/QtCore -I. -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/QT/Tools/mingw810_64/x86_64-w64-mingw32/include ..\AW\objetoanimado.h -o release\moc_objetoanimado.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1111,6 +1142,7 @@ release/main.o: ../AW/main.cpp ../AW/mainwindow.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/qbasictimer.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/QDebug \
 		../AW/heroe.h \
+		../AW/proyectil.h \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/QApplication \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qapplication.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/qcoreapplication.h \
@@ -1265,6 +1297,7 @@ release/mainwindow.o: ../AW/mainwindow.cpp ../AW/mainwindow.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/qbasictimer.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/QDebug \
 		../AW/heroe.h \
+		../AW/proyectil.h \
 		ui_mainwindow.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/QVariant \
 		C:/QT/6.0.2/mingw81_64/include/QtWidgets/QApplication \
@@ -1402,7 +1435,117 @@ release/objetoanimado.o: ../AW/objetoanimado.cpp ../AW/objetoanimado.h \
 		C:/QT/6.0.2/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\objetoanimado.o ..\AW\objetoanimado.cpp
 
-release/proyectil.o: ../AW/proyectil.cpp ../AW/proyectil.h
+release/proyectil.o: ../AW/proyectil.cpp ../AW/proyectil.h \
+		../AW/objetoanimado.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QObject \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qobject.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qobjectdefs.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qnamespace.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qglobal.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qconfig-bootstrapped.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qconfig.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtcore-config.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsystemdetection.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qprocessordetection.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcompilerdetection.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtypeinfo.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcontainerfwd.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsysinfo.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qlogging.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qflags.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qatomic.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbasicatomic.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qatomic_bootstrap.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qgenericatomic.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qatomic_msvc.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qglobalstatic.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmutex.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qnumeric.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qversiontagging.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtmetamacros.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstring.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qchar.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringview.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbytearray.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qrefcount.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qarraydata.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qpair.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qarraydatapointer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qarraydataops.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbytearrayalgorithms.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbytearrayview.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringliteral.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringalgorithms.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qanystringview.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qutf8stringview.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringtokenizer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringbuilder.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qlist.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qhashfunctions.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qiterator.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbytearraylist.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringlist.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qalgorithms.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringmatcher.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcoreevent.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qscopedpointer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmetatype.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcompare.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qvarlengtharray.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qdatastream.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qiodevicebase.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qiterable.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmetacontainer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcontainerinfo.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtaggedpointer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmath.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qobject_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qproperty.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qshareddata.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qpropertyprivate.h \
+		C:/QT/6.0.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
+		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qtguiglobal.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qtgui-config.h \
+		C:/QT/6.0.2/mingw81_64/include/QtWidgets/qtwidgets-config.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qvariant.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmap.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qshareddata_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qhash.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qdebug.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtextstream.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qstringconverter.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qset.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsharedpointer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qrect.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qmargins.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qsize.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qpoint.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpainterpath.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qtransform.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpolygon.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qregion.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qwindowdefs.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qline.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpixmap.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpaintdevice.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qcolor.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qrgb.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qrgba64.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qimage.h \
+		C:/QT/6.0.2/mingw81_64/include/QtGui/qpixelformat.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QString \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QTimer \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qtimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/qbasictimer.h \
+		C:/QT/6.0.2/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\proyectil.o ..\AW\proyectil.cpp
 
 release/reloj.o: ../AW/reloj.cpp ../AW/reloj.h

@@ -31,8 +31,12 @@ void MainWindow::animarFondo()
 {
     fondo->animar();
     piso->animar();
+}
 
-
+void MainWindow::MRUnivel1()
+{
+    bala->MRUnivel1();
+    bala->animar();
 }
 
 MainWindow::MainWindow(QWidget *parent)
@@ -57,6 +61,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(timerFondo, SIGNAL(timeout()), this, SLOT(animarFondo()));
     timerHeroe = new QTimer;
     connect(timerHeroe, SIGNAL(timeout()), this, SLOT(animarHeroe()));
+    timerbala = new QTimer;
+    connect(timerbala, SIGNAL(timeout()), this, SLOT(MRUnivel1())); //Movimiento de la bala
+
     cargarNivel1();
 
 }
@@ -75,8 +82,12 @@ void MainWindow::cargarNivel1()
     escena->addItem(piso);
     heroe = new Heroe(":/Image/imagenes heroe/frame_0_delay-0.08s.png",0,escena->height()-piso->getHeight()-100,100,100,8,":/Image/imagenes heroe/frame_","_delay-0.08s.png");
     escena->addItem(heroe);
+    bala = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width(),escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png",3,0);
+    escena->addItem(bala);
+
     timerFondo->start(100);
     timerHeroe->start(50);
+    timerbala->start(20);
 
 }
 
