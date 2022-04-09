@@ -26,6 +26,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene * escena;
@@ -38,6 +39,11 @@ private:
     //Creación de timers
     QTimer * timerHeroe;
     QTimer * timerFondo;
+
+    //funciones
+    void cargarNivel1();
+
+
 
 
 };
