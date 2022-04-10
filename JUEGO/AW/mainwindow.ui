@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>734</width>
-    <height>454</height>
+    <width>1366</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,10 +19,28 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>711</width>
-      <height>401</height>
+      <width>1366</width>
+      <height>680</height>
      </rect>
     </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLCDNumber" name="lcdVidas"/>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdTiempo"/>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -30,7 +48,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>734</width>
+     <width>1366</width>
      <height>20</height>
     </rect>
    </property>

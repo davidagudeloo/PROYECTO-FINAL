@@ -1,322 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>Image/imagenes heroe/frame_0_delay-0.08s.png</file>
-        <file>Image/imagenes heroe/frame_1_delay-0.08s.png</file>
-        <file>Image/imagenes heroe/frame_2_delay-0.08s.png</file>
-        <file>Image/imagenes heroe/frame_3_delay-0.08s.png</file>
-        <file>Image/imagenes heroe/frame_4_delay-0.08s.png</file>
-        <file>Image/imagenes heroe/frame_5_delay-0.08s.png</file>
-        <file>Image/imagenes heroe/frame_6_delay-0.08s.png</file>
-        <file>Image/imagenes heroe/frame_7_delay-0.08s.png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (1).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (2).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (3).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (4).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (5).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (6).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (7).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (8).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (9).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (10).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (11).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (12).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (13).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (14).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (15).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (16).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (17).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (18).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (19).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (20).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (21).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (22).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (23).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (24).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (25).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (26).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (27).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (28).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (29).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (30).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (31).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (32).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (33).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (34).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (35).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (36).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (37).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (38).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (39).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (40).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (41).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (42).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (43).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (44).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (45).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (46).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (47).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (48).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (49).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (50).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (51).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (52).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (53).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (54).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (55).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (56).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (57).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (58).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (59).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (60).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (61).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (62).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (63).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (64).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (65).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (66).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (67).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (68).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (69).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (70).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (71).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (72).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (73).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (74).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (75).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (76).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (77).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (78).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (79).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (80).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (81).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (82).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (83).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (84).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (85).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (86).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (87).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (88).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (89).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (90).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (91).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (92).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (93).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (94).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (95).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (96).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (97).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (98).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (99).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (100).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (101).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (102).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (103).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (104).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (105).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (106).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (107).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (108).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (109).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (110).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (111).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (112).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (113).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (114).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (115).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (116).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (117).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (118).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (119).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (120).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (121).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (122).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (123).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (124).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (125).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (126).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (127).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (128).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (129).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (130).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (131).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (132).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (133).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (134).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (135).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (136).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (137).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (138).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (139).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (140).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (141).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (142).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (143).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (144).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (145).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (146).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (147).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (148).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (149).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (150).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (151).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (152).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (153).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (154).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (155).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (156).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (157).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (158).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (159).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (160).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (161).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (162).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (163).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (164).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (165).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (166).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (167).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (168).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (169).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (170).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (171).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (172).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (173).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (174).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (175).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (176).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (177).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (178).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (179).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (180).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (181).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (182).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (183).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (184).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (185).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (186).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (187).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (188).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (189).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (190).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (191).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (192).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (193).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (194).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (195).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (196).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (197).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (198).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (199).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (200).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (201).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (202).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (203).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (204).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (205).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (206).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (207).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (208).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (209).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (210).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (211).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (212).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (213).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (214).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (215).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (216).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (217).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (218).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (219).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (220).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (221).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (222).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (223).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (224).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (225).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (226).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (227).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (228).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (229).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (230).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (231).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (232).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (233).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (234).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (235).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (236).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (237).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (238).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (239).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (240).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (241).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (242).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (243).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (244).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (245).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (246).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (247).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (248).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (249).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (250).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (251).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (252).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (253).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (254).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (255).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (256).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (257).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (258).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (259).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (260).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (261).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (262).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (263).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (264).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (265).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (266).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (267).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (268).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (269).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (270).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (271).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (272).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (273).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (274).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (275).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (276).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (277).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (278).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (279).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (280).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (281).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (282).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (283).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (284).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (285).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (286).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (287).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (288).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (289).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (290).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (291).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (292).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (293).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (294).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (295).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (296).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (297).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (298).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (299).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (300).png</file>
-        <file>Image/imagenes fondo bosque/fondoBosque (0).png</file>
-        <file>Image/imagenes piso/frame_0_delay-0.1s.png</file>
-        <file>Image/imagenes piso/frame_1_delay-0.1s.png</file>
-        <file>Image/imagenes piso/frame_2_delay-0.1s.png</file>
-        <file>Image/imagenes piso/frame_3_delay-0.1s.png</file>
-        <file>Image/imagenes piso/frame_4_delay-0.1s.png</file>
-        <file>Image/imagenes piso/frame_5_delay-0.1s.png</file>
-        <file>Image/imagenes piso/frame_6_delay-0.1s.png</file>
-        <file>Image/imagenes piso/frame_7_delay-0.1s.png</file>
         <file>Image/Bala/frame_0_delay-0.06s.png</file>
         <file>Image/Bala/frame_1_delay-0.06s.png</file>
         <file>Image/Bala/frame_2_delay-0.06s.png</file>
@@ -347,5 +30,333 @@
         <file>Image/Bala/frame_27_delay-0.06s.png</file>
         <file>Image/Bala/frame_28_delay-0.06s.png</file>
         <file>Image/Bala/frame_29_delay-0.06s.png</file>
+        <file>Image/menu/frame_0_delay-0.19s.png</file>
+        <file>Image/menu/frame_1_delay-0.19s.png</file>
+        <file>Image/enemigo1/frame_0_delay-0.08s.png</file>
+        <file>Image/enemigo1/frame_1_delay-0.08s.png</file>
+        <file>Image/enemigo1/frame_2_delay-0.08s.png</file>
+        <file>Image/enemigo1/frame_3_delay-0.08s.png</file>
+        <file>Image/enemigo1/frame_4_delay-0.08s.png</file>
+        <file>Image/enemigo1/frame_5_delay-0.08s.png</file>
+        <file>Image/fondo bosque/fondoBosque (0).png</file>
+        <file>Image/fondo bosque/fondoBosque (1).png</file>
+        <file>Image/fondo bosque/fondoBosque (2).png</file>
+        <file>Image/fondo bosque/fondoBosque (3).png</file>
+        <file>Image/fondo bosque/fondoBosque (4).png</file>
+        <file>Image/fondo bosque/fondoBosque (5).png</file>
+        <file>Image/fondo bosque/fondoBosque (6).png</file>
+        <file>Image/fondo bosque/fondoBosque (7).png</file>
+        <file>Image/fondo bosque/fondoBosque (8).png</file>
+        <file>Image/fondo bosque/fondoBosque (9).png</file>
+        <file>Image/fondo bosque/fondoBosque (10).png</file>
+        <file>Image/fondo bosque/fondoBosque (11).png</file>
+        <file>Image/fondo bosque/fondoBosque (12).png</file>
+        <file>Image/fondo bosque/fondoBosque (13).png</file>
+        <file>Image/fondo bosque/fondoBosque (14).png</file>
+        <file>Image/fondo bosque/fondoBosque (15).png</file>
+        <file>Image/fondo bosque/fondoBosque (16).png</file>
+        <file>Image/fondo bosque/fondoBosque (17).png</file>
+        <file>Image/fondo bosque/fondoBosque (18).png</file>
+        <file>Image/fondo bosque/fondoBosque (19).png</file>
+        <file>Image/fondo bosque/fondoBosque (20).png</file>
+        <file>Image/fondo bosque/fondoBosque (21).png</file>
+        <file>Image/fondo bosque/fondoBosque (22).png</file>
+        <file>Image/fondo bosque/fondoBosque (23).png</file>
+        <file>Image/fondo bosque/fondoBosque (24).png</file>
+        <file>Image/fondo bosque/fondoBosque (25).png</file>
+        <file>Image/fondo bosque/fondoBosque (26).png</file>
+        <file>Image/fondo bosque/fondoBosque (27).png</file>
+        <file>Image/fondo bosque/fondoBosque (28).png</file>
+        <file>Image/fondo bosque/fondoBosque (29).png</file>
+        <file>Image/fondo bosque/fondoBosque (30).png</file>
+        <file>Image/fondo bosque/fondoBosque (31).png</file>
+        <file>Image/fondo bosque/fondoBosque (32).png</file>
+        <file>Image/fondo bosque/fondoBosque (33).png</file>
+        <file>Image/fondo bosque/fondoBosque (34).png</file>
+        <file>Image/fondo bosque/fondoBosque (35).png</file>
+        <file>Image/fondo bosque/fondoBosque (36).png</file>
+        <file>Image/fondo bosque/fondoBosque (37).png</file>
+        <file>Image/fondo bosque/fondoBosque (38).png</file>
+        <file>Image/fondo bosque/fondoBosque (39).png</file>
+        <file>Image/fondo bosque/fondoBosque (40).png</file>
+        <file>Image/fondo bosque/fondoBosque (41).png</file>
+        <file>Image/fondo bosque/fondoBosque (42).png</file>
+        <file>Image/fondo bosque/fondoBosque (43).png</file>
+        <file>Image/fondo bosque/fondoBosque (44).png</file>
+        <file>Image/fondo bosque/fondoBosque (45).png</file>
+        <file>Image/fondo bosque/fondoBosque (46).png</file>
+        <file>Image/fondo bosque/fondoBosque (47).png</file>
+        <file>Image/fondo bosque/fondoBosque (48).png</file>
+        <file>Image/fondo bosque/fondoBosque (49).png</file>
+        <file>Image/fondo bosque/fondoBosque (50).png</file>
+        <file>Image/fondo bosque/fondoBosque (51).png</file>
+        <file>Image/fondo bosque/fondoBosque (52).png</file>
+        <file>Image/fondo bosque/fondoBosque (53).png</file>
+        <file>Image/fondo bosque/fondoBosque (54).png</file>
+        <file>Image/fondo bosque/fondoBosque (55).png</file>
+        <file>Image/fondo bosque/fondoBosque (56).png</file>
+        <file>Image/fondo bosque/fondoBosque (57).png</file>
+        <file>Image/fondo bosque/fondoBosque (58).png</file>
+        <file>Image/fondo bosque/fondoBosque (59).png</file>
+        <file>Image/fondo bosque/fondoBosque (60).png</file>
+        <file>Image/fondo bosque/fondoBosque (61).png</file>
+        <file>Image/fondo bosque/fondoBosque (62).png</file>
+        <file>Image/fondo bosque/fondoBosque (63).png</file>
+        <file>Image/fondo bosque/fondoBosque (64).png</file>
+        <file>Image/fondo bosque/fondoBosque (65).png</file>
+        <file>Image/fondo bosque/fondoBosque (66).png</file>
+        <file>Image/fondo bosque/fondoBosque (67).png</file>
+        <file>Image/fondo bosque/fondoBosque (68).png</file>
+        <file>Image/fondo bosque/fondoBosque (69).png</file>
+        <file>Image/fondo bosque/fondoBosque (70).png</file>
+        <file>Image/fondo bosque/fondoBosque (71).png</file>
+        <file>Image/fondo bosque/fondoBosque (72).png</file>
+        <file>Image/fondo bosque/fondoBosque (73).png</file>
+        <file>Image/fondo bosque/fondoBosque (74).png</file>
+        <file>Image/fondo bosque/fondoBosque (75).png</file>
+        <file>Image/fondo bosque/fondoBosque (76).png</file>
+        <file>Image/fondo bosque/fondoBosque (77).png</file>
+        <file>Image/fondo bosque/fondoBosque (78).png</file>
+        <file>Image/fondo bosque/fondoBosque (79).png</file>
+        <file>Image/fondo bosque/fondoBosque (80).png</file>
+        <file>Image/fondo bosque/fondoBosque (81).png</file>
+        <file>Image/fondo bosque/fondoBosque (82).png</file>
+        <file>Image/fondo bosque/fondoBosque (83).png</file>
+        <file>Image/fondo bosque/fondoBosque (84).png</file>
+        <file>Image/fondo bosque/fondoBosque (85).png</file>
+        <file>Image/fondo bosque/fondoBosque (86).png</file>
+        <file>Image/fondo bosque/fondoBosque (87).png</file>
+        <file>Image/fondo bosque/fondoBosque (88).png</file>
+        <file>Image/fondo bosque/fondoBosque (89).png</file>
+        <file>Image/fondo bosque/fondoBosque (90).png</file>
+        <file>Image/fondo bosque/fondoBosque (91).png</file>
+        <file>Image/fondo bosque/fondoBosque (92).png</file>
+        <file>Image/fondo bosque/fondoBosque (93).png</file>
+        <file>Image/fondo bosque/fondoBosque (94).png</file>
+        <file>Image/fondo bosque/fondoBosque (95).png</file>
+        <file>Image/fondo bosque/fondoBosque (96).png</file>
+        <file>Image/fondo bosque/fondoBosque (97).png</file>
+        <file>Image/fondo bosque/fondoBosque (98).png</file>
+        <file>Image/fondo bosque/fondoBosque (99).png</file>
+        <file>Image/fondo bosque/fondoBosque (100).png</file>
+        <file>Image/fondo bosque/fondoBosque (101).png</file>
+        <file>Image/fondo bosque/fondoBosque (102).png</file>
+        <file>Image/fondo bosque/fondoBosque (103).png</file>
+        <file>Image/fondo bosque/fondoBosque (104).png</file>
+        <file>Image/fondo bosque/fondoBosque (105).png</file>
+        <file>Image/fondo bosque/fondoBosque (106).png</file>
+        <file>Image/fondo bosque/fondoBosque (107).png</file>
+        <file>Image/fondo bosque/fondoBosque (108).png</file>
+        <file>Image/fondo bosque/fondoBosque (109).png</file>
+        <file>Image/fondo bosque/fondoBosque (110).png</file>
+        <file>Image/fondo bosque/fondoBosque (111).png</file>
+        <file>Image/fondo bosque/fondoBosque (112).png</file>
+        <file>Image/fondo bosque/fondoBosque (113).png</file>
+        <file>Image/fondo bosque/fondoBosque (114).png</file>
+        <file>Image/fondo bosque/fondoBosque (115).png</file>
+        <file>Image/fondo bosque/fondoBosque (116).png</file>
+        <file>Image/fondo bosque/fondoBosque (117).png</file>
+        <file>Image/fondo bosque/fondoBosque (118).png</file>
+        <file>Image/fondo bosque/fondoBosque (119).png</file>
+        <file>Image/fondo bosque/fondoBosque (120).png</file>
+        <file>Image/fondo bosque/fondoBosque (121).png</file>
+        <file>Image/fondo bosque/fondoBosque (122).png</file>
+        <file>Image/fondo bosque/fondoBosque (123).png</file>
+        <file>Image/fondo bosque/fondoBosque (124).png</file>
+        <file>Image/fondo bosque/fondoBosque (125).png</file>
+        <file>Image/fondo bosque/fondoBosque (126).png</file>
+        <file>Image/fondo bosque/fondoBosque (127).png</file>
+        <file>Image/fondo bosque/fondoBosque (128).png</file>
+        <file>Image/fondo bosque/fondoBosque (129).png</file>
+        <file>Image/fondo bosque/fondoBosque (130).png</file>
+        <file>Image/fondo bosque/fondoBosque (131).png</file>
+        <file>Image/fondo bosque/fondoBosque (132).png</file>
+        <file>Image/fondo bosque/fondoBosque (133).png</file>
+        <file>Image/fondo bosque/fondoBosque (134).png</file>
+        <file>Image/fondo bosque/fondoBosque (135).png</file>
+        <file>Image/fondo bosque/fondoBosque (136).png</file>
+        <file>Image/fondo bosque/fondoBosque (137).png</file>
+        <file>Image/fondo bosque/fondoBosque (138).png</file>
+        <file>Image/fondo bosque/fondoBosque (139).png</file>
+        <file>Image/fondo bosque/fondoBosque (140).png</file>
+        <file>Image/fondo bosque/fondoBosque (141).png</file>
+        <file>Image/fondo bosque/fondoBosque (142).png</file>
+        <file>Image/fondo bosque/fondoBosque (143).png</file>
+        <file>Image/fondo bosque/fondoBosque (144).png</file>
+        <file>Image/fondo bosque/fondoBosque (145).png</file>
+        <file>Image/fondo bosque/fondoBosque (146).png</file>
+        <file>Image/fondo bosque/fondoBosque (147).png</file>
+        <file>Image/fondo bosque/fondoBosque (148).png</file>
+        <file>Image/fondo bosque/fondoBosque (149).png</file>
+        <file>Image/fondo bosque/fondoBosque (150).png</file>
+        <file>Image/fondo bosque/fondoBosque (151).png</file>
+        <file>Image/fondo bosque/fondoBosque (152).png</file>
+        <file>Image/fondo bosque/fondoBosque (153).png</file>
+        <file>Image/fondo bosque/fondoBosque (154).png</file>
+        <file>Image/fondo bosque/fondoBosque (155).png</file>
+        <file>Image/fondo bosque/fondoBosque (156).png</file>
+        <file>Image/fondo bosque/fondoBosque (157).png</file>
+        <file>Image/fondo bosque/fondoBosque (158).png</file>
+        <file>Image/fondo bosque/fondoBosque (159).png</file>
+        <file>Image/fondo bosque/fondoBosque (160).png</file>
+        <file>Image/fondo bosque/fondoBosque (161).png</file>
+        <file>Image/fondo bosque/fondoBosque (162).png</file>
+        <file>Image/fondo bosque/fondoBosque (163).png</file>
+        <file>Image/fondo bosque/fondoBosque (164).png</file>
+        <file>Image/fondo bosque/fondoBosque (165).png</file>
+        <file>Image/fondo bosque/fondoBosque (166).png</file>
+        <file>Image/fondo bosque/fondoBosque (167).png</file>
+        <file>Image/fondo bosque/fondoBosque (168).png</file>
+        <file>Image/fondo bosque/fondoBosque (169).png</file>
+        <file>Image/fondo bosque/fondoBosque (170).png</file>
+        <file>Image/fondo bosque/fondoBosque (171).png</file>
+        <file>Image/fondo bosque/fondoBosque (172).png</file>
+        <file>Image/fondo bosque/fondoBosque (173).png</file>
+        <file>Image/fondo bosque/fondoBosque (174).png</file>
+        <file>Image/fondo bosque/fondoBosque (175).png</file>
+        <file>Image/fondo bosque/fondoBosque (176).png</file>
+        <file>Image/fondo bosque/fondoBosque (177).png</file>
+        <file>Image/fondo bosque/fondoBosque (178).png</file>
+        <file>Image/fondo bosque/fondoBosque (179).png</file>
+        <file>Image/fondo bosque/fondoBosque (180).png</file>
+        <file>Image/fondo bosque/fondoBosque (181).png</file>
+        <file>Image/fondo bosque/fondoBosque (182).png</file>
+        <file>Image/fondo bosque/fondoBosque (183).png</file>
+        <file>Image/fondo bosque/fondoBosque (184).png</file>
+        <file>Image/fondo bosque/fondoBosque (185).png</file>
+        <file>Image/fondo bosque/fondoBosque (186).png</file>
+        <file>Image/fondo bosque/fondoBosque (187).png</file>
+        <file>Image/fondo bosque/fondoBosque (188).png</file>
+        <file>Image/fondo bosque/fondoBosque (189).png</file>
+        <file>Image/fondo bosque/fondoBosque (190).png</file>
+        <file>Image/fondo bosque/fondoBosque (191).png</file>
+        <file>Image/fondo bosque/fondoBosque (192).png</file>
+        <file>Image/fondo bosque/fondoBosque (193).png</file>
+        <file>Image/fondo bosque/fondoBosque (194).png</file>
+        <file>Image/fondo bosque/fondoBosque (195).png</file>
+        <file>Image/fondo bosque/fondoBosque (196).png</file>
+        <file>Image/fondo bosque/fondoBosque (197).png</file>
+        <file>Image/fondo bosque/fondoBosque (198).png</file>
+        <file>Image/fondo bosque/fondoBosque (199).png</file>
+        <file>Image/fondo bosque/fondoBosque (200).png</file>
+        <file>Image/fondo bosque/fondoBosque (201).png</file>
+        <file>Image/fondo bosque/fondoBosque (202).png</file>
+        <file>Image/fondo bosque/fondoBosque (203).png</file>
+        <file>Image/fondo bosque/fondoBosque (204).png</file>
+        <file>Image/fondo bosque/fondoBosque (205).png</file>
+        <file>Image/fondo bosque/fondoBosque (206).png</file>
+        <file>Image/fondo bosque/fondoBosque (207).png</file>
+        <file>Image/fondo bosque/fondoBosque (208).png</file>
+        <file>Image/fondo bosque/fondoBosque (209).png</file>
+        <file>Image/fondo bosque/fondoBosque (210).png</file>
+        <file>Image/fondo bosque/fondoBosque (211).png</file>
+        <file>Image/fondo bosque/fondoBosque (212).png</file>
+        <file>Image/fondo bosque/fondoBosque (213).png</file>
+        <file>Image/fondo bosque/fondoBosque (214).png</file>
+        <file>Image/fondo bosque/fondoBosque (215).png</file>
+        <file>Image/fondo bosque/fondoBosque (216).png</file>
+        <file>Image/fondo bosque/fondoBosque (217).png</file>
+        <file>Image/fondo bosque/fondoBosque (218).png</file>
+        <file>Image/fondo bosque/fondoBosque (219).png</file>
+        <file>Image/fondo bosque/fondoBosque (220).png</file>
+        <file>Image/fondo bosque/fondoBosque (221).png</file>
+        <file>Image/fondo bosque/fondoBosque (222).png</file>
+        <file>Image/fondo bosque/fondoBosque (223).png</file>
+        <file>Image/fondo bosque/fondoBosque (224).png</file>
+        <file>Image/fondo bosque/fondoBosque (225).png</file>
+        <file>Image/fondo bosque/fondoBosque (226).png</file>
+        <file>Image/fondo bosque/fondoBosque (227).png</file>
+        <file>Image/fondo bosque/fondoBosque (228).png</file>
+        <file>Image/fondo bosque/fondoBosque (229).png</file>
+        <file>Image/fondo bosque/fondoBosque (230).png</file>
+        <file>Image/fondo bosque/fondoBosque (231).png</file>
+        <file>Image/fondo bosque/fondoBosque (232).png</file>
+        <file>Image/fondo bosque/fondoBosque (233).png</file>
+        <file>Image/fondo bosque/fondoBosque (234).png</file>
+        <file>Image/fondo bosque/fondoBosque (235).png</file>
+        <file>Image/fondo bosque/fondoBosque (236).png</file>
+        <file>Image/fondo bosque/fondoBosque (237).png</file>
+        <file>Image/fondo bosque/fondoBosque (238).png</file>
+        <file>Image/fondo bosque/fondoBosque (239).png</file>
+        <file>Image/fondo bosque/fondoBosque (240).png</file>
+        <file>Image/fondo bosque/fondoBosque (241).png</file>
+        <file>Image/fondo bosque/fondoBosque (242).png</file>
+        <file>Image/fondo bosque/fondoBosque (243).png</file>
+        <file>Image/fondo bosque/fondoBosque (244).png</file>
+        <file>Image/fondo bosque/fondoBosque (245).png</file>
+        <file>Image/fondo bosque/fondoBosque (246).png</file>
+        <file>Image/fondo bosque/fondoBosque (247).png</file>
+        <file>Image/fondo bosque/fondoBosque (248).png</file>
+        <file>Image/fondo bosque/fondoBosque (249).png</file>
+        <file>Image/fondo bosque/fondoBosque (250).png</file>
+        <file>Image/fondo bosque/fondoBosque (251).png</file>
+        <file>Image/fondo bosque/fondoBosque (252).png</file>
+        <file>Image/fondo bosque/fondoBosque (253).png</file>
+        <file>Image/fondo bosque/fondoBosque (254).png</file>
+        <file>Image/fondo bosque/fondoBosque (255).png</file>
+        <file>Image/fondo bosque/fondoBosque (256).png</file>
+        <file>Image/fondo bosque/fondoBosque (257).png</file>
+        <file>Image/fondo bosque/fondoBosque (258).png</file>
+        <file>Image/fondo bosque/fondoBosque (259).png</file>
+        <file>Image/fondo bosque/fondoBosque (260).png</file>
+        <file>Image/fondo bosque/fondoBosque (261).png</file>
+        <file>Image/fondo bosque/fondoBosque (262).png</file>
+        <file>Image/fondo bosque/fondoBosque (263).png</file>
+        <file>Image/fondo bosque/fondoBosque (264).png</file>
+        <file>Image/fondo bosque/fondoBosque (265).png</file>
+        <file>Image/fondo bosque/fondoBosque (266).png</file>
+        <file>Image/fondo bosque/fondoBosque (267).png</file>
+        <file>Image/fondo bosque/fondoBosque (268).png</file>
+        <file>Image/fondo bosque/fondoBosque (269).png</file>
+        <file>Image/fondo bosque/fondoBosque (270).png</file>
+        <file>Image/fondo bosque/fondoBosque (271).png</file>
+        <file>Image/fondo bosque/fondoBosque (272).png</file>
+        <file>Image/fondo bosque/fondoBosque (273).png</file>
+        <file>Image/fondo bosque/fondoBosque (274).png</file>
+        <file>Image/fondo bosque/fondoBosque (275).png</file>
+        <file>Image/fondo bosque/fondoBosque (276).png</file>
+        <file>Image/fondo bosque/fondoBosque (277).png</file>
+        <file>Image/fondo bosque/fondoBosque (278).png</file>
+        <file>Image/fondo bosque/fondoBosque (279).png</file>
+        <file>Image/fondo bosque/fondoBosque (280).png</file>
+        <file>Image/fondo bosque/fondoBosque (281).png</file>
+        <file>Image/fondo bosque/fondoBosque (282).png</file>
+        <file>Image/fondo bosque/fondoBosque (283).png</file>
+        <file>Image/fondo bosque/fondoBosque (284).png</file>
+        <file>Image/fondo bosque/fondoBosque (285).png</file>
+        <file>Image/fondo bosque/fondoBosque (286).png</file>
+        <file>Image/fondo bosque/fondoBosque (287).png</file>
+        <file>Image/fondo bosque/fondoBosque (288).png</file>
+        <file>Image/fondo bosque/fondoBosque (289).png</file>
+        <file>Image/fondo bosque/fondoBosque (290).png</file>
+        <file>Image/fondo bosque/fondoBosque (291).png</file>
+        <file>Image/fondo bosque/fondoBosque (292).png</file>
+        <file>Image/fondo bosque/fondoBosque (293).png</file>
+        <file>Image/fondo bosque/fondoBosque (294).png</file>
+        <file>Image/fondo bosque/fondoBosque (295).png</file>
+        <file>Image/fondo bosque/fondoBosque (296).png</file>
+        <file>Image/fondo bosque/fondoBosque (297).png</file>
+        <file>Image/fondo bosque/fondoBosque (298).png</file>
+        <file>Image/fondo bosque/fondoBosque (299).png</file>
+        <file>Image/fondo bosque/fondoBosque (300).png</file>
+        <file>Image/heroe/frame_0_delay-0.08s.png</file>
+        <file>Image/heroe/frame_1_delay-0.08s.png</file>
+        <file>Image/heroe/frame_2_delay-0.08s.png</file>
+        <file>Image/heroe/frame_3_delay-0.08s.png</file>
+        <file>Image/heroe/frame_4_delay-0.08s.png</file>
+        <file>Image/heroe/frame_5_delay-0.08s.png</file>
+        <file>Image/heroe/frame_6_delay-0.08s.png</file>
+        <file>Image/heroe/frame_7_delay-0.08s.png</file>
+        <file>Image/piso/frame_0_delay-0.1s.png</file>
+        <file>Image/piso/frame_1_delay-0.1s.png</file>
+        <file>Image/piso/frame_2_delay-0.1s.png</file>
+        <file>Image/piso/frame_3_delay-0.1s.png</file>
+        <file>Image/piso/frame_4_delay-0.1s.png</file>
+        <file>Image/piso/frame_5_delay-0.1s.png</file>
+        <file>Image/piso/frame_6_delay-0.1s.png</file>
+        <file>Image/piso/frame_7_delay-0.1s.png</file>
+        <file>Image/menu/titulo menu0.png</file>
+        <file>Image/imagenes de apoyo/lose.gif</file>
+        <file>Image/imagenes de apoyo/win.gif</file>
     </qresource>
 </RCC>

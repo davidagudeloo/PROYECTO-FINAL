@@ -2,6 +2,7 @@
 #define PROYECTIL_H
 
 #include "objetoanimado.h"
+#include "heroe.h"
 
 class Proyectil : public ObjetoAnimado
 {
@@ -14,10 +15,10 @@ public:
     Proyectil(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath, int velInical, int frecAparicion);
 
     //Métodos
-    void actualizarPosProyectil(); //Cambia el movimiento del proyectil dependiendo del nivel
-    void colisionProyectilHeroe();
-    void MParabolicoNivel2();
-    void MRUnivel1();
+    void actualizarPosProyectil(Heroe * heroe); //Cambia el movimiento del proyectil dependiendo del nivel
+    void MRUnivel1(Heroe * heroe);
+    void colisionProyectilHeroe(Heroe * heroe);
+    void MParabolicoNivel2();//no se ha hecho
 };
 
 

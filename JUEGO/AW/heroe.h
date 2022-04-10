@@ -10,10 +10,11 @@ private:
     int vidas=3;
     bool poderDisponible=false;
     int nivelActual=1;
+    bool isDead=false;
 
 public:
     //Atributos globales
-    float vely=40;
+    float vely=60;
     bool estaSaltando=false;
 
     //Constructor
@@ -22,6 +23,10 @@ public:
 
     //Métodos
     void actualizarPosY();
+    void setVidas(int value);
+    int getVidas() const;
+    bool getIsDead() const;
+    void setIsDead(bool value);
 };
 
 #endif // HEROE_H

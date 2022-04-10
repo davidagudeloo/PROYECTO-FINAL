@@ -7,6 +7,8 @@
 #include "objetoanimado.h"
 #include "heroe.h"
 #include "proyectil.h"
+#include "enemigo.h"
+#include "reloj.h"
 #include <QTimer>
 
 
@@ -21,7 +23,9 @@ class MainWindow : public QMainWindow
 public slots:
     void animarHeroe();
     void animarFondo();
-    void MRUnivel1();
+    void animarProyectil();
+
+    void contarSegundos();
 
 public:
     void keyPressEvent(QKeyEvent * i);
@@ -38,14 +42,19 @@ private:
     ObjetoAnimado * fondo;
     ObjetoAnimado * piso;
     Proyectil * bala;
+    Enemigo * enemigo;
+    Reloj * reloj;
+    ObjetoAnimado * fondoAux;
 
     //Creación de timers
     QTimer * timerHeroe;
     QTimer * timerFondo;
-     QTimer *timerbala;
+    QTimer *timerbala;
+    QTimer * timerSegundos;
 
     //funciones
     void cargarNivel1();
+    void menu();
 
 
 

@@ -10,6 +10,17 @@ int ObjetoAnimado::getHeight() const
     return height;
 }
 
+int ObjetoAnimado::getPosix() const
+{
+    return posix;
+}
+
+int ObjetoAnimado::getPosiy() const
+{
+    return posiy;
+}
+
+
 ObjetoAnimado::ObjetoAnimado(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath)
 {
     setPixmap(QPixmap(name).scaled(w,h));

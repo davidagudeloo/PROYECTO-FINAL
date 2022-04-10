@@ -26,7 +26,7 @@ private:
 public:
     //Atributos globales
     float delta=0.08;
-    float g =9.8;
+    float g =12;
 
     //Constructor
     ObjetoAnimado(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath);
@@ -37,6 +37,8 @@ public:
 
     int getWidth() const;
     int getHeight() const;
+    int getPosix() const;
+    int getPosiy() const;
 };
 
 #endif // OBJETOANIMADO_H
