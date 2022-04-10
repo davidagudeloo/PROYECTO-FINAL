@@ -73,9 +73,40 @@ En este informe veremos el desarrollo del proyecto final de la materia Informát
         \item Agregar métodos de las clases que heredan de Objeto animado, como héroe, enemigo, proyectil, reloj.
         \item Método de proyectil que mueve y verifica la colisión con otros objetos del mismo.
         \item Agregar el método que creará el nivel uno.
-        
-    
     \end{itemize}
+    
+    \item Domingo 10 de Abril:
+    \begin{itemize}
+        \item Buscar ecuaciones de péndulo.
+        \item Conectar las vidas, y el tiempo con la finalización del nivel.
+        \item Agregar el menú.
+        \item Personalizar el menú.
+    \end{itemize}
+    
+    \item Lunes 11 de Abril:
+    \begin{itemize}
+        \item Modelar el comportamiento del péndulo.
+        \item Terminar nivel uno.
+    \end{itemize}
+    
+    \item Martes 12 de Abril:
+    \begin{itemize}
+        \item Empezar a trabajar en el guardado del juego.
+        \item Ecuaciones para el resorte y el movimiento parabólico.
+    \end{itemize}
+    
+    \item Miércoles 13 de Abril:
+    \begin{itemize}
+        \item Modelar proyectil de nivel dos.
+    \end{itemize}
+    
+    \item Jueves 14 de Abril:
+    \begin{itemize}
+        \item Modelar el comportamiento del péndulo.
+        \item Cargar nivel 2.
+    \end{itemize}
+    
+    
 \end{itemize}
 
 \section{Desarrollo del proyecto.}
@@ -84,7 +115,6 @@ Para el desarrollo del proyecto Artic Wolf: Saving the Family, se tuvo en cuenta
 En los días \textbf{Jueves 7 y Viernes 8 de abril} se comenzó por crear el proyecto con la clase padre Objeto animado con sus respectivos atributos y métodos, y sus clases hijas Heroe, Enemigo, Proyectil y Reloj.
 En la clase objeto animado se realizaron varios cambios con respecto a lo planeado en el informe de clases. Esto porque a medida que se va escribiendo el código se encuentran formas más efectivas de realizar ciertas tareas que las que ya se tenían planeadas. Sin embargo, el uso del informe de Clases es fundamental para la asignación de tareas y la realización del avance del proyecto.
 
-\newpage
 \begin{figure}[h]
 \includegraphics[scale=0.5]{Images/ObjetoAnimado.png}
 \centering
@@ -100,6 +130,14 @@ En la clase objeto animado se realizaron varios cambios con respecto a lo planea
 \end{figure}
 
 Con los cambios realizados en la clase objeto animado se logró obtener el movimiento esperado en los objetos que se muestran en la escena, esto con ayuda del método animar y stringPath los cuales siguen cumpliendo las mismas funciones que se les asignaron en la parte de planeación del proyecto. El método stringPath recibe el número de la imagen de la cuál se requiere su path y luego lo retorna. La función animar utiliza el método anterior para conocer el camino a la imagen y haciendo uso de actualFrame como parámetro del método stringPath logra ir cambiando el frame de tal forma que cuando sea llamada, estos varíen y den la impresión de movimiento.
+
+\newpage
+\begin{figure}[h]
+\includegraphics[scale=0.6]{Images/animacionInicial.png}
+\centering
+\caption{Pruebas del funcionamiento de la clase objeto animado.}
+\label{fig:animacion1}
+\end{figure}
 
 \begin{figure}[h]
 \includegraphics[scale=0.6]{Images/animaciones.png}
@@ -118,15 +156,61 @@ El \textbf{Sábado 9 de abril} se empezó con la creación de la clase padre Niv
 \label{fig:niveles}
 \end{figure}
 
-Sin embargo, nos dimos cuenta que la función que le otorgamos a estas clases en la planeación podría ser reemplazada por un método en el MainWindow que realice la misma función, en este método se agregarían todos los objetos necesarios para crear el nivel correspondiente.
+Sin embargo, nos dimos cuenta que la función que le otorgamos a estas clases en la planeación podría ser reemplazada por un \textbf{método en el MainWindow} que realice la misma función, en este método se agregarían todos los objetos necesarios para crear el nivel correspondiente. Por lo tanto la clase padre nivel y sus hijas son descartadas.
 
+Este mismo día se comienza con el modelamiento del proyectil del nivel 1, para esto utilizamos el planteamiento de la clase proyectil que se realizó en el informe de clases.
 
+\begin{figure}[h]
+\includegraphics[scale=0.5]{Images/proyectil.png}
+\centering
+\caption{Clase nivel planeada en el informe de clases.}
+\label{fig:proyectil}
+\end{figure}
 
-Ir mostrando el avance en imágenes
-Las clases niveles serán reemplazadas por métodos de la clase mainwindow
+Se trabaja en la colisión entre el proyectil y el escenario, tratando de que cada que el proyectil salga de este se borre de la escena y se cree un nuevo proyectil, pero el borrado de este objeto provocaba conflictos en el proyecto por lo que se decidió que no se borraría el objeto sino que se le haría una especie de Reset a su posición, de esta forma no se estarían creando y borrando nuevos objetos sino que siempre es el mismo, y cuando sale de la escena o se choca con el héroe vuelve a su posición inicial.
+El movimiento automático del proyectil se logra haciendo uso de un Timer y conectándolo con las ecuaciones de movimiento del proyectil del nivel 1.
 
-    
+\begin{figure}[h]
+\includegraphics[scale=0.55]{Images/proyectil1.png}
+\centering
+\caption{Pruebas de la animación y la colisión entre el proyectil y la pared.}
+\label{fig:proyectil1}
+\end{figure}
 
+\begin{figure}[h]
+\includegraphics[scale=0.55]{Images/proyectil2.png}
+\centering
+\caption{Pruebas de la animación y la colisión entre el proyectil y la pared.}
+\label{fig:proyectil2}
+\end{figure}
+
+El \textbf{Domingo 10 de abril} se agregó la animación del enemigo, se ajustó la ventana de GraphicsView y el tamaño de todos los objetos en la escena.
+
+\begin{figure}[h]
+\includegraphics[scale=0.4]{Images/tamaniobjetosajustado.png}
+\centering
+\caption{Ajuste del tamaño de los objetos de la escena.}
+\label{fig:ajustetamanio}
+\end{figure}
+
+También se agregó el contador de las vidas y del tiempo de la partida como podremos ver en la siguiente imagen (\ref{fig:vidastiempo}), estos contadores se ubicarán en la parte superior izquierda de la escena, en la imagen de demostración están encerrados en un recuadro rojo para ubicarlos de la manera más sencilla. El tiempo irá disminuyendo conforme transcurre la partida con ayuda de un Timer. Las vidas disminuirán cada que un proyectil choque con el héroe y esto será codificado en el método de la clase proyectil en donde se verifica la colisión entre el héroe y el proyectil.
+
+\newpage
+\begin{figure}[h]
+\includegraphics[scale=0.45]{Images/tiempovidas.png}
+\centering
+\caption{Reloj y vidas del héroe puestas en pantalla.}
+\label{fig:vidastiempo}
+\end{figure}
+
+Se hicieron pruebas para agregar la pantalla del menú, la cuál aparecerá cuando se corra el juego y una vez se presione la techa I del teclado iniciará la partida con tres vidas y 120 segundos en el contador del tiempo de la partida. Esto se hará con un KeyPressEvent y un if que al presionar la tecla determinada iniciará el método del MainWindow encargado de crear los objetos del nivel 1.
+
+\begin{figure}[h]
+\includegraphics[scale=1.5]{Images/keyi.png}
+\centering
+\caption{Condicional encargado de iniciar el nivel 1 cuando se presione la tecla I.}
+\label{fig:vidastiempo}
+\end{figure}
 
 
 

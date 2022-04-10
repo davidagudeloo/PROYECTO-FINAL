@@ -88,8 +88,7 @@ MainWindow::MainWindow(QWidget *parent)
     timerSegundos = new QTimer;
     connect(timerSegundos, SIGNAL(timeout()), this, SLOT(contarSegundos())); //Movimiento de la bala
 
-    //menu();
-    cargarNivel1();
+    menu();
 }
 
 MainWindow::~MainWindow()
