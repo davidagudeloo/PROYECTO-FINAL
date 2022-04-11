@@ -24,6 +24,7 @@ public slots:
     void animarHeroe();
     void animarFondo();
     void animarProyectil();
+    void animarEnemigo();
 
     void contarSegundos();
 
@@ -44,13 +45,16 @@ private:
     Proyectil * bala;
     Enemigo * enemigo;
     Reloj * reloj;
+    Reloj * pendulo;
     ObjetoAnimado * fondoAux;
+    ObjetoAnimado * corazon;
 
     //Creación de timers
     QTimer * timerHeroe;
     QTimer * timerFondo;
     QTimer *timerbala;
     QTimer * timerSegundos;
+    QTimer * timerEnemigo;
 
     //funciones
     void cargarNivel1();

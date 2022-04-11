@@ -358,5 +358,8 @@
         <file>Image/menu/titulo menu0.png</file>
         <file>Image/imagenes de apoyo/lose.gif</file>
         <file>Image/imagenes de apoyo/win.gif</file>
+        <file>Image/imagenes de apoyo/pendulo.png</file>
+        <file>Image/imagenes de apoyo/reloj.png</file>
+        <file>Image/imagenes de apoyo/corazon0.png</file>
     </qresource>
 </RCC>

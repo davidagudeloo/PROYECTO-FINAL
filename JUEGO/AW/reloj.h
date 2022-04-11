@@ -14,14 +14,15 @@ private:
     float posA[2]; //coordenada (x,y) del inicio del péndulo
     float posB[2]; //coordenada (x,y) del final del péndulo
     float L; //largo del pendulo
-    float angulo;
+    float anguloInicial;
+    int tiempoms=1000;
 
 public:
     //Constructor
     Reloj(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath);
 
     //Constructor del pendulo
-    Reloj(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath, float posA, float posB, float L, float angulo);
+    Reloj(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath, float x, float y, float L, float anguloInicial);
 
 
     //Métodos
