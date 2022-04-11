@@ -20,6 +20,16 @@ void Heroe::setIsDead(bool value)
     isDead = value;
 }
 
+int Heroe::getNivelActual() const
+{
+    return nivelActual;
+}
+
+void Heroe::setNivelActual(int value)
+{
+    nivelActual = value;
+}
+
 Heroe::Heroe(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath, int vidas, bool poderDisponible, int nivelActual) : ObjetoAnimado(name, posix, posiy, w, h, numFrames, initialPath, finalPath)
 {
     this->vidas=vidas;

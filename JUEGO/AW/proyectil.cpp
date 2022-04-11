@@ -11,9 +11,9 @@ void Proyectil::MRUnivel1(Heroe * heroe)
 {
     colisionProyectilHeroe(heroe);
     setX(x()-velInicial);
-    if(x()<-72){
+    if(x()< -getWidth()){
         setPos(getPosix(), getPosiy()); //Reincia la posicion del proyectil
-        velInicial=5;
+        velInicial=(rand()%7+4);
     }
 
 }
@@ -21,7 +21,13 @@ void Proyectil::MRUnivel1(Heroe * heroe)
 void Proyectil::actualizarPosProyectil(Heroe * heroe)
 {
     //if que cambiará la actualizacion del proyectil dependiendo del nivel
-    MRUnivel1(heroe);
+    if(heroe->getNivelActual()==1){
+        MRUnivel1(heroe);
+    }
+    else{
+        MParabolicoNivel2(heroe);
+    }
+
 }
 
 void Proyectil::colisionProyectilHeroe(Heroe * heroe)
@@ -32,5 +38,26 @@ void Proyectil::colisionProyectilHeroe(Heroe * heroe)
             heroe->setIsDead(true);
         }
         setPos(getPosix(),getPosiy());
+    }
+}
+
+void Proyectil::MParabolicoNivel2(Heroe * heroe)
+{
+    colisionProyectilHeroe(heroe);
+    float velx=velResorte*cos(ang);
+    float vely=velResorte*sin(ang)-g*delta;
+    velResorte=sqrt((velx*velx)+(vely*vely));
+    ang=atan2(vely, velx);
+    setX(x()-velx*delta);
+    setY(y()-vely*delta+0.5*g*delta*delta);
+    if(y()>heroe->getPosiy()+200){
+        setPos(getPosix(), getPosiy()); //Reincia la posicion del proyectil
+        ang=45*(M_PI/180); //pasa el ángulo a grados
+        //temp
+        velResorte+=10; //aquí debe ir la función del resorte
+        if(velResorte>=120){
+            velResorte=40;
+        }
+
     }
 }

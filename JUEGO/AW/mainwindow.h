@@ -58,6 +58,7 @@ private:
 
     //funciones
     void cargarNivel1();
+    void cargarNivel2();
     void menu();
 };
 #endif // MAINWINDOW_H

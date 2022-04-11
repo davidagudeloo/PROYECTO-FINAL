@@ -16,6 +16,7 @@ public:
     //Atributos globales
     float vely=60;
     bool estaSaltando=false;
+    bool estaAgachado=false;
 
     //Constructor
     Heroe(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath, int vidas, bool poderDisponible, int nivelActual);
@@ -27,6 +28,8 @@ public:
     int getVidas() const;
     bool getIsDead() const;
     void setIsDead(bool value);
+    int getNivelActual() const;
+    void setNivelActual(int value);
 };
 
 #endif // HEROE_H

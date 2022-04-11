@@ -8,7 +8,7 @@ class Reloj : public ObjetoAnimado
 {
 private:
     //Atributos
-    int tiempoPartida=120;
+    int tiempoPartida=40;
 
 
     float posA[2]; //coordenada (x,y) del inicio del péndulo
