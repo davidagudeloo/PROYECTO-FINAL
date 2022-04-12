@@ -7,7 +7,7 @@ class Enemigo : public ObjetoAnimado
 {
 private:
     //Atributos
-    int nivelDeDificultad;
+    int nivelDeDificultad=1;
 
 public:
     //Constructor

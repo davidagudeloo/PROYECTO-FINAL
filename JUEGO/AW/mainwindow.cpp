@@ -8,11 +8,29 @@ void MainWindow::keyPressEvent(QKeyEvent *i)
             heroe->estaSaltando=true;
             heroe->setPixmap(QPixmap(":/Image/heroe/frame_4_delay-0.08s.png").scaled(heroe->getWidth(), heroe->getHeight()));
         }
-        if(i->key() == Qt::Key_S){
+        else if(i->key() == Qt::Key_S){
             heroe->estaAgachado=true;
             heroe->setPixmap(QPixmap(":/Image/heroe/frame_2_delay-0.08s.png").scaled(heroe->getWidth(), heroe->getHeight()));
 
         }
+        //guardar
+        if(i->key() == Qt::Key_G){
+            archivo->escribirDatos("datos.txt", heroe, reloj);
+
+        }
+        //cargar
+        if(i->key() == Qt::Key_C){
+            archivo->seQuiereCargar=true;
+            archivo->leerDatos("datos.txt", heroe, reloj);
+            if(heroe->getNivelActual()==1){
+                cargarNivel1();
+            }
+            else if(heroe->getNivelActual()==2){
+                cargarNivel2();
+
+            }
+        }
+
     }
 
     if(i->key() == Qt::Key_I){
@@ -122,12 +140,31 @@ MainWindow::MainWindow(QWidget *parent)
 
     srand(time(NULL)); //inicializo la semilla aleatoria
     menu();
+    archivo = new ArchivoInformacion();
+
 
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete heroe;
+    delete fondo;
+    delete piso;
+    delete bala;
+    delete enemigo;
+    delete reloj;
+    delete pendulo;
+    delete fondoAux;
+    delete corazon;
+    delete archivo;
+
+
+    delete timerHeroe;
+    delete timerFondo;
+    delete timerbala;
+    delete timerSegundos;
+    delete timerEnemigo;
 }
 
 void MainWindow::cargarNivel1()
@@ -141,6 +178,7 @@ void MainWindow::cargarNivel1()
     escena->addItem(piso);
 
     bala = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png",4,0);
+
     escena->addItem(bala);
     enemigo = new Enemigo(":/Image/enemigo1/frame_0_delay-0.08s.png",escena->width()-300,escena->height()-piso->getHeight()-100,300,100,6,":/Image/enemigo1/frame_","_delay-0.08s.png");
     escena->addItem(enemigo);
@@ -150,11 +188,14 @@ void MainWindow::cargarNivel1()
     escena->addItem(pendulo);
     corazon = new ObjetoAnimado(":/Image/imagenes de apoyo/corazon0.png",310,65,40,40,1,"-","-");
     escena->addItem(corazon);
-
+    if(archivo->seQuiereCargar){
+        archivo->leerDatos("datos.txt", heroe, reloj);
+        archivo->seQuiereCargar=false;
+    }
     ui->lcdVidas->show();
     ui->lcdTiempo->show();
     ui->lcdVidas->display(heroe->getVidas());
-    ui->lcdTiempo->display(reloj->getTiempoPartida());
+    ui->lcdTiempo->display("--");
 
 
 
@@ -186,11 +227,14 @@ void MainWindow::cargarNivel2()
     escena->addItem(pendulo);
     corazon = new ObjetoAnimado(":/Image/imagenes de apoyo/corazon0.png",310,65,40,40,1,"-","-");
     escena->addItem(corazon);
-
+    if(archivo->seQuiereCargar){
+        archivo->leerDatos("datos.txt", heroe, reloj);
+        archivo->seQuiereCargar=false;
+    }
     ui->lcdVidas->show();
     ui->lcdTiempo->show();
     ui->lcdVidas->display(heroe->getVidas());
-    ui->lcdTiempo->display(reloj->getTiempoPartida());
+    ui->lcdTiempo->display("--");
 
 
 

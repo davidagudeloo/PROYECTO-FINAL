@@ -10,6 +10,7 @@
 #include "enemigo.h"
 #include "reloj.h"
 #include <QTimer>
+#include "archivoinformacion.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -49,10 +50,12 @@ private:
     ObjetoAnimado * fondoAux;
     ObjetoAnimado * corazon;
 
+    ArchivoInformacion * archivo;
+
     //Creación de timers
     QTimer * timerHeroe;
     QTimer * timerFondo;
-    QTimer *timerbala;
+    QTimer * timerbala;
     QTimer * timerSegundos;
     QTimer * timerEnemigo;
 
