@@ -22,8 +22,9 @@ public:
     //Métodos
     void actualizarPosProyectil(Heroe * heroe); //Cambia el movimiento del proyectil dependiendo del nivel
     void MRUnivel1(Heroe * heroe);
-    void colisionProyectilHeroe(Heroe * heroe);
-    void MParabolicoNivel2(Heroe * heroe);//no se ha hecho
+    void colisionProyectilHeroe(Heroe * heroe); //Verifica la colisión entre el proyectil y el héroe
+    void MParabolicoNivel2(Heroe * heroe);
+    float velocidadInicialResorte();
 };
 
 

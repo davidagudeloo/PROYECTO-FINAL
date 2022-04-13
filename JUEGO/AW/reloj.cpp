@@ -36,7 +36,6 @@ void Reloj::movPendulo()
 {
 
     float w=sqrt(9.8/L);
-    //float angulo=anguloInicial*cos(w*delta);
     float angulo=anguloInicial*cos(w*tiempoms/1000);
 
     posB[0]=posA[0]+L*sin(angulo*(M_PI/180));
@@ -44,12 +43,6 @@ void Reloj::movPendulo()
     setPos(posB[0],posB[1]);
 
     tiempoms+=1000;
-
-
-    //longitud 1m
-    /*setX(x());
-    setY(y()-vely*delta+0.5*g*delta*delta);
-    vely=vely-g*delta;*/
 }
 
 

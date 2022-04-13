@@ -87,6 +87,14 @@ En este informe veremos el desarrollo del proyecto final de la materia Informát
     \begin{itemize}
         \item Modelar el comportamiento del péndulo.
         \item Terminar nivel uno.
+        
+        \item Tareas faltantes:
+        \begin{itemize}
+            \item Asignar botones de comandos.
+            \item Diseñar la imagen del menú con los comandos previamente establecidos.
+            \item Diseñar pantallas de información, como las intrucciones, la historia. Y pantallas de carga como el cambio de nivel.
+            \item Implementar el poder del héroe.
+        \end{itemize}
     \end{itemize}
     
     \item Martes 12 de Abril:
@@ -197,21 +205,86 @@ También se agregó el contador de las vidas y del tiempo de la partida como pod
 
 \newpage
 \begin{figure}[h]
-\includegraphics[scale=0.45]{Images/tiempovidas.png}
+\includegraphics[scale=0.4]{Images/tiempovidas.png}
 \centering
 \caption{Reloj y vidas del héroe puestas en pantalla.}
 \label{fig:vidastiempo}
 \end{figure}
 
-Se hicieron pruebas para agregar la pantalla del menú, la cuál aparecerá cuando se corra el juego y una vez se presione la techa I del teclado iniciará la partida con tres vidas y 120 segundos en el contador del tiempo de la partida. Esto se hará con un KeyPressEvent y un if que al presionar la tecla determinada iniciará el método del MainWindow encargado de crear los objetos del nivel 1.
+Se hicieron pruebas para agregar la pantalla del menú, la cuál aparecerá cuando se corra el juego y una vez se presione la tecla I del teclado iniciará la partida con tres vidas y 120 segundos en el contador del tiempo de la partida. Esto se hará con un KeyPressEvent y un if que al presionar la tecla determinada iniciará el método del MainWindow encargado de crear los objetos del nivel 1.
 
 \begin{figure}[h]
-\includegraphics[scale=1.5]{Images/keyi.png}
+\includegraphics[scale=0.4]{Images/pantallainicio.png}
 \centering
-\caption{Condicional encargado de iniciar el nivel 1 cuando se presione la tecla I.}
-\label{fig:vidastiempo}
+\caption{Pantalla que mostrará el menú.}
+\label{fig:pantallamenu}
 \end{figure}
 
+\newpage
+\begin{figure}[h]
+\includegraphics[scale=1]{Images/keyi.png}
+\centering
+\caption{Condicional encargado de iniciar el nivel 1 cuando se presione la tecla I.}
+\label{fig:if}
+\end{figure}
+
+ \textbf{PROBLEMAS:} La animación del héroe tiene problemas en el momento en el que el héroe se encuentra realizando un salto. Esto se debe a que la animación del enemigo se encuentra dentro del SLOT de animación del héroe para ahorrar líneas de código.
+ \newline
+ \textbf{POSIBLES SOLUCIONES: }Una de las posibles soluciones es meter la animación del enemigo dentro de otro SLOT de animación que ya exista, como el del fondo o el proyectil para de esta forma seguir ahorrando líneas de código. La otra opción es simplemente crear un nuevo SLOT que se encargue de la animación del enemigo.
+ \newline
+ 
+
+El \textbf{Lunes 11 de abril} se comenzó solucionando el problema que se venía presentando con la animación del enemigo, se probaron las dos posibles soluciones planteadas y se tomó la decisión de crear un nuevo SLOT para la animación del enemigo así esto conllevara líneas extras de código. Luego de que el problema anterior fue solucionado se procedió a realizar el modelamiento del péndulo y la descripción de este movimiento con ayuda de un diagrama de cuerpo libre y las ecuaciones. 
+
+\begin{figure}[h]
+\includegraphics[scale=0.6]{Images/diagramapendulo.png}
+\centering
+\caption{Diagrama de cuerpo libre del péndulo.}
+\label{fig:diagrama}
+\end{figure}
+
+Para esto se agregaron nuevos atributos a la clase del reloj, como la longitud del péndulo, sus coordenadas en los puntos A y B y el ángulo inicial del mismo.
+
+\begin{figure}[h]
+\includegraphics[scale=0.6]{Images/reloj.png}
+\centering
+\caption{Clase reloj pensada en el informe de Clases.}
+\label{fig:reloj}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[scale=0.6]{Images/newreloj.png}
+\centering
+\caption{Clase reloj necesaria para la creación del péndulo.}
+\label{fig:newreloj}
+\end{figure}
+
+También se creó un constructor diferente para el reloj, en el que se incluyen los valores iniciales necesarios para la construcción del péndulo, estos valores serán las coordenadas del punto A, la longitud del péndulo y el ángulo inicial y con los valores anteriormente mencionados se obtendrán las coordenadas iniciales del punto B. Esto, como ya se mencionó, serán los valores de las coordenadas iniciales del péndulo.
+
+\begin{figure}[h]
+\includegraphics[scale=1]{Images/ecuacion1.png}
+\centering
+\caption{Ecuaciones para determinar las coordenadas iniciales del punto B.}
+\label{fig:ecu2}
+\end{figure}
+
+Luego, para realizar el movimiento pendular se necesitará ir cambiando las coordenadas en B con respecto avance el tiempo, para esto se necesitará el ángulo, que también irá cambiando con respecto al tiempo, un omega que está relacionado con la longitud del péndulo, la longitud del péndulo y las coordenadas en A.
+
+\begin{figure}[h]
+\includegraphics[scale=1]{Images/ecuacion2.png}
+\centering
+\caption{Ecuaciones que determinan el movimiento del péndulo. Siendo g la gravedad, L la longitud del péndulo, y theta sub cero el ángulo inicial.}
+\label{fig:ecu1}
+\end{figure}
+
+Después de realizar la implementación de las ecuaciones del péndulo y verificar su funcionamiento, se agregó la imagen del reloj y del péndulo para la ambientación del juego.
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Images/barra.png}
+\centering
+\caption{Imagen del reloj y péndulo funcionando.}
+\label{fig:penduloreloj}
+\end{figure}
 
 
 \section{Conclusiones.}
