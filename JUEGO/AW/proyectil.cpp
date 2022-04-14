@@ -20,7 +20,6 @@ void Proyectil::MRUnivel1(Heroe * heroe)
 
 void Proyectil::actualizarPosProyectil(Heroe * heroe)
 {
-    //if que cambiará la actualizacion del proyectil dependiendo del nivel
     if(heroe->getNivelActual()==1){
         MRUnivel1(heroe);
     }
