@@ -13,14 +13,16 @@ using namespace std;
 
 class ArchivoInformacion
 {
+    bool seQuiereCargar=false;
 
 public:
-    bool seQuiereCargar=false;
     ArchivoInformacion();
     void leerDatos(string texto, Heroe * heroe, Reloj * reloj);
     void escribirDatos(string name, Heroe * heroe, Reloj * reloj);
 
 
+    bool getSeQuiereCargar() const;
+    void setSeQuiereCargar(bool value);
 };
 
 #endif // ARCHIVOINFORMACION_H

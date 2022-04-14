@@ -26,10 +26,13 @@ public slots:
     void animarFondo();
     void animarProyectil();
     void animarEnemigo();
+    void animarTeleport();
 
     void contarSegundos();
 
 public:
+
+    int pantallaDeCarga=0;
     void keyPressEvent(QKeyEvent * i);
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
@@ -38,6 +41,7 @@ public:
 private:
     Ui::MainWindow *ui;
     QGraphicsScene * escena;
+
 
     //Creación de objetos
     Heroe * heroe;
@@ -50,6 +54,7 @@ private:
     ObjetoAnimado * fondoAux;
     ObjetoAnimado * corazon;
 
+    ObjetoAnimado * teleport;
     ArchivoInformacion * archivo;
 
     //Creación de timers
@@ -58,10 +63,13 @@ private:
     QTimer * timerbala;
     QTimer * timerSegundos;
     QTimer * timerEnemigo;
+    QTimer * timerTeleport;
 
     //funciones
     void cargarNivel1();
     void cargarNivel2();
+    void borrarObjetos();
+    void pantallasCarga();
     void menu();
 };
 #endif // MAINWINDOW_H

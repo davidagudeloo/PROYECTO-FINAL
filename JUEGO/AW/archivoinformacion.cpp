@@ -1,8 +1,18 @@
 #include "archivoinformacion.h"
 
+bool ArchivoInformacion::getSeQuiereCargar() const
+{
+    return seQuiereCargar;
+}
+
+void ArchivoInformacion::setSeQuiereCargar(bool value)
+{
+    seQuiereCargar = value;
+}
+
 ArchivoInformacion::ArchivoInformacion()
 {
-
+    
 }
 
 void ArchivoInformacion::leerDatos(string name, Heroe * heroe, Reloj * reloj)

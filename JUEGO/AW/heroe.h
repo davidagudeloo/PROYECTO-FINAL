@@ -8,14 +8,14 @@ class Heroe : public ObjetoAnimado
 private:
     //Atributos
     int vidas=3;
-    bool poderDisponible=false;
+    bool poderDisponible=true;//false
     int nivelActual=1;
     bool isDead=false;
+    bool estaSaltando=false;
 
 public:
     //Atributos globales
     float vely=60;
-    bool estaSaltando=false;
     bool estaAgachado=false;
 
     //Constructor
@@ -30,6 +30,10 @@ public:
     void setIsDead(bool value);
     int getNivelActual() const;
     void setNivelActual(int value);
+    bool getPoderDisponible() const;
+    void setPoderDisponible(bool value);
+    bool getEstaSaltando() const;
+    void setEstaSaltando(bool value);
 };
 
 #endif // HEROE_H

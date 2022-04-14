@@ -21,8 +21,29 @@ int ObjetoAnimado::getPosiy() const
 }
 
 
+int ObjetoAnimado::getNumFrames() const
+{
+    return numFrames;
+}
+
+int ObjetoAnimado::getActualFrame() const
+{
+    return actualFrame;
+}
+
+void ObjetoAnimado::setPosix(int value)
+{
+    posix = value;
+}
+
+void ObjetoAnimado::setPosiy(int value)
+{
+    posiy = value;
+}
+
 ObjetoAnimado::ObjetoAnimado(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath)
 {
+    this->name=name;
     setPixmap(QPixmap(name).scaled(w,h));
     this->posix=posix;
     this->posiy=posiy;
@@ -51,4 +72,9 @@ QString ObjetoAnimado::stringPath(int numFrame)
     path += QString::number(numFrame);
     path += finalPath;
     return path;
+}
+
+void ObjetoAnimado::setImagen(QString name)
+{
+    setPixmap(QPixmap(name).scaled(getWidth(),getHeight()));
 }

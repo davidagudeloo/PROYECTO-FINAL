@@ -13,6 +13,7 @@ class ObjetoAnimado : public QObject, public QGraphicsPixmapItem
 
 private:
     //Atributos
+    QString name;
     int posix;
     int posiy;
     int width;
@@ -34,11 +35,16 @@ public:
     //Métodos
     void animar();
     QString stringPath(int numFrame);
+    void setImagen(QString name);
 
     int getWidth() const;
     int getHeight() const;
     int getPosix() const;
     int getPosiy() const;
+    int getNumFrames() const;
+    int getActualFrame() const;
+    void setPosix(int value);
+    void setPosiy(int value);
 };
 
 #endif // OBJETOANIMADO_H

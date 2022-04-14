@@ -593,5 +593,22 @@
         <file>Image/fondo2/fondoDesierto (225).png</file>
         <file>Image/fondo2/fondoDesierto (226).png</file>
         <file>Image/fondo2/fondoDesierto (227).png</file>
+        <file>Image/teleport/teleport (0).png</file>
+        <file>Image/teleport/teleport (1).png</file>
+        <file>Image/teleport/teleport (2).png</file>
+        <file>Image/teleport/teleport (3).png</file>
+        <file>Image/teleport/teleport (4).png</file>
+        <file>Image/teleport/teleport (5).png</file>
+        <file>Image/teleport/teleport (6).png</file>
+        <file>Image/teleport/teleport (7).png</file>
+        <file>Image/teleport/teleport (8).png</file>
+        <file>Image/teleport/teleport (9).png</file>
+        <file>Image/teleport/teleport (10).png</file>
+        <file>Image/teleport/teleport (11).png</file>
+        <file>Image/teleport/teleport (12).png</file>
+        <file>Image/teleport/teleport (13).png</file>
+        <file>Image/teleport/teleport (14).png</file>
+        <file>Image/teleport/teleport (15).png</file>
+        <file>Image/teleport/teleport (16).png</file>
     </qresource>
 </RCC>
