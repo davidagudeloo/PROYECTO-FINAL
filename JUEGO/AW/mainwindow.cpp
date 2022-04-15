@@ -194,6 +194,8 @@ MainWindow::MainWindow(QWidget *parent)
     //Fondo auxiliar
     fondoAux = new ObjetoAnimado(":/Image/imagenes de apoyo/lose.gif",0,0,escena->width(),escena->height(),1,"-","-");
     escena->addItem(fondoAux);
+    //Heroe auxiliar: se utilizarán únicamente sus atributos para puente entre niveles
+    heroeAux = new Heroe("-",0,0,1,1,1,"-","-");
     //Llamado del menú principal
     cargarNivel1();
     menu();
@@ -205,6 +207,7 @@ MainWindow::~MainWindow()
     delete escena;
     delete archivo;
     delete fondoAux;
+    delete heroeAux;
 
     delete fondo;
     delete piso;
@@ -298,6 +301,10 @@ void MainWindow::cargarNivel2()
         archivo->leerDatos("datos.txt", heroe, reloj);
         archivo->setSeQuiereCargar(false);
     }
+    else{
+        heroe->setNivelActual(heroeAux->getNivelActual());
+        heroe->setVidas(heroeAux->getVidas());
+    }
 
     //Se muestran los displays
     ui->lcdVidas->show();
@@ -362,6 +369,8 @@ void MainWindow::pantallasCarga()
             pantallaDeCarga++;
         }
         else if(pantallaDeCarga==2){
+            heroeAux->setNivelActual(heroe->getNivelActual());
+            heroeAux->setVidas(heroe->getVidas());
             borrarObjetos();
             cargarNivel2();
             pantallaDeCarga=0;
