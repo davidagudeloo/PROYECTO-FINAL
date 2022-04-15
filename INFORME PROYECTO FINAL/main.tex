@@ -108,11 +108,12 @@ En este informe veremos el desarrollo del proyecto final de la materia Informát
     \begin{itemize}
         \item Agregar movimiento del jugador en el nivel dos.
         \item Prueba de la jugabilidad del nivel dos.
+        \item Estructuración de las pantallas de carga e información.
     \end{itemize}
     
     \item Jueves 14 de Abril:
     \begin{itemize}
-    
+        \item Diseño de las pantallas de información y carga.
     \end{itemize}
     
     
@@ -341,6 +342,63 @@ También implementamos las ecuaciones de resortes, las cuales nos darán la velo
 \caption{Ecuaciones para la velocidad inicial dada por un resorte.}
 \label{fig:ecuacionesresorte}
 \end{figure}
+
+(IMAGEN DEL NIVEL DOS)
+
+\subsection{Miércoles 13 y Jueves 14 de Abril.}
+Este día se utilizó para agregarle más movilidad al héroe, movilidad que será vista como su poder dentro del juego, este poder será activado en especial para el nivel dos, pues es allí en donde se necesitará mover de izquierda a derecha y viceversa para esquivar los proyectiles que vienen con movimiento parabólico hacia el suelo y que pueden restarle vidas. Para el movimiento del héroe se utilizarán las teclas A (movimiento a la izquierda) y D (moviemiento a la derecha).
+
+Se agregará una nueva animación para mostrar este poder, la cual se pondrá sobre la animación del héroe de forma que parezcan chispas saliendo de él.
+
+(IMAGEN DEL HEROE Y SU PODER)
+
+También se comenzó con la estructuración de las pantallas de información y de carga, pues la historia es una parte importante para comprender las dinámicas que veremos en el juego, también nos ayudarán a mostrar los controles de juego de cada nivel, de esta forma será más sencillo para el usuario recordar las opciones que tiene para controlar al héroe en cada nivel.
+
+(DIAGRAMA DE FLUJO DE LAS PANTALLAS DE INFORMACIÓN Y CARGA)
+
+Tendremos una pantalla de información y una pantalla de carga en cada nivel, la primera nos mostrará la historia del juego dependiendo del nivel y la segunda nos informará de los controles que debemos utilizar en cada nivel.
+
+\begin{itemize}
+    \item NIVEL 1.
+    
+        \begin{figure}[h]
+        \includegraphics[scale=0.5]{Images/pantallahistoria.png}
+        \centering
+        \caption{Ecuaciones para la velocidad inicial dada por un resorte.}
+        \label{fig:ecuacionesresorte}
+        \end{figure}
+    
+    \item NIVEL 2.
+        \begin{figure}[h]
+        \includegraphics[scale=0.5]{Images/pantallahistoria2.png}
+        \centering
+        \caption{Ecuaciones para la velocidad inicial dada por un resorte.}
+        \label{fig:ecuacionesresorte}
+        \end{figure}
+    
+\end{itemize}
+
+
+
+
+\section{Pantalla: Historia de Juego.}
+MENU
+
+En un bosque lejano viven tranquilamente una familia de Lobos conformada por su madre y sus dos cachorros, pasean en el campo y juegan todo el día, sin embargo no son una familia normal, pues poseen poderes sobrenaturales.
+
+Esta paz estuvo presente en el bosque hasta el día en que sus crías son raptadas por un grupo de humanos, quienes desean apropiarse de los poderes que tienen los cachorros, tal como han hecho durante años con todo lo que nos brinda la naturaleza.
+
+¿Podrá la loba recuperar a sus pequeños cachorros?
+
+PANTALLA DE CARGA CON CONTROL W
+
+NIVEL 1
+
+Nuestra heroína ha conseguido no perderlos de vista, y seguirles el rastro durante todo el trayecto. Sin embargo, el enemigo ingresará a una base en busca de ayuda ante la imposibilidad de detener a nuestra loba.
+
+Por lo que recurre a entes mayores para dificultar el rescate de los cachorros.
+
+
 
 
 \end{document}
