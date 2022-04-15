@@ -44,6 +44,8 @@ private:
 
 
     //Creación de objetos
+    Heroe * heroeAux;
+
     Heroe * heroe;
     ObjetoAnimado * fondo;
     ObjetoAnimado * piso;
@@ -56,6 +58,7 @@ private:
 
     ObjetoAnimado * teleport;
     ArchivoInformacion * archivo;
+
 
     //Creación de timers
     QTimer * timerHeroe;
