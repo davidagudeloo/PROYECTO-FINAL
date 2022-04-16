@@ -27,11 +27,12 @@ public slots:
     void animarProyectil();
     void animarEnemigo();
     void animarTeleport();
+    void animarPantallaCarga1();
 
     void contarSegundos();
 
 public:
-
+    ifstream myfile;
     int pantallaDeCarga=0;
     void keyPressEvent(QKeyEvent * i);
     MainWindow(QWidget *parent = nullptr);
@@ -58,6 +59,7 @@ private:
 
     ObjetoAnimado * teleport;
     ArchivoInformacion * archivo;
+    ObjetoAnimado * pantallaCarga1;
 
 
     //Creación de timers
@@ -67,6 +69,7 @@ private:
     QTimer * timerSegundos;
     QTimer * timerEnemigo;
     QTimer * timerTeleport;
+    QTimer * timerPantallaCarga1;
 
     //funciones
     void cargarNivel1();

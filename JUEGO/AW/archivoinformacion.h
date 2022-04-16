@@ -13,6 +13,8 @@ using namespace std;
 
 class ArchivoInformacion
 {
+private:
+    //Atributos
     bool seQuiereCargar=false;
 
 public:

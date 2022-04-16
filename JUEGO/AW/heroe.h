@@ -8,7 +8,7 @@ class Heroe : public ObjetoAnimado
 private:
     //Atributos
     int vidas=3;
-    bool poderDisponible=true;//false
+    bool poderDisponible=false;
     int nivelActual=1;
     bool isDead=false;
     bool estaSaltando=false;
@@ -24,6 +24,7 @@ public:
 
     //Métodos
     void actualizarPosY();
+    //Get and Set
     void setVidas(int value);
     int getVidas() const;
     bool getIsDead() const;

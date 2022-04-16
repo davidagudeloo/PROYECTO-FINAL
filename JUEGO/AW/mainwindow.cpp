@@ -43,22 +43,29 @@ void MainWindow::keyPressEvent(QKeyEvent *i)
     }
 
     if(i->key() == Qt::Key_M){
+        pantallaDeCarga=0;
+        heroe->setNivelActual(1);
         menu();
     }
     //Puede cargar
     if(i->key() == Qt::Key_C){
-        archivo->setSeQuiereCargar(true);
-        archivo->leerDatos("datos.txt", heroe, reloj);
-        //el nivel 1
-        if(heroe->getNivelActual()==1){
-            borrarObjetos();
-            cargarNivel1();
+        myfile.open("datos.txt");
+        //Sii el archivo existe
+        if(myfile){
+            archivo->setSeQuiereCargar(true);
+            archivo->leerDatos("datos.txt", heroe, reloj);
+            //el nivel 1
+            if(heroe->getNivelActual()==1){
+                borrarObjetos();
+                cargarNivel1();
+            }
+            //o el nivel 2
+            else if(heroe->getNivelActual()==2){
+                borrarObjetos();
+                cargarNivel2();
+            }
         }
-        //o el nivel 2
-        else if(heroe->getNivelActual()==2){
-            borrarObjetos();
-            cargarNivel2();
-        }
+        myfile.close();
     }
     //Inicializacion
     if(i->key() == Qt::Key_N){
@@ -104,7 +111,7 @@ void MainWindow::animarProyectil()
     ui->lcdVidas->display(heroe->getVidas());
     bala->animar();
     //Si el heroe está muerto (cero vidas)
-    if(heroe->getIsDead()){
+    if(heroe->getIsDead()&&heroe->getVidas()==0){
         timerFondo->stop();
         timerHeroe->stop();
         timerEnemigo->stop();
@@ -134,16 +141,30 @@ void MainWindow::animarTeleport()
     }
 }
 
+void MainWindow::animarPantallaCarga1()
+{
+    pantallaCarga1->animar();
+    if(pantallaCarga1->getActualFrame() == pantallaCarga1->getNumFrames()-1){
+        timerPantallaCarga1->stop();
+    }
+}
+
 void MainWindow::contarSegundos()
 {
     reloj->actualizarTiempo();
     ui->lcdTiempo->display(reloj->getTiempoPartida());
     //Si se acaba el tiempo
-    if(reloj->getTiempoPartida()<=0){
+    if(reloj->getTiempoPartida()==0){
         //Y está en el nivel 1
         if(heroe->getNivelActual()==1){
             heroe->setNivelActual(2);
             heroe->setPoderDisponible(true);
+            heroe->setIsDead(true);
+            //Se ocultan los lcds
+            ui->lcdVidas->hide();
+            ui->lcdTiempo->hide();
+
+            pantallaDeCarga=0;
             pantallasCarga();
         }
         //Y está en el nivel 2
@@ -152,6 +173,7 @@ void MainWindow::contarSegundos()
             timerHeroe->stop();
             timerbala->stop();
             timerEnemigo->stop();
+            heroe->setIsDead(true);
             //Pantalla de victoria
             fondoAux->setImagen(":/Image/imagenes de apoyo/win.gif");
             escena->removeItem(fondoAux);
@@ -192,13 +214,19 @@ MainWindow::MainWindow(QWidget *parent)
     //Archivo para guardado
     archivo = new ArchivoInformacion();
     //Fondo auxiliar
-    fondoAux = new ObjetoAnimado(":/Image/imagenes de apoyo/lose.gif",0,0,escena->width(),escena->height(),1,"-","-");
+    fondoAux = new ObjetoAnimado("-",0,0,escena->width(),escena->height(),1,"-","-");
     escena->addItem(fondoAux);
     //Heroe auxiliar: se utilizarán únicamente sus atributos para puente entre niveles
     heroeAux = new Heroe("-",0,0,1,1,1,"-","-");
+
     //Llamado del menú principal
     cargarNivel1();
     menu();
+
+
+
+    timerPantallaCarga1 = new QTimer;
+    connect(timerPantallaCarga1, SIGNAL(timeout()), this, SLOT(animarPantallaCarga1()));
 }
 
 MainWindow::~MainWindow()
@@ -285,6 +313,7 @@ void MainWindow::cargarNivel2()
     corazon = new ObjetoAnimado(":/Image/imagenes de apoyo/corazon0.png",310,65,40,40,1,"-","-");
     teleport = new ObjetoAnimado(":/Image/teleport/teleport (11).png",heroe->x(),heroe->y(),heroe->getWidth(),heroe->getHeight(),10,":/Image/teleport/teleport (",").png");
 
+    heroe->setPoderDisponible(true);
     //Se añaden a la escena
     escena->addItem(fondo);
     escena->addItem(piso);
@@ -335,40 +364,57 @@ void MainWindow::borrarObjetos()
 
 void MainWindow::pantallasCarga()
 {
-    qDebug() << pantallaDeCarga;
     if(heroe->getNivelActual()==1){
         if(pantallaDeCarga==0){
-            fondoAux->setImagen(":/Image/imagenes de apoyo/win.gif");
+            fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria0.png");
             escena->removeItem(fondoAux);
             escena->addItem(fondoAux);
             pantallaDeCarga++;
         }
         else if(pantallaDeCarga==1){
-            fondoAux->setImagen(":/Image/imagenes de apoyo/lose.gif");
+            fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria1.png");
             escena->removeItem(fondoAux);
             escena->addItem(fondoAux);
             pantallaDeCarga++;
         }
         else if(pantallaDeCarga==2){
+            pantallaCarga1 = new ObjetoAnimado(":/Image/CargaNivel1/0.gif",0,0,escena->width(),escena->height(),14,":/Image/CargaNivel1/",".gif");
+            escena->addItem(pantallaCarga1);
+            pantallaCarga1->show();
+            timerPantallaCarga1->start(500);
+            pantallaDeCarga++;
+        }
+        else if(pantallaDeCarga==3){
+            timerPantallaCarga1->stop();
+            delete pantallaCarga1;
             borrarObjetos();
             cargarNivel1();
-            pantallaDeCarga=0;
+            pantallaDeCarga++;
         }
     }
     else{
         if(pantallaDeCarga==0){
-            fondoAux->setImagen(":/Image/imagenes de apoyo/win.gif");
+            fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria2.png");
             escena->removeItem(fondoAux);
             escena->addItem(fondoAux);
             pantallaDeCarga++;
         }
         else if(pantallaDeCarga==1){
-            fondoAux->setImagen(":/Image/imagenes de apoyo/lose.gif");
+            fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria3.png");
             escena->removeItem(fondoAux);
             escena->addItem(fondoAux);
             pantallaDeCarga++;
         }
         else if(pantallaDeCarga==2){
+            pantallaCarga1 = new ObjetoAnimado(":/Image/CargaNivel2/CN2 (0).gif",0,0,escena->width(),escena->height(),14,":/Image/CargaNivel2/CN2 (",").gif");
+            escena->addItem(pantallaCarga1);
+            pantallaCarga1->show();
+            timerPantallaCarga1->start(500);
+            pantallaDeCarga++;
+        }
+        else if(pantallaDeCarga==3){
+            timerPantallaCarga1->stop();
+            delete pantallaCarga1;
             heroeAux->setNivelActual(heroe->getNivelActual());
             heroeAux->setVidas(heroe->getVidas());
             borrarObjetos();

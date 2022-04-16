@@ -610,5 +610,35 @@
         <file>Image/teleport/teleport (14).png</file>
         <file>Image/teleport/teleport (15).png</file>
         <file>Image/teleport/teleport (16).png</file>
+        <file>Image/CargaNivel1/0.gif</file>
+        <file>Image/CargaNivel1/1.gif</file>
+        <file>Image/CargaNivel1/2.gif</file>
+        <file>Image/CargaNivel1/3.gif</file>
+        <file>Image/CargaNivel1/4.gif</file>
+        <file>Image/CargaNivel1/5.gif</file>
+        <file>Image/CargaNivel1/6.gif</file>
+        <file>Image/CargaNivel1/7.gif</file>
+        <file>Image/CargaNivel1/8.gif</file>
+        <file>Image/CargaNivel1/9.gif</file>
+        <file>Image/CargaNivel1/10.gif</file>
+        <file>Image/CargaNivel1/11.gif</file>
+        <file>Image/CargaNivel1/12.gif</file>
+        <file>Image/imagenes de apoyo/pantallahistoria2.png</file>
+        <file>Image/CargaNivel2/CN2 (0).gif</file>
+        <file>Image/CargaNivel2/CN2 (1).gif</file>
+        <file>Image/CargaNivel2/CN2 (2).gif</file>
+        <file>Image/CargaNivel2/CN2 (3).gif</file>
+        <file>Image/CargaNivel2/CN2 (4).gif</file>
+        <file>Image/CargaNivel2/CN2 (5).gif</file>
+        <file>Image/CargaNivel2/CN2 (6).gif</file>
+        <file>Image/CargaNivel2/CN2 (7).gif</file>
+        <file>Image/CargaNivel2/CN2 (8).gif</file>
+        <file>Image/CargaNivel2/CN2 (9).gif</file>
+        <file>Image/CargaNivel2/CN2 (10).gif</file>
+        <file>Image/CargaNivel2/CN2 (11).gif</file>
+        <file>Image/CargaNivel2/CN2 (12).gif</file>
+        <file>Image/imagenes de apoyo/pantallahistoria0.png</file>
+        <file>Image/imagenes de apoyo/pantallahistoria1.png</file>
+        <file>Image/imagenes de apoyo/pantallahistoria3.png</file>
     </qresource>
 </RCC>
