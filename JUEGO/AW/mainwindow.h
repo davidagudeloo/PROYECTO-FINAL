@@ -50,7 +50,7 @@ private:
     Heroe * heroe;
     ObjetoAnimado * fondo;
     ObjetoAnimado * piso;
-    Proyectil * bala;
+    Proyectil * bala[4];
     Enemigo * enemigo;
     Reloj * reloj;
     Reloj * pendulo;

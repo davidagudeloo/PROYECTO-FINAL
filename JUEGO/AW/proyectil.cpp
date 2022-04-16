@@ -62,8 +62,8 @@ float Proyectil::velocidadInicialResorte()
 {
     float velResorte=0;
     float m=0.01, k=800, y1, y2=1; //y2 es la longitud del resorte (1m), k es la constante elástica, m la masa del proyectil (0.01kg)
-    float x = 10+(rand()%(40)); //Dará número aleatorios entre 1 y 50.
-    //float x = 60; //80-20 min
+    float x = 29+(rand()%(59-29)); //Dará número aleatorios entre 1 y 58.
+    //float x = 29;
     x=x/100; //El resorte se comprimirá máximo hasta la mitad (0.5m)
     y1 = y2-x;
     velResorte=sqrt(2*g*y1+(k*pow(x,2))/m);

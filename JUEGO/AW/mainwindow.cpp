@@ -107,9 +107,19 @@ void MainWindow::animarFondo()
 
 void MainWindow::animarProyectil()
 {
-    bala->actualizarPosProyectil(heroe);
-    ui->lcdVidas->display(heroe->getVidas());
-    bala->animar();
+    if(heroe->getNivelActual()==1){
+        bala[0]->actualizarPosProyectil(heroe);
+        ui->lcdVidas->display(heroe->getVidas());
+        bala[0]->animar();
+    }
+    else{
+        for(int i=0; i<4;i++){
+            bala[i]->actualizarPosProyectil(heroe);
+            ui->lcdVidas->display(heroe->getVidas());
+            bala[i]->animar();
+        }
+    }
+
     //Si el heroe está muerto (cero vidas)
     if(heroe->getIsDead()&&heroe->getVidas()==0){
         timerFondo->stop();
@@ -163,7 +173,10 @@ void MainWindow::contarSegundos()
             //Se ocultan los lcds
             ui->lcdVidas->hide();
             ui->lcdTiempo->hide();
-
+            timerFondo->stop();
+            timerHeroe->stop();
+            timerbala->stop();
+            timerEnemigo->stop();
             pantallaDeCarga=0;
             pantallasCarga();
         }
@@ -225,6 +238,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 
 
+
     timerPantallaCarga1 = new QTimer;
     connect(timerPantallaCarga1, SIGNAL(timeout()), this, SLOT(animarPantallaCarga1()));
 }
@@ -240,7 +254,10 @@ MainWindow::~MainWindow()
     delete fondo;
     delete piso;
     delete heroe;
-    delete bala;
+    delete bala[0];
+    delete bala[1];
+    delete bala[2];
+    delete bala[3];
     delete enemigo;
     delete reloj;
     delete pendulo;
@@ -262,7 +279,10 @@ void MainWindow::cargarNivel1()
     fondo = new ObjetoAnimado(":/Image/fondo bosque/fondoBosque (0).png",0,0,escena->width(),escena->height(),300,":/Image/fondo bosque/fondoBosque (",").png");
     piso = new ObjetoAnimado(":/Image/piso/frame_0_delay-0.1s.png",0,escena->height()-50,escena->width()-2,50,8,":/Image/piso/frame_","_delay-0.1s.png");
     heroe = new Heroe(":/Image/heroe/frame_0_delay-0.08s.png",0,escena->height()-piso->getHeight()-120,220,120,8,":/Image/heroe/frame_","_delay-0.08s.png");
-    bala = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png",4,0);
+    bala[0] = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png",4,0);
+    bala[1] = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png",4,0);
+    bala[2] = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png",4,0);
+    bala[3] = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png",4,0);
     enemigo = new Enemigo(":/Image/enemigo1/frame_0_delay-0.08s.png",escena->width()-300,escena->height()-piso->getHeight()-100,300,100,6,":/Image/enemigo1/frame_","_delay-0.08s.png");
     reloj = new Reloj(":/Image/imagenes de apoyo/reloj.png",0,0,150,150,1,"-","-");
     pendulo = new Reloj(":/Image/imagenes de apoyo/pendulo.png",80,70,50,50,1,"-","-",50,35,50,30);
@@ -273,7 +293,7 @@ void MainWindow::cargarNivel1()
     escena->addItem(fondo);
     escena->addItem(piso);
     escena->addItem(heroe);
-    escena->addItem(bala);
+    escena->addItem(bala[0]);
     escena->addItem(enemigo);
     escena->addItem(reloj);
     escena->addItem(pendulo);
@@ -306,7 +326,10 @@ void MainWindow::cargarNivel2()
     fondo = new ObjetoAnimado(":/Image/fondo2/fondoDesierto (0).png",0,0,escena->width(),escena->height(),228,":/Image/fondo2/fondoDesierto (",").png");
     piso = new ObjetoAnimado(":/Image/piso/frame_0_delay-0.1s.png",0,escena->height()-50,escena->width()-2,50,8,":/Image/piso/frame_","_delay-0.1s.png");
     heroe = new Heroe(":/Image/heroe/frame_0_delay-0.08s.png",0,escena->height()-piso->getHeight()-120,220,120,8,":/Image/heroe/frame_","_delay-0.08s.png");
-    bala = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png",4,0);
+    bala[0] = new Proyectil(":/Image/bala2/frame_0_delay-0.03s.png",escena->width()-280,escena->height()-piso->getHeight()-50,160,180,38,":/Image/bala2/frame_","_delay-0.03s.png",4,0);
+    bala[1] = new Proyectil(":/Image/bala2/frame_0_delay-0.03s.png",escena->width()-280,escena->height()-piso->getHeight()-50,160,180,38,":/Image/bala2/frame_","_delay-0.03s.png",4,0);
+    bala[2] = new Proyectil(":/Image/bala2/frame_0_delay-0.03s.png",escena->width()-280,escena->height()-piso->getHeight()-50,160,180,38,":/Image/bala2/frame_","_delay-0.03s.png",4,0);
+    bala[3] = new Proyectil(":/Image/bala2/frame_0_delay-0.03s.png",escena->width()-280,escena->height()-piso->getHeight()-50,160,180,38,":/Image/bala2/frame_","_delay-0.03s.png",4,0);
     enemigo = new Enemigo(":/Image/enemigo2/frame_0_delay-0.1s.png",escena->width()-250,escena->height()-piso->getHeight()-200,250,200,5,":/Image/enemigo2/frame_","_delay-0.1s.png");
     reloj = new Reloj(":/Image/imagenes de apoyo/reloj.png",0,0,150,150,1,"-","-");
     pendulo = new Reloj(":/Image/imagenes de apoyo/pendulo.png",80,70,50,50,1,"-","-",50,35,50,30);
@@ -318,7 +341,10 @@ void MainWindow::cargarNivel2()
     escena->addItem(fondo);
     escena->addItem(piso);
     escena->addItem(heroe);
-    escena->addItem(bala);
+    escena->addItem(bala[0]);
+    escena->addItem(bala[1]);
+    escena->addItem(bala[2]);
+    escena->addItem(bala[3]);
     escena->addItem(enemigo);
     escena->addItem(reloj);
     escena->addItem(pendulo);
@@ -354,7 +380,10 @@ void MainWindow::borrarObjetos()
     delete fondo;
     delete piso;
     delete heroe;
-    delete bala;
+    delete bala[0];
+    delete bala[1];
+    delete bala[2];
+    delete bala[3];
     delete enemigo;
     delete reloj;
     delete pendulo;
