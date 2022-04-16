@@ -1,9 +1,8 @@
 #include "proyectil.h"
 
-Proyectil::Proyectil(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath, int velInical, int frecAparicion) : ObjetoAnimado(name, posix, posiy, w, h, numFrames, initialPath, finalPath)
+Proyectil::Proyectil(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath, int velInical) : ObjetoAnimado(name, posix, posiy, w, h, numFrames, initialPath, finalPath)
 {
     this->velInicial=velInical;
-    this->frecAparicion=frecAparicion;
 
 }
 

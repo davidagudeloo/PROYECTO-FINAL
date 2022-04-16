@@ -354,9 +354,6 @@
         <file>Image/piso/frame_5_delay-0.1s.png</file>
         <file>Image/piso/frame_6_delay-0.1s.png</file>
         <file>Image/piso/frame_7_delay-0.1s.png</file>
-        <file>Image/menu/titulo menu0.png</file>
-        <file>Image/imagenes de apoyo/lose.gif</file>
-        <file>Image/imagenes de apoyo/win.gif</file>
         <file>Image/imagenes de apoyo/pendulo.png</file>
         <file>Image/imagenes de apoyo/reloj.png</file>
         <file>Image/imagenes de apoyo/corazon0.png</file>
@@ -624,19 +621,6 @@
         <file>Image/CargaNivel1/11.gif</file>
         <file>Image/CargaNivel1/12.gif</file>
         <file>Image/imagenes de apoyo/pantallahistoria2.png</file>
-        <file>Image/CargaNivel2/CN2 (0).gif</file>
-        <file>Image/CargaNivel2/CN2 (1).gif</file>
-        <file>Image/CargaNivel2/CN2 (2).gif</file>
-        <file>Image/CargaNivel2/CN2 (3).gif</file>
-        <file>Image/CargaNivel2/CN2 (4).gif</file>
-        <file>Image/CargaNivel2/CN2 (5).gif</file>
-        <file>Image/CargaNivel2/CN2 (6).gif</file>
-        <file>Image/CargaNivel2/CN2 (7).gif</file>
-        <file>Image/CargaNivel2/CN2 (8).gif</file>
-        <file>Image/CargaNivel2/CN2 (9).gif</file>
-        <file>Image/CargaNivel2/CN2 (10).gif</file>
-        <file>Image/CargaNivel2/CN2 (11).gif</file>
-        <file>Image/CargaNivel2/CN2 (12).gif</file>
         <file>Image/imagenes de apoyo/pantallahistoria0.png</file>
         <file>Image/imagenes de apoyo/pantallahistoria1.png</file>
         <file>Image/imagenes de apoyo/pantallahistoria3.png</file>
@@ -678,5 +662,20 @@
         <file>Image/bala2/frame_35_delay-0.03s.png</file>
         <file>Image/bala2/frame_36_delay-0.03s.png</file>
         <file>Image/bala2/frame_37_delay-0.03s.png</file>
+        <file>Image/imagenes de apoyo/lose.png</file>
+        <file>Image/imagenes de apoyo/win.png</file>
+        <file>Image/CargaNivel2/0.gif</file>
+        <file>Image/CargaNivel2/1.gif</file>
+        <file>Image/CargaNivel2/2.gif</file>
+        <file>Image/CargaNivel2/3.gif</file>
+        <file>Image/CargaNivel2/4.gif</file>
+        <file>Image/CargaNivel2/5.gif</file>
+        <file>Image/CargaNivel2/6.gif</file>
+        <file>Image/CargaNivel2/7.gif</file>
+        <file>Image/CargaNivel2/8.gif</file>
+        <file>Image/CargaNivel2/9.gif</file>
+        <file>Image/CargaNivel2/10.gif</file>
+        <file>Image/CargaNivel2/11.gif</file>
+        <file>Image/CargaNivel2/12.gif</file>
     </qresource>
 </RCC>

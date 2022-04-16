@@ -16,7 +16,6 @@ private:
 public:
     //Atributos globales
     float vely=60;
-    bool estaAgachado=false;
 
     //Constructor
     Heroe(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath, int vidas, bool poderDisponible, int nivelActual);

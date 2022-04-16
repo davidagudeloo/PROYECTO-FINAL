@@ -11,13 +11,12 @@ class Proyectil : public ObjetoAnimado
 {
 private:
     int velInicial; //velocidad inicial del proyectil
-    int frecAparicion; //frecuencia de aparicion del proyectil
 
     float velResorte=40;
     float ang=45*(M_PI/180);
 public:
     //constructor
-    Proyectil(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath, int velInical, int frecAparicion);
+    Proyectil(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath, int velInical);
 
     //Métodos
     void actualizarPosProyectil(Heroe * heroe); //Cambia el movimiento del proyectil dependiendo del nivel
