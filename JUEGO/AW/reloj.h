@@ -9,8 +9,6 @@ class Reloj : public ObjetoAnimado
 private:
     //Atributos
     int tiempoPartida=40;
-
-
     float posA[2]; //coordenada (x,y) del inicio del péndulo
     float posB[2]; //coordenada (x,y) del final del péndulo
     float L; //largo del pendulo
@@ -28,6 +26,7 @@ public:
     //Métodos
     void actualizarTiempo();
     void movPendulo();
+
     int getTiempoPartida() const;
     void setTiempoPartida(int value);
 };

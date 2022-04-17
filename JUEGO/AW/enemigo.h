@@ -5,15 +5,9 @@
 
 class Enemigo : public ObjetoAnimado
 {
-private:
-    //Atributos
-    int nivelDeDificultad=1;
-
 public:
     //Constructor
-    Enemigo(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath, int nivelDeDificultad);
     Enemigo(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath);
-
 };
 
 #endif // ENEMIGO_H

@@ -50,12 +50,11 @@ void Heroe::setEstaSaltando(bool value)
     estaSaltando = value;
 }
 
-Heroe::Heroe(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath, int vidas, bool poderDisponible, int nivelActual) : ObjetoAnimado(name, posix, posiy, w, h, numFrames, initialPath, finalPath)
+void Heroe::setVely(float value)
 {
-    this->vidas=vidas;
-    this->poderDisponible=poderDisponible;
-    this->nivelActual=nivelActual;
+    vely = value;
 }
+
 Heroe::Heroe(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath) : ObjetoAnimado(name, posix, posiy, w, h, numFrames, initialPath, finalPath)
 {
 
@@ -63,8 +62,7 @@ Heroe::Heroe(QString name, int posix, int posiy, int w, int h, int numFrames, QS
 
 void Heroe::actualizarPosY()
 {
-    setY(y()-vely*delta+0.5*g*delta*delta);
+    setY(y()-vely*delta+0.5*g*delta*delta); //Ecuación de movimiento
     vely=vely-g*delta;
-
 }
 

@@ -55,10 +55,8 @@ ObjetoAnimado::ObjetoAnimado(QString name, int posix, int posiy, int w, int h, i
     this->finalPath=finalPath;
 }
 
-
 void ObjetoAnimado::animar()
 {
-    //qDebug() << "funciona";
     setPixmap(QPixmap(stringPath(actualFrame)).scaled(width, height));
     actualFrame++;
     if(actualFrame==numFrames){

@@ -10,18 +10,18 @@
 class Proyectil : public ObjetoAnimado
 {
 private:
-    int velInicial; //velocidad inicial del proyectil
+    int velInicial; //velocidad inicial del proyectil NIVEL 1
+    float velResorte=40; //velocidad inicial del proyectil NIVEL 2
+    float ang=45*(M_PI/180); //Se convierte de radianes a grados
 
-    float velResorte=40;
-    float ang=45*(M_PI/180);
 public:
     //constructor
-    Proyectil(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath, int velInical);
+    Proyectil(QString name, int posix, int posiy, int w, int h, int numFrames, QString initialPath, QString finalPath);
 
     //Métodos
     void actualizarPosProyectil(Heroe * heroe); //Cambia el movimiento del proyectil dependiendo del nivel
-    void MRUnivel1(Heroe * heroe);
     void colisionProyectilHeroe(Heroe * heroe); //Verifica la colisión entre el proyectil y el héroe
+    void MRUnivel1(Heroe * heroe);
     void MParabolicoNivel2(Heroe * heroe);
     float velocidadInicialResorte();
 };

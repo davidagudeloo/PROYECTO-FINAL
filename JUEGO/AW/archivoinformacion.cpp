@@ -15,6 +15,7 @@ ArchivoInformacion::ArchivoInformacion()
     
 }
 
+//Cargar
 void ArchivoInformacion::leerDatos(string name, Heroe * heroe, Reloj * reloj)
 {
     ifstream archivo; // tipo de dato que me permite leer un archivo
@@ -22,16 +23,16 @@ void ArchivoInformacion::leerDatos(string name, Heroe * heroe, Reloj * reloj)
     archivo.open(name,ios::in); // abrimos el archivo en modo lectura
 
     getline(archivo,linea);
-    heroe->setNivelActual(stoi(linea));
+    heroe->setNivelActual(stoi(linea)); //stoi=string to int
     getline(archivo,linea);
-    heroe->setVidas(stoi(linea)); //stoi=string to int
+    heroe->setVidas(stoi(linea));
     getline(archivo,linea);
     reloj->setTiempoPartida(stoi(linea));
 
-    archivo.close(); // cerramos el archivo
-
+    archivo.close(); // Cerramos el archivo
 }
 
+//Guardar
 void ArchivoInformacion::escribirDatos(string name, Heroe * heroe, Reloj * reloj)
 {
     ofstream archivo; // tipo de dato que me permite escribir un archivo

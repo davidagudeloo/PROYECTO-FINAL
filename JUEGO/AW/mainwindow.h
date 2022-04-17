@@ -32,20 +32,23 @@ public slots:
     void contarSegundos();
 
 public:
-    ifstream myfile;
-    int pantallaDeCarga=0;
     void keyPressEvent(QKeyEvent * i);
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 
 private:
+    ifstream myfile; //Dato que nos permite verificar si existe un archivo
+    int pantallaDeCarga=0;
+
     Ui::MainWindow *ui;
     QGraphicsScene * escena;
 
 
     //Creación de objetos
     Heroe * heroeAux;
+    ArchivoInformacion * archivo;
+    ObjetoAnimado * pantallaCarga1;
 
     Heroe * heroe;
     ObjetoAnimado * fondo;
@@ -56,10 +59,7 @@ private:
     Reloj * pendulo;
     ObjetoAnimado * fondoAux;
     ObjetoAnimado * corazon;
-
     ObjetoAnimado * teleport;
-    ArchivoInformacion * archivo;
-    ObjetoAnimado * pantallaCarga1;
 
 
     //Creación de timers
@@ -72,10 +72,10 @@ private:
     QTimer * timerPantallaCarga1;
 
     //funciones
+    void menu();
     void cargarNivel1();
     void cargarNivel2();
-    void borrarObjetos();
-    void pantallasCarga();
-    void menu();
+    void borrarObjetos(); //Liberará memoria
+    void pantallasCarga(); //Transición entre pantallas de carga
 };
 #endif // MAINWINDOW_H

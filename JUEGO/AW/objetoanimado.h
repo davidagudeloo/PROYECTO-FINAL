@@ -26,7 +26,7 @@ private:
 
 public:
     //Atributos globales
-    float delta=0.08;
+    float delta=0.08; //delta de tiempo
     float g =12;
 
     //Constructor

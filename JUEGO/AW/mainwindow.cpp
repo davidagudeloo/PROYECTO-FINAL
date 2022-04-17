@@ -38,15 +38,15 @@ void MainWindow::keyPressEvent(QKeyEvent *i)
     }
 
     if(i->key() == Qt::Key_M){
-        pantallaDeCarga=0;
         heroe->setNivelActual(1);
         menu();
     }
     //Puede cargar
     if(i->key() == Qt::Key_C){
         myfile.open("datos.txt");
-        //Sii el archivo existe
-        if(myfile){
+        //Si el archivo existe y está en el menú
+        if(myfile && pantallaDeCarga==0){
+            pantallaDeCarga=5;
             archivo->setSeQuiereCargar(true);
             archivo->leerDatos("datos.txt", heroe, reloj);
             //el nivel 1
@@ -75,7 +75,7 @@ void MainWindow::animarHeroe()
         heroe->actualizarPosY();
         if(heroe->y()+heroe->getHeight() > piso->y()){
             heroe->setPos(heroe->getPosix(),heroe->getPosiy());
-            heroe->vely=60;
+            heroe->setVely(60);
             heroe->setEstaSaltando(false);
             timerHeroe->start(50);
         }
@@ -109,7 +109,7 @@ void MainWindow::animarProyectil()
     }
 
     //Si el heroe está muerto (cero vidas)
-    if(heroe->getIsDead()&&heroe->getVidas()==0){
+    if(heroe->getIsDead() && heroe->getVidas()==0){
         timerFondo->stop();
         timerHeroe->stop();
         timerEnemigo->stop();
@@ -118,7 +118,6 @@ void MainWindow::animarProyectil()
         escena->addItem(fondoAux);
         timerbala->stop();
         timerSegundos->stop();
-
     }
 }
 
@@ -145,6 +144,7 @@ void MainWindow::animarPantallaCarga1()
     pantallaCarga1->animar();
     if(pantallaCarga1->getActualFrame() == pantallaCarga1->getNumFrames()-1){
         timerPantallaCarga1->stop();
+        pantallaDeCarga++;
     }
 }
 
@@ -158,7 +158,7 @@ void MainWindow::contarSegundos()
         if(heroe->getNivelActual()==1){
             heroe->setNivelActual(2);
             heroe->setPoderDisponible(true);
-            heroe->setIsDead(true);
+            heroe->setIsDead(true); //Bloqueo de funciones de botones
             //Se ocultan los lcds
             ui->lcdVidas->hide();
             ui->lcdTiempo->hide();
@@ -175,7 +175,7 @@ void MainWindow::contarSegundos()
             timerHeroe->stop();
             timerbala->stop();
             timerEnemigo->stop();
-            heroe->setIsDead(true);
+            heroe->setIsDead(true); //Bloqueo de funciones de botones
             //Pantalla de victoria
             fondoAux->setImagen(":/Image/imagenes de apoyo/win.png");
             escena->removeItem(fondoAux);
@@ -183,7 +183,6 @@ void MainWindow::contarSegundos()
             timerSegundos->stop();
         }
     }
-
 }
 
 MainWindow::MainWindow(QWidget *parent)
@@ -210,6 +209,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(timerSegundos, SIGNAL(timeout()), this, SLOT(contarSegundos()));
     timerTeleport = new QTimer;
     connect(timerTeleport, SIGNAL(timeout()), this, SLOT(animarTeleport()));
+    timerPantallaCarga1 = new QTimer;
+    connect(timerPantallaCarga1, SIGNAL(timeout()), this, SLOT(animarPantallaCarga1()));
 
     //Se inicializa la semilla aleatoria
     srand(time(NULL));
@@ -222,14 +223,8 @@ MainWindow::MainWindow(QWidget *parent)
     heroeAux = new Heroe("-",0,0,1,1,1,"-","-");
 
     //Llamado del menú principal
-    cargarNivel1();
+    cargarNivel1(); //Se inicializa una primera vez, para el borrado de memoria
     menu();
-
-
-
-
-    timerPantallaCarga1 = new QTimer;
-    connect(timerPantallaCarga1, SIGNAL(timeout()), this, SLOT(animarPantallaCarga1()));
 }
 
 MainWindow::~MainWindow()
@@ -262,16 +257,105 @@ MainWindow::~MainWindow()
     delete timerTeleport;
 }
 
+void MainWindow::menu()
+{
+    pantallaDeCarga=0;
+    //Detenemos los timers de la inicialización
+    timerbala->stop();
+    timerSegundos->stop();
+    //Se ocultan los lcds
+    ui->lcdVidas->hide();
+    ui->lcdTiempo->hide();
+
+    //Creación de objetos
+    fondo = new ObjetoAnimado(":/Image/menu/frame_0_delay-0.19s.png",0,0,escena->width(),escena->height(),2,":/Image/menu/frame_","_delay-0.19s.png");
+
+    //Se añaden a la escena
+    escena->addItem(fondo);
+
+    //Se activan los timers
+    timerFondo->start(200);
+}
+
+void MainWindow::pantallasCarga()
+{
+    if(heroe->getNivelActual()==1){
+        if(pantallaDeCarga==0){
+            fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria0.png");
+            escena->removeItem(fondoAux);
+            escena->addItem(fondoAux);
+            pantallaDeCarga++;
+        }
+        else if(pantallaDeCarga==1){
+            fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria1.png");
+            escena->removeItem(fondoAux);
+            escena->addItem(fondoAux);
+            pantallaDeCarga++;
+        }
+        else if(pantallaDeCarga==2){
+            pantallaCarga1 = new ObjetoAnimado(":/Image/CargaNivel1/0.gif",0,0,escena->width(),escena->height(),14,":/Image/CargaNivel1/",".gif");
+            escena->addItem(pantallaCarga1);
+            pantallaCarga1->show();
+            timerPantallaCarga1->start(500);
+            pantallaDeCarga++;
+        }
+        else if(pantallaDeCarga==3){
+
+        }
+        else if(pantallaDeCarga==4){
+            timerPantallaCarga1->stop();
+            delete pantallaCarga1;
+            pantallaDeCarga++;
+            borrarObjetos();
+            cargarNivel1();
+        }
+    }
+    else{
+        //Se reinicia cuando el tiempo llega a cero
+        if(pantallaDeCarga==0){
+            fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria2.png");
+            escena->removeItem(fondoAux);
+            escena->addItem(fondoAux);
+            pantallaDeCarga++;
+        }
+        else if(pantallaDeCarga==1){
+            fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria3.png");
+            escena->removeItem(fondoAux);
+            escena->addItem(fondoAux);
+            pantallaDeCarga++;
+        }
+        else if(pantallaDeCarga==2){
+            pantallaCarga1 = new ObjetoAnimado(":/Image/CargaNivel2/0.gif",0,0,escena->width(),escena->height(),14,":/Image/CargaNivel2/",".gif");
+            escena->addItem(pantallaCarga1);
+            pantallaCarga1->show();
+            timerPantallaCarga1->start(500);
+            pantallaDeCarga++;
+        }
+        else if(pantallaDeCarga==3){
+
+        }
+        else if(pantallaDeCarga==4){
+            timerPantallaCarga1->stop();
+            delete pantallaCarga1;
+            pantallaDeCarga++;
+            heroeAux->setNivelActual(heroe->getNivelActual());
+            heroeAux->setVidas(heroe->getVidas());
+            borrarObjetos();
+            cargarNivel2();
+        }
+    }
+}
+
 void MainWindow::cargarNivel1()
 {
     //Creación de objetos
     fondo = new ObjetoAnimado(":/Image/fondo bosque/fondoBosque (0).png",0,0,escena->width(),escena->height(),300,":/Image/fondo bosque/fondoBosque (",").png");
     piso = new ObjetoAnimado(":/Image/piso/frame_0_delay-0.1s.png",0,escena->height()-50,escena->width()-2,50,8,":/Image/piso/frame_","_delay-0.1s.png");
     heroe = new Heroe(":/Image/heroe/frame_0_delay-0.08s.png",0,escena->height()-piso->getHeight()-120,220,120,8,":/Image/heroe/frame_","_delay-0.08s.png");
-    bala[0] = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png",4);
-    bala[1] = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png",4);
-    bala[2] = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png",4);
-    bala[3] = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png",4);
+    bala[0] = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png");
+    bala[1] = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png");
+    bala[2] = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png");
+    bala[3] = new Proyectil(":/Image/Bala/frame_1_delay-0.06s.png",escena->width()-280,escena->height()-piso->getHeight()-50,72,24,30,":/Image/Bala/frame_","_delay-0.06s.png");
     enemigo = new Enemigo(":/Image/enemigo1/frame_0_delay-0.08s.png",escena->width()-300,escena->height()-piso->getHeight()-100,300,100,6,":/Image/enemigo1/frame_","_delay-0.08s.png");
     reloj = new Reloj(":/Image/imagenes de apoyo/reloj.png",0,0,150,150,1,"-","-");
     pendulo = new Reloj(":/Image/imagenes de apoyo/pendulo.png",80,70,50,50,1,"-","-",50,35,50,30);
@@ -315,10 +399,10 @@ void MainWindow::cargarNivel2()
     fondo = new ObjetoAnimado(":/Image/fondo2/fondoDesierto (0).png",0,0,escena->width(),escena->height(),228,":/Image/fondo2/fondoDesierto (",").png");
     piso = new ObjetoAnimado(":/Image/piso/frame_0_delay-0.1s.png",0,escena->height()-50,escena->width()-2,50,8,":/Image/piso/frame_","_delay-0.1s.png");
     heroe = new Heroe(":/Image/heroe/frame_0_delay-0.08s.png",0,escena->height()-piso->getHeight()-120,220,120,8,":/Image/heroe/frame_","_delay-0.08s.png");
-    bala[0] = new Proyectil(":/Image/bala2/frame_0_delay-0.03s.png",escena->width()-280,escena->height()-piso->getHeight()-50,160,180,38,":/Image/bala2/frame_","_delay-0.03s.png",4);
-    bala[1] = new Proyectil(":/Image/bala2/frame_0_delay-0.03s.png",escena->width()-280,escena->height()-piso->getHeight()-50,160,180,38,":/Image/bala2/frame_","_delay-0.03s.png",4);
-    bala[2] = new Proyectil(":/Image/bala2/frame_0_delay-0.03s.png",escena->width()-280,escena->height()-piso->getHeight()-50,160,180,38,":/Image/bala2/frame_","_delay-0.03s.png",4);
-    bala[3] = new Proyectil(":/Image/bala2/frame_0_delay-0.03s.png",escena->width()-280,escena->height()-piso->getHeight()-50,160,180,38,":/Image/bala2/frame_","_delay-0.03s.png",4);
+    bala[0] = new Proyectil(":/Image/bala2/frame_0_delay-0.03s.png",escena->width()-280,escena->height()-piso->getHeight()-50,160,180,38,":/Image/bala2/frame_","_delay-0.03s.png");
+    bala[1] = new Proyectil(":/Image/bala2/frame_0_delay-0.03s.png",escena->width()-280,escena->height()-piso->getHeight()-50,160,180,38,":/Image/bala2/frame_","_delay-0.03s.png");
+    bala[2] = new Proyectil(":/Image/bala2/frame_0_delay-0.03s.png",escena->width()-280,escena->height()-piso->getHeight()-50,160,180,38,":/Image/bala2/frame_","_delay-0.03s.png");
+    bala[3] = new Proyectil(":/Image/bala2/frame_0_delay-0.03s.png",escena->width()-280,escena->height()-piso->getHeight()-50,160,180,38,":/Image/bala2/frame_","_delay-0.03s.png");
     enemigo = new Enemigo(":/Image/enemigo2/frame_0_delay-0.1s.png",escena->width()-250,escena->height()-piso->getHeight()-200,250,200,5,":/Image/enemigo2/frame_","_delay-0.1s.png");
     reloj = new Reloj(":/Image/imagenes de apoyo/reloj.png",0,0,150,150,1,"-","-");
     pendulo = new Reloj(":/Image/imagenes de apoyo/pendulo.png",80,70,50,50,1,"-","-",50,35,50,30);
@@ -326,6 +410,7 @@ void MainWindow::cargarNivel2()
     teleport = new ObjetoAnimado(":/Image/teleport/teleport (11).png",heroe->x(),heroe->y(),heroe->getWidth(),heroe->getHeight(),10,":/Image/teleport/teleport (",").png");
 
     heroe->setPoderDisponible(true);
+
     //Se añaden a la escena
     escena->addItem(fondo);
     escena->addItem(piso);
@@ -379,88 +464,3 @@ void MainWindow::borrarObjetos()
     delete corazon;
     delete teleport;
 }
-
-void MainWindow::pantallasCarga()
-{
-    if(heroe->getNivelActual()==1){
-        if(pantallaDeCarga==0){
-            fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria0.png");
-            escena->removeItem(fondoAux);
-            escena->addItem(fondoAux);
-            pantallaDeCarga++;
-        }
-        else if(pantallaDeCarga==1){
-            fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria1.png");
-            escena->removeItem(fondoAux);
-            escena->addItem(fondoAux);
-            pantallaDeCarga++;
-        }
-        else if(pantallaDeCarga==2){
-            pantallaCarga1 = new ObjetoAnimado(":/Image/CargaNivel1/0.gif",0,0,escena->width(),escena->height(),14,":/Image/CargaNivel1/",".gif");
-            escena->addItem(pantallaCarga1);
-            pantallaCarga1->show();
-            timerPantallaCarga1->start(500);
-            pantallaDeCarga++;
-        }
-        else if(pantallaDeCarga==3){
-            timerPantallaCarga1->stop();
-            delete pantallaCarga1;
-            borrarObjetos();
-            cargarNivel1();
-            pantallaDeCarga++;
-        }
-    }
-    else{
-        if(pantallaDeCarga==0){
-            fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria2.png");
-            escena->removeItem(fondoAux);
-            escena->addItem(fondoAux);
-            pantallaDeCarga++;
-        }
-        else if(pantallaDeCarga==1){
-            fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria3.png");
-            escena->removeItem(fondoAux);
-            escena->addItem(fondoAux);
-            pantallaDeCarga++;
-        }
-        else if(pantallaDeCarga==2){
-            pantallaCarga1 = new ObjetoAnimado(":/Image/CargaNivel2/0.gif",0,0,escena->width(),escena->height(),14,":/Image/CargaNivel2/",".gif");
-            escena->addItem(pantallaCarga1);
-            pantallaCarga1->show();
-            timerPantallaCarga1->start(500);
-            pantallaDeCarga++;
-        }
-        else if(pantallaDeCarga==3){
-            timerPantallaCarga1->stop();
-            delete pantallaCarga1;
-            heroeAux->setNivelActual(heroe->getNivelActual());
-            heroeAux->setVidas(heroe->getVidas());
-            borrarObjetos();
-            cargarNivel2();
-            pantallaDeCarga=0;
-        }
-    }
-
-
-}
-
-void MainWindow::menu()
-{
-    pantallaDeCarga=0;
-    timerbala->stop();
-    timerSegundos->stop();
-    //Se ocultan los lcds
-    ui->lcdVidas->hide();
-    ui->lcdTiempo->hide();
-
-    //Creación de objetos
-    fondo = new ObjetoAnimado(":/Image/menu/frame_0_delay-0.19s.png",0,0,escena->width(),escena->height(),2,":/Image/menu/frame_","_delay-0.19s.png");
-
-    //Se añaden a la escena
-    escena->addItem(fondo);
-
-    //Se activan los timers
-    timerFondo->start(200);
-}
-
-

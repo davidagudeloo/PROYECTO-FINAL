@@ -34,7 +34,6 @@ void Reloj::actualizarTiempo()
 
 void Reloj::movPendulo()
 {
-
     float w=sqrt(9.8/L);
     float angulo=anguloInicial*cos(w*tiempoms/1000);
 
@@ -44,10 +43,3 @@ void Reloj::movPendulo()
 
     tiempoms+=1000;
 }
-
-
-
-
-
-
-
