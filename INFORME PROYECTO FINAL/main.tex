@@ -116,6 +116,19 @@ En este informe veremos el desarrollo del proyecto final de la materia Informát
         \item Diseño de las pantallas de información y carga.
     \end{itemize}
     
+    \item Viernes 15 de Abril:
+    \begin{itemize}
+        \item Agregar las pantallas de carga e información.
+        \item Determinar el orden de las pantallas dentro del código.
+        \item Aumentar la dificultad del nivel dos (Dos proyectiles de forma parabólica o un proyectil de forma parabólica y otro rectilíneo)
+        \item Cambiar la imagen del proyectil del nivel dos.
+    \end{itemize}
+    
+    \item Sábado 16 de Abril:
+    \begin{itemize}
+        \item Se realizarán pruebas del juego con diferentes personas para recibir comentarios que nos puedan ayudar a mejorar la experiencia de juego.
+    \end{itemize}
+    
     
 \end{itemize}
 
@@ -141,9 +154,9 @@ En la clase objeto animado se realizaron varios cambios con respecto a lo planea
 \label{fig:newobjetoAnimado}
 \end{figure}
 
+\newpage
 Con los cambios realizados en la clase objeto animado se logró obtener el movimiento esperado en los objetos que se muestran en la escena, esto con ayuda del método animar y stringPath los cuales siguen cumpliendo las mismas funciones que se les asignaron en la parte de planeación del proyecto. El método stringPath recibe el número de la imagen de la cuál se requiere su path y luego lo retorna. La función animar utiliza el método anterior para conocer el camino a la imagen y haciendo uso de actualFrame como parámetro del método stringPath logra ir cambiando el frame de tal forma que cuando sea llamada, estos varíen y den la impresión de movimiento.
 
-\newpage
 \begin{figure}[h]
 \includegraphics[scale=0.6]{Images/animacionInicial.png}
 \centering
@@ -158,10 +171,10 @@ Con los cambios realizados en la clase objeto animado se logró obtener el movim
 \label{fig:animacion}
 \end{figure}
 
+\newpage
 \subsection{Sábado 9 de Abril.}
 Se empezó con la creación de la clase padre Nivel y sus clases hijas nivel1 y nivel2 como se planeó en el informe de Clases. Estas clases se utilizarían para armar el nivel correspondiente en cada clase.
 
-\newpage
 \begin{figure}[h]
 \includegraphics[scale=0.6]{Images/niveles.png}
 \centering
@@ -200,6 +213,7 @@ El movimiento automático del proyectil se logra haciendo uso de un Timer y cone
 \subsection{Domingo 10 de Abril.}
 Se agregó la animación del enemigo, se ajustó la ventana de GraphicsView y el tamaño de todos los objetos en la escena.
 
+\newpage
 \begin{figure}[h]
 \includegraphics[scale=0.3]{Images/tamaniobjetosajustado.png}
 \centering
@@ -209,7 +223,6 @@ Se agregó la animación del enemigo, se ajustó la ventana de GraphicsView y el
 
 También se agregó el contador de las vidas y del tiempo de la partida como podremos ver en la siguiente imagen (\ref{fig:vidastiempo}), estos contadores se ubicarán en la parte superior izquierda de la escena, en la imagen de demostración están encerrados en un recuadro rojo para ubicarlos de la manera más sencilla. El tiempo irá disminuyendo conforme transcurre la partida con ayuda de un Timer. Las vidas disminuirán cada que un proyectil choque con el héroe y esto será codificado en el método de la clase proyectil en donde se verifica la colisión entre el héroe y el proyectil.
 
-\newpage
 \begin{figure}[h]
 \includegraphics[scale=0.4]{Images/tiempovidas.png}
 \centering
@@ -226,7 +239,6 @@ Se hicieron pruebas para agregar la pantalla del menú, la cuál aparecerá cuan
 \label{fig:pantallamenu}
 \end{figure}
 
-\newpage
 \begin{figure}[h]
 \includegraphics[scale=1]{Images/keyi.png}
 \centering
@@ -234,6 +246,7 @@ Se hicieron pruebas para agregar la pantalla del menú, la cuál aparecerá cuan
 \label{fig:if}
 \end{figure}
 
+\newpage
  \textbf{PROBLEMAS:} La animación del héroe tiene problemas en el momento en el que el héroe se encuentra realizando un salto. Esto se debe a que la animación del enemigo se encuentra dentro del SLOT de animación del héroe para ahorrar líneas de código.
  \newline
  \textbf{POSIBLES SOLUCIONES: }Una de las posibles soluciones es meter la animación del enemigo dentro de otro SLOT de animación que ya exista, como el del fondo o el proyectil para de esta forma seguir ahorrando líneas de código. La otra opción es simplemente crear un nuevo SLOT que se encargue de la animación del enemigo.
@@ -242,17 +255,18 @@ Se hicieron pruebas para agregar la pantalla del menú, la cuál aparecerá cuan
 \subsection{Lunes 11 de Abril.}
 Se comenzó solucionando el problema que se venía presentando con la animación del enemigo, se probaron las dos posibles soluciones planteadas y se tomó la decisión de crear un nuevo SLOT para la animación del enemigo así esto conllevara líneas extras de código. Luego de que el problema anterior fue solucionado se procedió a realizar el modelamiento del péndulo y la descripción de este movimiento con ayuda de un diagrama de cuerpo libre y las ecuaciones. 
 
+\newpage
 \begin{figure}[h]
 \includegraphics[scale=0.6]{Images/diagramapendulo.png}
 \centering
 \caption{Diagrama de cuerpo libre del péndulo.}
-\label{fig:diagrama}
+\label{fig:diagramacuerpolibre}
 \end{figure}
 
 Para esto se agregaron nuevos atributos a la clase del reloj, como la longitud del péndulo, sus coordenadas en los puntos A y B y el ángulo inicial del mismo.
 
 \begin{figure}[h]
-\includegraphics[scale=0.5]{Images/reloj.png}
+\includegraphics[scale=0.6]{Images/reloj.png}
 \centering
 \caption{Clase reloj pensada en el informe de Clases.}
 \label{fig:reloj}
@@ -267,6 +281,7 @@ Para esto se agregaron nuevos atributos a la clase del reloj, como la longitud d
 
 También se creó un constructor diferente para el reloj, en el que se incluyen los valores iniciales necesarios para la construcción del péndulo, estos valores serán las coordenadas del punto A, la longitud del péndulo y el ángulo inicial y con los valores anteriormente mencionados se obtendrán las coordenadas iniciales del punto B. Esto, como ya se mencionó, serán los valores de las coordenadas iniciales del péndulo.
 
+\newpage
 \begin{figure}[h]
 \includegraphics[scale=0.6]{Images/ecuacion1.png}
 \centering
@@ -285,7 +300,6 @@ Luego, para realizar el movimiento pendular se necesitará ir cambiando las coor
 
 Después de realizar la implementación de las ecuaciones del péndulo y verificar su funcionamiento, se agregó la imagen del reloj y del péndulo para la ambientación del juego.
 
-\newpage
 \begin{figure}[h]
 \includegraphics[scale=0.7]{Images/barra.png}
 \centering
@@ -295,32 +309,39 @@ Después de realizar la implementación de las ecuaciones del péndulo y verific
 
 Este mismo día se comenzó con la prueba de las ecuaciones de movimiento parabólico que serán utilizadas en el nivel 2 para el lanzamiento del proyectil.
 
+\newpage
+\begin{figure}[h]
+\includegraphics[scale=0.4]{Images/Nivel 2.png}
+\centering
+\caption{Nivel 2.}
+\label{fig:nivel2}
+\end{figure}
+
 \subsection{Martes 13 de Abril.}
 Como se tenía planeado se comenzó a abordar el problema del guardado y la carga del juego, para comenzar se tendrán en cuenta los aspectos más importantes del juego, como lo son el número de vidas del héroe, el tiempo que lleva la partida y el nivel en el que se encuentra a la hora de guardar. Para esto se creó una nueva clase que no estaba contemplada en la planeación de las clases, pues en esta planeación se tenía pensado incluir el guardado y cargado en la clase de niveles, clase que finalmente no fue implementada en el código, por esto se creó una clase que se encarga de guardar y cargar las partidas cuando el usuario así lo requiere.
 Para implementar la clase se utilizó la práctica tres como guía del manejo de archivos, pues es utilizando estos que podremos guardar y cargar la partida.
 
-Para guardar la partida creamos un método que tendrá como parámetros su nombre, y punteros a objetos de tipo reloj y de tipo héroe, lo anterior para poder utilizar los métodos Get del tiempo de partida, las vidas del héroe y el nivel en el que se encuentra, que son los datos relevantes del juego. Los datos anteriores se escribirán en el archivo haciendo un salto de línea en cada uno para su fácil lectura cuando se desee cargar el juego.
-Para cargar la partida se codificará otro método con los mismos parámetros del método de guardado, con la diferencia que el archivo de este método será de lectura, para tomar los datos guardados en el archivo de escritura y cargar el nivel con estos datos.
+Para guardar la partida creamos un método que tendrá como parámetros su nombre, y punteros a objetos de tipo reloj y de tipo héroe, lo anterior para poder utilizar los métodos Get del tiempo de partida, las vidas del héroe y el nivel en el que se encuentra, que son los datos relevantes del juego. Los datos anteriores se escribirán en el archivo haciendo un salto de línea en cada uno para su fácil lectura cuando se desee cargar el juego. Para cargar la partida se codificará otro método con los mismos parámetros del método de guardado, con la diferencia que el archivo de este método será de lectura, para tomar los datos guardados en el archivo de escritura y cargar el nivel con estos datos.
 
+\newpage
 \begin{figure}[h]
-\includegraphics[scale=0.7]{Images/archivoinfo.png}
+\includegraphics[scale=0.5]{Images/archivoinfo.png}
 \centering
 \caption{Mapa mental de la clase que manejará el guardado y cargado del juego.}
-\label{fig:diagramaresorte}
+\label{fig:claseArchivo}
 \end{figure}
 
 En este día también se implementó el Movimiento Parabólico haciendo uso de sus ecuaciones. Estas ecuaciones se utilizarán para el movimiento del proyectil del nivel dos.
 
-\newpage
 \begin{figure}[h]
 \includegraphics[scale=1]{Images/diagramaparabolico.png}
 \centering
 \caption{Diagrama de cuerpo libre del movimiento parabólico.}
-\label{fig:diagramaresorte}
+\label{fig:diagramaparabolico}
 \end{figure}
 
 \begin{figure}[h]
-\includegraphics[scale=0.7]{Images/ecuacionparabolica.png}
+\includegraphics[scale=0.5]{Images/ecuacionparabolica.png}
 \centering
 \caption{Ecuaciones del movimiento parabólico.}
 \label{fig:ecuacionesmovpara}
@@ -343,62 +364,98 @@ También implementamos las ecuaciones de resortes, las cuales nos darán la velo
 \label{fig:ecuacionesresorte}
 \end{figure}
 
-(IMAGEN DEL NIVEL DOS)
-
 \subsection{Miércoles 13 y Jueves 14 de Abril.}
 Este día se utilizó para agregarle más movilidad al héroe, movilidad que será vista como su poder dentro del juego, este poder será activado en especial para el nivel dos, pues es allí en donde se necesitará mover de izquierda a derecha y viceversa para esquivar los proyectiles que vienen con movimiento parabólico hacia el suelo y que pueden restarle vidas. Para el movimiento del héroe se utilizarán las teclas A (movimiento a la izquierda) y D (moviemiento a la derecha).
 
-Se agregará una nueva animación para mostrar este poder, la cual se pondrá sobre la animación del héroe de forma que parezcan chispas saliendo de él.
-
-(IMAGEN DEL HEROE Y SU PODER)
+Se agregará una nueva animación para mostrar este poder, la cual se pondrá sobre la animación del héroe de forma que parezcan chispas saliendo de él. 
 
 También se comenzó con la estructuración de las pantallas de información y de carga, pues la historia es una parte importante para comprender las dinámicas que veremos en el juego, también nos ayudarán a mostrar los controles de juego de cada nivel, de esta forma será más sencillo para el usuario recordar las opciones que tiene para controlar al héroe en cada nivel.
 
-(DIAGRAMA DE FLUJO DE LAS PANTALLAS DE INFORMACIÓN Y CARGA)
+\begin{figure}[h]
+\includegraphics[scale=0.6]{Images/menu.png}
+\centering
+\caption{Menú del juego.}
+\label{fig:menu}
+\end{figure}
 
+\newpage
 Tendremos una pantalla de información y una pantalla de carga en cada nivel, la primera nos mostrará la historia del juego dependiendo del nivel y la segunda nos informará de los controles que debemos utilizar en cada nivel.
 
 \begin{itemize}
-    \item NIVEL 1.
-    
+    \item PANTALLAS NIVEL 1.
         \begin{figure}[h]
-        \includegraphics[scale=0.5]{Images/pantallahistoria.png}
+        \includegraphics[scale=0.4]{Images/pantallahistoria.png}
         \centering
-        \caption{Ecuaciones para la velocidad inicial dada por un resorte.}
-        \label{fig:ecuacionesresorte}
+        \caption{Pantalla con la historia del nivel 1.}
+        \label{fig:pantallahistoria1}
+        \end{figure}
+        
+        \newpage
+        \begin{figure}[h]
+        \includegraphics[scale=0.4]{Images/pannivel1.png}
+        \centering
+        \caption{Pantalla con instrucciones para el nivel 1.}
+        \label{fig:pantallainstruciones1}
+        \end{figure}
+        
+        \begin{figure}[h]
+        \includegraphics[scale=0.4]{Images/pannivel11.png}
+        \centering
+        \caption{Pantalla con instrucciones para el nivel 1.}
+        \label{fig:pantallainstruciones11}
         \end{figure}
     
-    \item NIVEL 2.
+    \newpage
+    \item PANTALLAS NIVEL 2.
         \begin{figure}[h]
-        \includegraphics[scale=0.5]{Images/pantallahistoria2.png}
+        \includegraphics[scale=0.4]{Images/pantallahistoria2.png}
         \centering
-        \caption{Ecuaciones para la velocidad inicial dada por un resorte.}
-        \label{fig:ecuacionesresorte}
+        \caption{Pantalla con la historia del nivel 2.}
+        \label{fig:pantallains2}
         \end{figure}
-    
+        
+        \begin{figure}[h]
+        \includegraphics[scale=0.4]{Images/pannivel2.png}
+        \centering
+        \caption{Pantalla con instrucciones del nivel 2.}
+        \label{fig:pantallains21}
+        \end{figure}
+        
 \end{itemize}
 
+\subsection{Viernes 15 de Abril.}
+Se hacen las pruebas de las pantallas de carga para determinar su orden dentro del código, pues es importante tener en cuenta qué pantallas se habilitan dependiendo en la que me encuentre, para esto se utilizó un diagrama de flujo que nos ayudará con la organización. 
+
+\newpage
+\begin{figure}[h]
+\includegraphics[scale=1.1]{Images/diagramaflujopantallas.png}
+\centering
+\caption{Diagrama de flujo del orden de las pantallas del juego.}
+\label{fig:diagramaflujo}
+\end{figure}
+
+La dificultad del nivel dos se aumentó agregando más proyectiles a la escena, se agregaron un total de cuatro, estos proyectiles poseen una velocidad inicial aleatoria, y teniendo en cuenta su moviemiento parabólico, su alcance máximo varía y dificulta más la victoria en el nivel dos.
+
+\newpage
+\begin{figure}[h]
+\includegraphics[scale=0.4]{Images/nivel2proyectiles.png}
+\centering
+\caption{Proyectiles del nivel 2.}
+\label{fig:nivel2proy}
+\end{figure}
+
+\subsection{Sábado 16 de Abril.}
+En este día se realizaron las pruebas con usuarios para observar el comportamiento que tendría el juego con alguien que no conoce su dinámica, de esta forma podríamos ubicar los errores que se pueden presentar ante el usuario y corregirlos.
+Se encontró que el cambio de las pantallas dentro del juego tenía varios problemas, pues la tecla N de continuar se mantenía activa no solo cuando era requerida sino también en otros momentos del juego, en donde así el usuario perdiera todas sus vidas podía retomar el juego presionando la tecla N y las vidas empezarían a descender a la parte negativa. Con esta misma tecla N se podía omitir la pantalla de carga en donde se presentan las instrucciones del juego.
+Estos errores se resolvieron después de los aportes de las personas que sirvieron como primeros usuarios, cambiando algunos condicionales en las pantallas de carga y en la resta de las vidas del héroe.
 
 
-
-\section{Pantalla: Historia de Juego.}
-MENU
-
-En un bosque lejano viven tranquilamente una familia de Lobos conformada por su madre y sus dos cachorros, pasean en el campo y juegan todo el día, sin embargo no son una familia normal, pues poseen poderes sobrenaturales.
-
-Esta paz estuvo presente en el bosque hasta el día en que sus crías son raptadas por un grupo de humanos, quienes desean apropiarse de los poderes que tienen los cachorros, tal como han hecho durante años con todo lo que nos brinda la naturaleza.
-
-¿Podrá la loba recuperar a sus pequeños cachorros?
-
-PANTALLA DE CARGA CON CONTROL W
-
-NIVEL 1
-
-Nuestra heroína ha conseguido no perderlos de vista, y seguirles el rastro durante todo el trayecto. Sin embargo, el enemigo ingresará a una base en busca de ayuda ante la imposibilidad de detener a nuestra loba.
-
-Por lo que recurre a entes mayores para dificultar el rescate de los cachorros.
-
-
-
+\section{Conclusiones.}
+\begin{itemize}
+    \item La organización previa de las clases a utilizar en el proyecto fue de gran ayuda para comenzar a codificar teniendo en mente este análisis realizado anteriormente.
+    \item Aunque las clases que se utilizaron en el proyecto final no fueron las mismas que se planearon a la hora de hacer el informe de clases, estas últimas nos permitieron adentrarnos al código con mayor confianza y determinación.
+    \item La asignación de tareas para cada día disponible hasta la entrega fue clave para la organización y noción del tiempo que se necesita en un proyecto.
+    \item Las pruebas con usuarios fueron clave para encontrar problemas dentro del proyecto que nosotros como desarrolladores no vimos claramente pues ya conocíamos las dinámicas del juego.
+\end{itemize}
 
 \end{document}
