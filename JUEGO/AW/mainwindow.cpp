@@ -196,6 +196,11 @@ MainWindow::MainWindow(QWidget *parent)
     escena->setSceneRect(0,0,ui->graphicsView->width()-2, ui->graphicsView->height()-2);
     ui->graphicsView->setScene(escena);
 
+    //Música
+    QDesktopServices::openUrl(QUrl("https://youtu.be/kofwOaINByM"));
+    QThread::msleep(1000);
+    QMainWindow::QWidget::setWindowState(Qt::WindowNoState);
+
     //Creación de timers
     timerFondo = new QTimer;
     connect(timerFondo, SIGNAL(timeout()), this, SLOT(animarFondo()));

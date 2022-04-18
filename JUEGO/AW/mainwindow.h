@@ -12,6 +12,11 @@
 #include <QTimer>
 #include "archivoinformacion.h"
 
+//Para la música
+#include <qdesktopservices.h>
+#include <qurl.h>
+#include <QThread>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
