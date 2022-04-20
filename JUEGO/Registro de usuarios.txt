@@ -1,0 +1,101 @@
+#include <iostream>
+#include <string.h>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    string nombre, clave;
+
+    ifstream archivoLectura;
+    archivoLectura.open("Usuarios.txt", ios::in);
+
+    int opcion;
+    cout<<"1.Registrar usuario."<<endl;
+    cout<<"2.Inicio de sesion."<<endl;
+    cout<<"Ingrese opcion: ";
+    cin>>opcion;
+
+    switch (opcion) {
+    case 1:{
+        ofstream archivoEscritura;
+        archivoEscritura.open("Usuarios.txt", ios::app);
+
+        cout<<"Ingrese nombre: ";
+        cin>>nombre;
+        cout<<"Ingrese clave: ";
+        cin>>clave;
+
+        string nombre_, linea;
+
+        while(!archivoLectura.eof()&&!archivoEscritura.eof()){
+            getline(archivoLectura,linea);
+            for(int i=0; linea[i]!=' '; i++){ //Tomo letra por letra la linea leida
+                nombre_=nombre_+linea[i];
+            }
+            if(nombre_==nombre){
+                cout<<"EL NOMBRE DE USUARIO YA EXISTE"<<endl;
+                cout<<endl;
+                cout<<"Ingrese nombre: ";
+                cin>>nombre;
+                cout<<"Ingrese clave: ";
+                cin>>clave;
+                archivoLectura.seekg(0, archivoLectura.beg);
+            }
+            nombre_="";
+        }
+        archivoEscritura<<nombre<<" "<<clave<<"\n";
+        archivoEscritura.close();
+        archivoLectura.close();
+    }
+        break;
+
+    case 2:{
+
+        string nombre, clave;
+
+        ifstream archivoLectura;
+        archivoLectura.open("Usuarios.txt", ios::in);
+
+        cout<<"Ingrese nombre: ";
+        cin>>nombre;
+        cout<<"Ingrese clave: ";
+        cin>>clave;
+        cout<<endl;
+
+        string nombre_clave=nombre+' '+clave, linea;
+
+        while(!archivoLectura.eof()){
+            getline(archivoLectura,linea);
+            if(nombre_clave==linea){
+                cout<<"USUARIO ENCONTRADO"<<endl;
+                nombre_clave="";
+                break;
+            }
+        }
+        nombre_clave="";
+        if(archivoLectura.eof()){
+            cout<<"USUARIO O CLAVE INCORRECTA"<<endl;
+            archivoLectura.seekg(0, archivoLectura.beg);
+            while(!archivoLectura.eof()){
+                getline(archivoLectura,linea);
+                cout<<"Ingrese nombre: ";
+                cin>>nombre;
+                cout<<"Ingrese clave: ";
+                cin>>clave;
+                string nombre_clave=nombre+' '+clave;
+                if(nombre_clave==linea){
+                    cout<<"USUARIO ENCONTRADO"<<endl;
+                    nombre_clave="";
+                    break;
+                }
+            }
+        }
+    }
+        break;
+
+    } //switch
+
+    return 0;
+}
