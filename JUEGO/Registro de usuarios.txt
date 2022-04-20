@@ -8,9 +8,6 @@ int main()
 {
     string nombre, clave;
 
-    ifstream archivoLectura;
-    archivoLectura.open("Usuarios.txt", ios::in);
-
     int opcion;
     cout<<"1.Registrar usuario."<<endl;
     cout<<"2.Inicio de sesion."<<endl;
@@ -22,6 +19,9 @@ int main()
         ofstream archivoEscritura;
         archivoEscritura.open("Usuarios.txt", ios::app);
 
+        ifstream archivoLectura;
+        archivoLectura.open("Usuarios.txt", ios::in);
+
         cout<<"Ingrese nombre: ";
         cin>>nombre;
         cout<<"Ingrese clave: ";
@@ -29,7 +29,7 @@ int main()
 
         string nombre_, linea;
 
-        while(!archivoLectura.eof()&&!archivoEscritura.eof()){
+        while(!archivoLectura.eof() && !archivoEscritura.eof()){
             getline(archivoLectura,linea);
             for(int i=0; linea[i]!=' '; i++){ //Tomo letra por letra la linea leida
                 nombre_=nombre_+linea[i];
@@ -41,11 +41,12 @@ int main()
                 cin>>nombre;
                 cout<<"Ingrese clave: ";
                 cin>>clave;
+                archivoLectura.clear();
                 archivoLectura.seekg(0, archivoLectura.beg);
             }
             nombre_="";
         }
-        archivoEscritura<<nombre<<" "<<clave<<"\n";
+        archivoEscritura<<nombre<<" "<<clave<<"\n"<<"1"<<"\n"<<"2"<<"\n"<<"3"<<"\n";
         archivoEscritura.close();
         archivoLectura.close();
     }
@@ -64,35 +65,40 @@ int main()
         cin>>clave;
         cout<<endl;
 
-        string nombre_clave=nombre+' '+clave, linea;
+        string nombre_clave=nombre+' '+clave, linea, datos[3];
+        //int verif=3;
 
-        while(!archivoLectura.eof()){
+
+        while(!archivoLectura.eof()||nombre_clave.length()>0){
             getline(archivoLectura,linea);
+            for(int i=0; i<3; i++){
+                getline(archivoLectura,datos[i]);
+            }
             if(nombre_clave==linea){
                 cout<<"USUARIO ENCONTRADO"<<endl;
-                nombre_clave="";
+                cout<<nombre<<endl;
+                for(int i=0; i<3; i++){
+                    cout<<datos[i]<<endl;
+                }
+                archivoLectura.close();
                 break;
             }
-        }
-        nombre_clave="";
-        if(archivoLectura.eof()){
-            cout<<"USUARIO O CLAVE INCORRECTA"<<endl;
-            archivoLectura.seekg(0, archivoLectura.beg);
-            while(!archivoLectura.eof()){
-                getline(archivoLectura,linea);
+            while(nombre_clave!=linea && archivoLectura.eof()){
+                cout<<"USUARIO O CLAVE INCORRECTA"<<endl;
+                cout<<endl;
+                nombre_clave="";
                 cout<<"Ingrese nombre: ";
                 cin>>nombre;
                 cout<<"Ingrese clave: ";
                 cin>>clave;
-                string nombre_clave=nombre+' '+clave;
-                if(nombre_clave==linea){
-                    cout<<"USUARIO ENCONTRADO"<<endl;
-                    nombre_clave="";
-                    break;
-                }
+                archivoLectura.clear();
+                archivoLectura.seekg(0, archivoLectura.beg);
+                nombre_clave=nombre+' '+clave;
             }
         }
-    }
+        archivoLectura.close();
+
+    } //case 2
         break;
 
     } //switch
