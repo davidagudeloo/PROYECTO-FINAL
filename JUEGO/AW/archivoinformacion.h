@@ -20,8 +20,8 @@ public:
     ArchivoInformacion();
 
     //Métodos
-    void leerDatos(string texto, Heroe * heroe, Reloj * reloj);
-    void escribirDatos(string name, Heroe * heroe, Reloj * reloj);
+    void cargarDatos(string texto, Heroe * heroe, Reloj * reloj);
+    void guardarDatos(string name, Heroe * heroe, Reloj * reloj);
 
     bool getSeQuiereCargar() const;
     void setSeQuiereCargar(bool value);

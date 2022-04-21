@@ -42,7 +42,14 @@ public:
     ~MainWindow();
 
 
+private slots:
+    void on_btRegistrarse_clicked();
+
+
+    void on_btIniciarSesion_clicked();
+
 private:
+    string usuarioClave="";
     ifstream myfile; //Dato que nos permite verificar si existe un archivo
     int pantallaDeCarga=0;
 

@@ -32,7 +32,7 @@ void MainWindow::keyPressEvent(QKeyEvent *i)
         }
         //Puede guardar
         if(i->key() == Qt::Key_G){
-            archivo->escribirDatos("datos.txt", heroe, reloj);
+            archivo->guardarDatos("datos.txt", heroe, reloj);
             menu();
         }    
     }
@@ -48,7 +48,7 @@ void MainWindow::keyPressEvent(QKeyEvent *i)
         if(myfile && pantallaDeCarga==0){
             pantallaDeCarga=5;
             archivo->setSeQuiereCargar(true);
-            archivo->leerDatos("datos.txt", heroe, reloj);
+            archivo->cargarDatos("datos.txt", heroe, reloj);
             //el nivel 1
             if(heroe->getNivelActual()==1){
                 borrarObjetos();
@@ -196,10 +196,12 @@ MainWindow::MainWindow(QWidget *parent)
     escena->setSceneRect(0,0,ui->graphicsView->width()-2, ui->graphicsView->height()-2);
     ui->graphicsView->setScene(escena);
 
+    ui->labelUsuarioRepetido->hide();
+
     //Música
-    QDesktopServices::openUrl(QUrl("https://youtu.be/kofwOaINByM"));
+    /*QDesktopServices::openUrl(QUrl("https://youtu.be/kofwOaINByM"));
     QThread::msleep(1000);
-    QMainWindow::QWidget::setWindowState(Qt::WindowNoState);
+    QMainWindow::QWidget::setWindowState(Qt::WindowNoState);*/
 
     //Creación de timers
     timerFondo = new QTimer;
@@ -263,6 +265,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::menu()
 {
+    //Inicio o Registro
+    ui->btIniciarSesion->show();
+    ui->btRegistrarse->show();
+    ui->labelClave->show();
+    ui->labelUsuario->show();
+    ui->lineClave->show();
+    ui->lineUsuario->show();
+
     pantallaDeCarga=0;
     //Detenemos los timers de la inicialización
     timerbala->stop();
@@ -285,6 +295,15 @@ void MainWindow::pantallasCarga()
 {
     if(heroe->getNivelActual()==1){
         if(pantallaDeCarga==0){
+            //Inicio y Registro
+            ui->btIniciarSesion->hide();
+            ui->btRegistrarse->hide();
+            ui->labelClave->hide();
+            ui->labelUsuario->hide();
+            ui->lineClave->hide();
+            ui->lineUsuario->hide();
+            ui->labelUsuarioRepetido->hide();
+
             fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria0.png");
             escena->removeItem(fondoAux);
             escena->addItem(fondoAux);
@@ -378,7 +397,7 @@ void MainWindow::cargarNivel1()
 
     //Se verifica si se desea cargar la partida guardada
     if(archivo->getSeQuiereCargar()){
-        archivo->leerDatos("datos.txt", heroe, reloj);
+        archivo->cargarDatos("datos.txt", heroe, reloj);
         archivo->setSeQuiereCargar(false);
     }
 
@@ -428,7 +447,7 @@ void MainWindow::cargarNivel2()
 
     //Se verifica si se desea cargar la partida guardada
     if(archivo->getSeQuiereCargar()){
-        archivo->leerDatos("datos.txt", heroe, reloj);
+        archivo->cargarDatos("datos.txt", heroe, reloj);
         archivo->setSeQuiereCargar(false);
     }
     else{
@@ -463,4 +482,95 @@ void MainWindow::borrarObjetos()
     for(int i=0; i<4; i++){
         delete bala[i];
     }
+}
+
+void MainWindow::on_btRegistrarse_clicked()
+{
+    ofstream archivoEscritura;
+    archivoEscritura.open("Usuarios.txt", ios::app);
+
+    ifstream archivoLectura;
+    archivoLectura.open("Usuarios.txt", ios::in);
+
+    QString nombreUsuario= ui->lineUsuario->text();
+    QString clave= ui->lineClave->text();
+
+    string nombre_, linea;
+
+    while(!archivoLectura.eof() && !archivoEscritura.eof()){
+        getline(archivoLectura,linea);
+        for(int i=0; linea[i]!=' '; i++){ //Tomo letra por letra la linea leida
+            nombre_=nombre_+linea[i];
+        }
+        if(nombre_==nombreUsuario.toStdString()){
+
+            ui->labelUsuarioRepetido->show();
+
+            //verificar pa borrar
+            ui->lineUsuario->setText("");
+            nombreUsuario="";
+            ui->lineClave->setText("");
+            clave="";
+
+            archivoLectura.clear();
+            archivoLectura.seekg(0, archivoLectura.beg);
+        }
+        nombre_="";
+
+    }
+    if(nombreUsuario!="" && clave!=""){
+        //datos usuario actual
+        archivo->guardarDatos("datos.txt", heroe, reloj);
+        //Base de Datos registro usuarios
+        archivoEscritura<<nombreUsuario.toStdString()<<" "<<clave.toStdString()<<"\n"<<"1"<<"\n"<<"3"<<"\n"<<"40"<<"\n";
+        archivoEscritura.close();
+        archivoLectura.close();
+        usuarioClave=nombreUsuario.toStdString()+" "+clave.toStdString();
+        pantallasCarga();
+    }
+}
+
+
+
+void MainWindow::on_btIniciarSesion_clicked()
+{
+
+    ifstream archivoLectura;
+    archivoLectura.open("Usuarios.txt", ios::in);
+
+    QString nombreUsuario= ui->lineUsuario->text();
+    QString clave= ui->lineClave->text();
+
+    string nombre_clave=nombreUsuario.toStdString()+' '+clave.toStdString(), linea, datosJuego[3];
+
+
+  /*  while(!archivoLectura.eof()||nombre_clave.length()>0){
+        getline(archivoLectura,linea);
+        for(int i=0; i<3; i++){
+            getline(archivoLectura,datosJuego[i]);
+        }
+        if(nombre_clave==linea){
+            pantallasCarga();
+            archivo->cargarDatos("datos.txt", heroe, reloj);
+
+            for(int i=0; i<3; i++){
+                cout<<datosJuego[i]<<endl;
+            }
+            archivoLectura.close();
+            break;
+        }
+        while(nombre_clave!=linea && archivoLectura.eof()){
+            cout<<"USUARIO O CLAVE INCORRECTA"<<endl;
+            cout<<endl;
+            nombre_clave="";
+            cout<<"Ingrese nombre: ";
+            cin>>nombre;
+            cout<<"Ingrese clave: ";
+            cin>>clave;
+            archivoLectura.clear();
+            archivoLectura.seekg(0, archivoLectura.beg);
+            nombre_clave=nombreUsuario.toStdString()+' '+clave.toStdString();
+        }
+    }*/
+    archivoLectura.close();
 }

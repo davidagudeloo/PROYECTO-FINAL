@@ -16,11 +16,12 @@ ArchivoInformacion::ArchivoInformacion()
 }
 
 //Cargar
-void ArchivoInformacion::leerDatos(string name, Heroe * heroe, Reloj * reloj)
+void ArchivoInformacion::cargarDatos(string name, Heroe * heroe, Reloj * reloj)
 {
     ifstream archivo; // tipo de dato que me permite leer un archivo
     string linea;
     archivo.open(name,ios::in); // abrimos el archivo en modo lectura
+
 
     getline(archivo,linea);
     heroe->setNivelActual(stoi(linea)); //stoi=string to int
@@ -33,7 +34,7 @@ void ArchivoInformacion::leerDatos(string name, Heroe * heroe, Reloj * reloj)
 }
 
 //Guardar
-void ArchivoInformacion::escribirDatos(string name, Heroe * heroe, Reloj * reloj)
+void ArchivoInformacion::guardarDatos(string name, Heroe * heroe, Reloj * reloj)
 {
     ofstream archivo; // tipo de dato que me permite escribir un archivo
     archivo.open(name.c_str(),ios::out); // abrimos el archivo en modo escritura
@@ -41,3 +42,4 @@ void ArchivoInformacion::escribirDatos(string name, Heroe * heroe, Reloj * reloj
     archivo<<heroe->getNivelActual()<<"\n"<<heroe->getVidas()<<"\n"<<reloj->getTiempoPartida();
     archivo.close();
 }
+
