@@ -208,9 +208,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->labelUsuarioRepetido->hide();
 
     //Música
-    /*QDesktopServices::openUrl(QUrl("https://youtu.be/kofwOaINByM"));
+    QDesktopServices::openUrl(QUrl("https://youtu.be/kofwOaINByM"));
     QThread::msleep(1000);
-    QMainWindow::QWidget::setWindowState(Qt::WindowNoState);*/
+    QMainWindow::QWidget::setWindowState(Qt::WindowNoState);
 
     //Creación de timers
     timerFondo = new QTimer;
