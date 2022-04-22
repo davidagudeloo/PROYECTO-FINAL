@@ -589,6 +589,7 @@ void MainWindow::on_btIniciarSesion_clicked()
         if(nombre_clave!=linea && archivoLectura.eof()){
             ui->labelUsuarioRepetido->setText("USUARIO O CLAVE INCORRECTA");
             ui->labelUsuarioRepetido->show();
+            ui->labelNombreUsuario->hide();
 
             nombre_clave="";
 

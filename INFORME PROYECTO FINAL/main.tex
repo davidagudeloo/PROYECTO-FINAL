@@ -449,6 +449,59 @@ En este día se realizaron las pruebas con usuarios para observar el comportamie
 Se encontró que el cambio de las pantallas dentro del juego tenía varios problemas, pues la tecla N de continuar se mantenía activa no solo cuando era requerida sino también en otros momentos del juego, en donde así el usuario perdiera todas sus vidas podía retomar el juego presionando la tecla N y las vidas empezarían a descender a la parte negativa. Con esta misma tecla N se podía omitir la pantalla de carga en donde se presentan las instrucciones del juego.
 Estos errores se resolvieron después de los aportes de las personas que sirvieron como primeros usuarios, cambiando algunos condicionales en las pantallas de carga y en la resta de las vidas del héroe.
 
+\subsection{Última semana.}
+En esta semana se tuvo la primera revisión del proyecto en donde se le enseñó al profesor los avances que se tenían del juego, allí se verificaron los modelos físicos y su implementación dentro del juego, también se criticó, por parte del profesor, la falta de un registro de usuarios, requisito que será implementado en los días siguientes a esta revisión.
+
+Como se mencionó anteriormente, se realizará la creación del registro de usuarios, para esto se utilizará la práctica 3 como guía. Serán necesarios dos botones, uno de registro y otro de inicio de sesión, también dos cajas de texto mediante las que se recibirán los datos de entrada que el usuario escriba en ellas, por último utilizaremos labels las cuales serán texto informativo para el usuario. Se crearán dos archivos, uno que contendrá la base de datos con los nombres de usuario, sus claves y la información necesaria para guardar el juego en el punto en el que el usuario presione G, y el otro serán los datos de guardado de juego del usuario que se encuentre actualmente jugando, ya sea alguien registrado o sin registrarse.
+
+El usuario que no se registre podrá guardar el juego y cargarlo, sin embargo cuando se salga del programa estos datos se perderán y no podrá volver a cargar el juego en el punto en el que lo guardó. Mientras que los usuarios registrados podrán iniciar sesión, guardar su partida, salir del programa y cargar el juego en el punto guardado o iniciar un nuevo juego si lo desean.
+
+\newpage
+\begin{figure}[h]
+\includegraphics[scale=0.4]{Images/menuregistro.png}
+\centering
+\caption{Menú con el registro de usuarios agregado.}
+\label{fig:menuregis}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[scale=0.9]{Images/registro.png}
+\centering
+\caption{Registro de usuario.}
+\label{fig:regis}
+\end{figure}
+
+Al realizar el registro de alguien nuevo se verificará que no exista un usuario con el mismo nombre pues esto evita confusiones a la hora de iniciar sesión, en caso de que alguna persona registre un nombre que ya existe se le informará por medio de uno de los labels. Una vez se registre el usuario nuevo, el programa iniciará las pantallas de carga y comenzará el juego.
+
+\newpage
+\begin{figure}[h]
+\includegraphics[scale=0.9]{Images/usuarioyaexis.png}
+\centering
+\caption{Label que indica la existencia de un usuario con el mismo nombre.}
+\label{fig:label1}
+\end{figure}
+
+Para iniciar sesión el usuario escribirá su nombre y su contraseña en las cajas de texto y el programa verificará que exista en la base de datos, si existe iniciará de manera existosa la sesión y podrá cargar el juego en un punto anteriormente guardado, además se verá su nombre de usuario en la esquina superior derecha de la pantalla.
+
+\begin{figure}[h]
+\includegraphics[scale=0.9]{Images/iniciosesion.png}
+\centering
+\caption{Inicio de sesión exitoso.}
+\label{fig:iniciosesion}
+\end{figure}
+
+\newpage
+Si el usuario o contraseña ingresados son incorrectos, se mostrará un mensaje al usuario y no se podrá iniciar sesión.
+
+\begin{figure}[h]
+\includegraphics[scale=0.9]{Images/claveinco.png}
+\centering
+\caption{Nombre de usuario o clave incorrecta.}
+\label{fig:claveinco}
+\end{figure}
+
+
+
 
 \section{Conclusiones.}
 \begin{itemize}
@@ -457,5 +510,14 @@ Estos errores se resolvieron después de los aportes de las personas que sirvier
     \item La asignación de tareas para cada día disponible hasta la entrega fue clave para la organización y noción del tiempo que se necesita en un proyecto.
     \item Las pruebas con usuarios fueron clave para encontrar problemas dentro del proyecto que nosotros como desarrolladores no vimos claramente pues ya conocíamos las dinámicas del juego.
 \end{itemize}
+
+\section{Cibergrafía.}
+\begin{itemize}
+    \item Sprites tomados de: http://www.animated-gifs.fr/animated-gifs.php
+    \item Textos hechos con ayuda de: https://textcraft.net/
+    \item Documentación tomada de: https://doc.qt.io/
+\end{itemize}
+
+
 
 \end{document}
