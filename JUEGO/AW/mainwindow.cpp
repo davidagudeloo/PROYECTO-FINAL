@@ -33,6 +33,7 @@ void MainWindow::keyPressEvent(QKeyEvent *i)
         //Puede guardar
         if(i->key() == Qt::Key_G){
             archivo->guardarDatos("datos.txt", heroe, reloj);
+            actualizarBaseDatos();
             menu();
         }    
     }
@@ -46,6 +47,14 @@ void MainWindow::keyPressEvent(QKeyEvent *i)
         myfile.open("datos.txt");
         //Si el archivo existe y está en el menú
         if(myfile && pantallaDeCarga==0){
+            //Inicio y Registro
+            ui->btIniciarSesion->hide();
+            ui->btRegistrarse->hide();
+            ui->labelClave->hide();
+            ui->labelUsuario->hide();
+            ui->lineClave->hide();
+            ui->lineUsuario->hide();
+            ui->labelUsuarioRepetido->hide();
             pantallaDeCarga=5;
             archivo->setSeQuiereCargar(true);
             archivo->cargarDatos("datos.txt", heroe, reloj);
@@ -303,6 +312,8 @@ void MainWindow::pantallasCarga()
             ui->lineClave->hide();
             ui->lineUsuario->hide();
             ui->labelUsuarioRepetido->hide();
+            ui->labelNombreUsuario->hide();
+
 
             fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria0.png");
             escena->removeItem(fondoAux);
@@ -336,6 +347,7 @@ void MainWindow::pantallasCarga()
     else{
         //Se reinicia cuando el tiempo llega a cero
         if(pantallaDeCarga==0){
+            ui->labelNombreUsuario->hide();
             fondoAux->setImagen(":/Image/imagenes de apoyo/pantallahistoria2.png");
             escena->removeItem(fondoAux);
             escena->addItem(fondoAux);
@@ -368,6 +380,7 @@ void MainWindow::pantallasCarga()
         }
     }
 }
+
 
 void MainWindow::cargarNivel1()
 {
@@ -406,6 +419,9 @@ void MainWindow::cargarNivel1()
     ui->lcdTiempo->show();
     ui->lcdVidas->display(heroe->getVidas());
     ui->lcdTiempo->display(reloj->getTiempoPartida());
+
+    ui->labelNombreUsuario->show();
+
 
     //Se activan los timers
     timerFondo->start(100);
@@ -461,6 +477,9 @@ void MainWindow::cargarNivel2()
     ui->lcdVidas->display(heroe->getVidas());
     ui->lcdTiempo->display(reloj->getTiempoPartida());
 
+    ui->labelNombreUsuario->show();
+
+
     //Se activan los timers
     timerFondo->start(100);//100
     timerHeroe->start(50);
@@ -504,7 +523,7 @@ void MainWindow::on_btRegistrarse_clicked()
         }
         if(nombre_==nombreUsuario.toStdString()){
 
-            ui->labelUsuarioRepetido->show();
+            ui->labelUsuarioRepetido->setText("EL USUARIO YA EXISTE");
 
             //verificar pa borrar
             ui->lineUsuario->setText("");
@@ -544,33 +563,109 @@ void MainWindow::on_btIniciarSesion_clicked()
     string nombre_clave=nombreUsuario.toStdString()+' '+clave.toStdString(), linea, datosJuego[3];
 
 
-  /*  while(!archivoLectura.eof()||nombre_clave.length()>0){
-        getline(archivoLectura,linea);
+    while(!archivoLectura.eof()||nombre_clave.length()>0){
+        getline(archivoLectura,linea);//toma el nombre de usuario
         for(int i=0; i<3; i++){
             getline(archivoLectura,datosJuego[i]);
         }
         if(nombre_clave==linea){
-            pantallasCarga();
-            archivo->cargarDatos("datos.txt", heroe, reloj);
+            heroe->setNivelActual(stoi(datosJuego[0]));
+            heroe->setVidas(stoi(datosJuego[1]));
+            reloj->setTiempoPartida(stoi(datosJuego[2]));
+            archivo->guardarDatos("datos.txt", heroe, reloj);
+            heroe->setNivelActual(1);
+            heroe->setVidas(3);
+            reloj->setTiempoPartida(40);
+            usuarioClave=nombreUsuario.toStdString()+" "+clave.toStdString();
+            ui->labelUsuarioRepetido->setText("Ingreso Exitoso :)");
+            ui->labelUsuarioRepetido->show();
+            ui->labelNombreUsuario->setText(nombreUsuario);
+            ui->labelNombreUsuario->show();
 
-            for(int i=0; i<3; i++){
-                cout<<datosJuego[i]<<endl;
-            }
+
             archivoLectura.close();
             break;
         }
-        while(nombre_clave!=linea && archivoLectura.eof()){
-            cout<<"USUARIO O CLAVE INCORRECTA"<<endl;
-            cout<<endl;
+        if(nombre_clave!=linea && archivoLectura.eof()){
+            ui->labelUsuarioRepetido->setText("USUARIO O CLAVE INCORRECTA");
+            ui->labelUsuarioRepetido->show();
+
             nombre_clave="";
-            cout<<"Ingrese nombre: ";
-            cin>>nombre;
-            cout<<"Ingrese clave: ";
-            cin>>clave;
-            archivoLectura.clear();
-            archivoLectura.seekg(0, archivoLectura.beg);
-            nombre_clave=nombreUsuario.toStdString()+' '+clave.toStdString();
+
+            //verificar pa borrar
+            ui->lineUsuario->setText("");
+            nombreUsuario="";
+            ui->lineClave->setText("");
+            clave="";
+
         }
-    }*/
+    }
     archivoLectura.close();
 }
+void MainWindow::actualizarBaseDatos()
+{
+    //acá
+    ifstream archivoLectura; // tipo de dato que me permite leer un archivo
+
+    string texto;
+    string textoActualizado;
+
+    string linea;
+    bool seActualizo=false;
+    int espacios=0;
+
+    archivoLectura.open("Usuarios.txt",ios::in); // abrimos el archivo en modo lectura
+
+
+    while(!archivoLectura.eof()){ // mientras no sea el final del archivo
+        getline(archivoLectura,linea);
+        texto = texto + linea + "\n";
+    }
+
+    archivoLectura.close(); // cerramos el archivo
+
+    //-------------------------------------------------------------------------------------
+    for(unsigned int i=0;i<texto.length();i++){
+        //construye linea a linea
+        if(texto[i]!='\n'){
+            if(espacios==0 || espacios==4){
+                textoActualizado+=texto[i];
+                linea=linea+texto[i];
+            }
+        }
+        else{
+            if(seActualizo){
+                espacios++;
+                if(espacios==4){
+                    seActualizo=false;
+                }
+            }
+            else{
+                textoActualizado+='\n';
+            }
+            if(linea==usuarioClave){
+                textoActualizado+=heroe->getNivelActual()+'0';
+                textoActualizado+='\n';
+                textoActualizado+=heroe->getVidas()+'0';
+                textoActualizado+='\n';
+                textoActualizado+=to_string(reloj->getTiempoPartida());
+                textoActualizado+='\n';
+                seActualizo=true;
+                espacios++;
+            }
+            linea="";
+        }
+    }
+    //-------------------------------------------------------------------------------------
+    ofstream archivoEscritura; // tipo de dato que me permite escribir un archivo
+
+    archivoEscritura.open("Usuarios.txt",ios::out); // abrimos el archivo en modo escritura
+
+
+    archivoEscritura<<textoActualizado;
+    archivoEscritura.close();
+
+    //--------------------------------------------------------------------------------------
+
+}
+

@@ -12,6 +12,11 @@
 #include <QTimer>
 #include "archivoinformacion.h"
 
+#include <stdlib.h> // libreria estandar
+#include <fstream> // flujo de entrada y salida hacia archivos
+#include <string.h> // trabajar con strings
+using namespace std;
+
 //Para la música
 #include <qdesktopservices.h>
 #include <qurl.h>
@@ -40,6 +45,7 @@ public:
     void keyPressEvent(QKeyEvent * i);
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
 
 
 private slots:
@@ -89,5 +95,6 @@ private:
     void cargarNivel2();
     void borrarObjetos(); //Liberará memoria
     void pantallasCarga(); //Transición entre pantallas de carga
+    void actualizarBaseDatos();
 };
 #endif // MAINWINDOW_H
